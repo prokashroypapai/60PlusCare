@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('seos', function (Blueprint $table) {
+            $table->id();
             $table->unsignedBigInteger('picture_id')->nullable();
             $table->foreign('picture_id')->references('id')->on('pictures');
             $table->unsignedBigInteger('page_id')->nullable();

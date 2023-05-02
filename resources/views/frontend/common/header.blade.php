@@ -46,12 +46,24 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="mega-menu-item">
-                                        <a href="#" class="mega-menu-link">Location</a>
-                                        <ul class="mega-submenu">
+                                    <li class="mega-menu-item megamenu-fw">
+                                        <a href="#" class="mega-menu-link">Knowledge</a>
+                                        <ul class="mega-submenu megamenu-content" role="menu">
                                             <li>
                                                 <div class="row">
-                                                    <div class="col-menu col-xl-12 col-lg-12">
+                                                    <div class="col-menu col-xl-3 col-lg-12">
+                                                        <h3 class="title">About 60 Plus Care</h3>
+                                                        <div class="content">
+                                                            <ul class="menu-col">
+                                                                <li><a href="{{url('packages')}}">Packages</a></li>
+                                                                <li><a href="{{url('doctors')}}">Doctors</a></li>
+                                                                <li><a href="{{url('patient-study')}}">Patient Study</a></li>
+                                                                <li><a href="{{url('physiotherapy')}}">Physiotherapy</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-menu col-xl-3 col-lg-12">
+                                                        <h3 class="title">Locations</h3>
                                                         <div class="content">
                                                             <ul class="menu-col">
                                                                 @foreach(\App\Models\Location::active()->select('location_name', 'location_slug')->get() as $location)
@@ -60,43 +72,13 @@
                                                             </ul>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="mega-menu-item megamenu-fw">
-                                        <a href="#" class="mega-menu-link">Pages</a>
-                                        <ul class="mega-submenu megamenu-content" role="menu">
-                                            <li>
-                                                <div class="row">
                                                     <div class="col-menu col-xl-3 col-lg-12">
-                                                        <h3 class="title">About</h3>
+                                                        <h3 class="title">Other Links</h3>
                                                         <div class="content">
                                                             <ul class="menu-col">
-                                                                <li><a href="about-us.html">Baby About</a></li>
-                                                                <li><a href="about-us-2.html">Carer About</a></li>
-                                                                <li><a href="about-us-3.html">Pet About</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-menu col-xl-3 col-lg-12">
-                                                        <h3 class="title">Services</h3>
-                                                        <div class="content">
-                                                            <ul class="menu-col">
-                                                                <li><a href="services-1.html">Baby Services</a></li>
-                                                                <li><a href="services-2.html">Carer Services</a></li>
-                                                                <li><a href="services-3.html">Pet Services</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-menu col-xl-3 col-lg-12">
-                                                        <h3 class="title">Others</h3>
-                                                        <div class="content">
-                                                            <ul class="menu-col">
-                                                                <li><a href="our-team.html">Our team</a></li>
-                                                                <li><a href="team-details.html">Team Details</a></li>
-                                                                <li><a href="faq.html">FAQ</a></li>
-                                                                <li><a href="error.html">404 page</a></li>
+                                                                <li><a href="{{url('gallery')}}">Gallery</a></li>
+                                                                <li><a href="{{url('article')}}">Article</a></li>
+                                                                <li><a href="{{url('faq')}}">FAQ</a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -105,40 +87,7 @@
                                                             <ul class="menu-col-img">
                                                                 <li>
                                                                     <a href="about.html">
-                                                                        <img class="img-fluid" src="images/bg-meghamenu.jpg" alt="bimg">
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="mega-menu-item megamenu-fw">
-                                        <a href="#" class="mega-menu-link">Services</a>
-                                        <ul class="mega-submenu megamenu-content" role="menu">
-                                            <li>
-                                                <div class="row">
-                                                    <div class="col-menu col-xl-3 col-lg-12">
-                                                        <h3 class="title">Services details</h3>
-                                                        <div class="content">
-                                                            <ul class="menu-col">
-                                                                <li><a href="services-details-1.html">Baby Services details</a></li>
-                                                                <li><a href="services-details-2.html">Baby Services details</a></li>
-                                                                <li><a href="services-details-3.html">Carer Services details</a></li>
-                                                                <li><a href="services-details-4.html">Carer Services details</a></li>
-                                                                <li><a href="services-details-5.html">Pet Services details</a></li>
-                                                                <li><a href="services-details-6.html">Pet Services details</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-menu col-xl-9 col-lg-12">
-                                                        <div class="content">
-                                                            <ul class="menu-col-img">
-                                                                <li>
-                                                                    <a href="about.html">
-                                                                        <img class="img-fluid" src="images/bg-meghamenu-002.jpg" alt="bimg">
+                                                                        <img class="img-fluid" src="https://pbs.twimg.com/media/FDZuWk_VgAgKWZ9?format=jpg&name=medium" alt="bimg">
                                                                     </a>
                                                                 </li>
                                                             </ul>
@@ -149,25 +98,7 @@
                                         </ul>
                                     </li>
                                     <li class="mega-menu-item">
-                                        <a href="#" class="mega-menu-link">Blog</a>
-                                        <ul class="mega-submenu">
-                                            <li>
-                                                <div class="row">
-                                                    <div class="col-menu col-xl-12 col-lg-12">
-                                                        <div class="content">
-                                                            <ul class="menu-col">
-                                                                <li><a href="blog.html">Blog Classic</a></li>
-                                                                <li><a href="blog-grid.html">Blog Grid View</a></li>
-                                                                <li><a href="blog-single.html">Blog Single View</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="mega-menu-item">
-                                        <a href="contact-us.html">Contact us</a>
+                                        <a href="{{url('contact')}}">Contact</a>
                                     </li>
                                 </ul>
                             </nav><!-- menu end -->
