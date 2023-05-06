@@ -1,52 +1,3 @@
-/**
-  * Name: Babysitter
-  * Version: 1.0
-  * Author: Themetechmount
-  * Author URI: https://www.preyantechnosys.com
-*/
-
-/**
-  1. General
-     - Variables
-     - Extra-outer
-
-  2. Spacing
-
-  3. Color
-     - Skin-color, Skin-bg-color, Skin-border-color
-     - darkGrey-color, darkGrey-bg-color
-     - white-color, white-bg-color, white-border-color
-     - Grey-color, Grey-bg-color, grey-border-color
-
-  4. Pre-loader
-
-  5. SocialIcon / TooltipTop
-
-  6. Slick_dots/arrows
-
-  7. TopBar
-
-  8. Header
-     - SiteBrand(logo)
-     - SiteNavigation(Menu)
-     - side-menu
-
-  9. Footer
-     - FirstFooter
-     - SecondFooter
-
-  10. GoTop BUtton
-
-  11. Page-Title-Row
-
-  12. Inner-Pages
-      - single-pages-content
-      - Classic_Blog
-      - Single_Blog
-      - Contact_page
-      - Error_page
-      - Map
-**/
 
 /* ===============================================
     General
@@ -770,9 +721,9 @@ ul.social-icons{
     margin-right: 0px;
 }
 .social-icons li a {
-    display: block;
+    /*display: block;
     min-width: 26px;
-    text-align: center;
+    text-align: center;*/
 }
 .social-icons.circle li > a {
     border-width: 1px ;

@@ -64,9 +64,9 @@ nav.main-menu {
     border: none;
     z-index: 2;
 }
-nav.main-menu ul { 
-  padding: 0px; 
-  margin: 0px; 
+nav.main-menu ul {
+  padding: 0px;
+  margin: 0px;
   list-style: none;
 }
 nav.main-menu ul.menu > li {
@@ -101,7 +101,7 @@ nav.main-menu ul.menu li ul.mega-submenu li a {
     position: relative;
 }
 nav.main-menu ul.menu li ul.mega-submenu li ul.menu-col li a { position: relative; }
-nav.main-menu ul.menu li ul.mega-submenu li ul.menu-col li a:after { 
+nav.main-menu ul.menu li ul.mega-submenu li ul.menu-col li a:after {
     content: "";
     position: absolute;
     bottom: 2px;
@@ -141,8 +141,8 @@ nav.main-menu ul.menu li ul.mega-submenu > li:last-child > a { border-bottom: 0;
 ul.menu-col li a:hover,
 ul.menu-col li a:focus {
     text-decoration: none;
-}  
-nav.main-menu ul.menu li > ul.mega-submenu > li > a > span { 
+}
+nav.main-menu ul.menu li > ul.mega-submenu > li > a > span {
     display: inline !important;
     padding: 3px 8px;
     background: #ff006d;
@@ -166,7 +166,7 @@ nav.main-menu ul.mega-submenu ul.menu-col li.active a { color: var(--base-skin);
     nav.main-menu ul.menu li ul.megamenu-home > li ,
     nav.main-menu ul.menu li ul.megamenu-content > li ,
     nav.main-menu ul.menu li ul.megamenu-content > li ul.menu-col.menu-col-img li { padding: 0px !important; }
-    nav.main-menu ul.menu li ul.mega-submenu li a { 
+    nav.main-menu ul.menu li ul.mega-submenu li a {
         border: 0;
         display: inline-block;
         position: relative;
@@ -189,7 +189,18 @@ nav.main-menu ul.mega-submenu ul.menu-col li.active a { color: var(--base-skin);
         font-size: 15px;
         line-height: 15px;
     }
-    nav.main-menu ul.menu > li > a:after {
+    /*nav.main-menu ul.menu > li > a:after {
+        position: absolute;
+        content: "\f107";
+        font-family: "Font Awesome 5 Free";
+        font-size: 12px;
+        opacity: 0.8;
+        top: 2px;
+        right: 8px;
+        transform: rotate(0);
+        transition: transform .5s cubic-bezier(.19,1,.22,1);
+    }*/
+    .submenu a:after{
         position: absolute;
         content: "\f107";
         font-family: "Font Awesome 5 Free";
@@ -202,7 +213,7 @@ nav.main-menu ul.mega-submenu ul.menu-col li.active a { color: var(--base-skin);
     }
     nav.main-menu ul.menu > li:last-child > a:after { content: unset; }
     nav.main-menu ul.menu > li:hover > a:after { transform: rotate(180deg); transition: transform .5s cubic-bezier(.19,1,.22,1); }
-    nav.main-menu li.mega-menu-item > ul.mega-submenu { z-index: 9; transform: translate(0, 12px); 
+    nav.main-menu li.mega-menu-item > ul.mega-submenu { z-index: 9; transform: translate(0, 12px);
         transition: opacity 300ms ease-in, transform 300ms ease-in, visibility 300ms ease-in; }
     nav.main-menu li.mega-menu-item:hover > ul.mega-submenu {
         z-index: 10;
@@ -219,7 +230,7 @@ nav.main-menu ul.mega-submenu ul.menu-col li.active a { color: var(--base-skin);
     }
     nav.main-menu  ul.mega-submenu.megamenu-home .col-menu { position: relative; }
     nav.main-menu  ul.mega-submenu.megamenu-home .col-menu .content { overflow: hidden; }
-    nav.main-menu  ul.mega-submenu.megamenu-home .col-menu .menu-col-img li:hover .title { 
+    nav.main-menu  ul.mega-submenu.megamenu-home .col-menu .menu-col-img li:hover .title {
         bottom: 0;
         opacity: 1;
         transition: all 0.3s ease;
@@ -246,7 +257,7 @@ nav.main-menu ul.mega-submenu ul.menu-col li.active a { color: var(--base-skin);
         line-height: 25px;
         font-weight: 400;
         margin-bottom: 0;
-        text-transform: capitalize;        
+        text-transform: capitalize;
     }
     nav.main-menu ul.mega-submenu ul.menu-col li a { color: var(--base-bodyfont-color); }
     nav.main-menu ul.mega-submenu ul.menu-col li:hover a { color: var(--base-skin); }
@@ -348,10 +359,10 @@ nav.main-menu ul.mega-submenu ul.menu-col li.active a { color: var(--base-skin);
     nav.main-menu ul.menu li ul.mega-submenu li a { color: var(--base-white)!important; }
     nav.main-menu ul.menu > li.active > a ,
     nav.main-menu ul.menu li ul.mega-submenu li.active > a { color: var(--base-skin)!important; }
-    nav.main-menu ul.menu > li > a { 
-        font-size: 13px !important; 
-        line-height: 20px !important; 
-        padding: 10px 10px 9px !important; 
+    nav.main-menu ul.menu > li > a {
+        font-size: 13px !important;
+        line-height: 20px !important;
+        padding: 10px 10px 9px !important;
     }
     nav.main-menu ul.menu li ul.mega-submenu li a {
         max-width: 230px;
@@ -379,8 +390,8 @@ nav.main-menu ul.mega-submenu ul.menu-col li.active a { color: var(--base-skin);
         border-radius: 4px;
         background-color: var(--base-dark);
     }
-    .bg-base-dark .menubar-inner, 
-    .bg-base-dark .menubar-inner:after, 
+    .bg-base-dark .menubar-inner,
+    .bg-base-dark .menubar-inner:after,
     .bg-base-dark .menubar-inner:before { background-color: var(--base-white); }
     .menubar--squeeze .menubar-inner {
         top: 50%;

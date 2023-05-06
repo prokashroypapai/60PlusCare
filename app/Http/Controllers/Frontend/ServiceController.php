@@ -12,5 +12,9 @@ class ServiceController extends Controller
         if ($service_slug == null) {
             return view('frontend.service.index');
         }
+        else{
+            $myView = 'frontend.service.' . $service_slug;
+            return view($myView);
+        }
     }
 }

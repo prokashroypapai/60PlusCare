@@ -35,34 +35,9 @@
 <!-- page start -->
 <div class="page">
 
-    <!-- header start -->
-    <header id="masthead" class="header prt-header-style-01">
-        <!-- topbar -->
-        <!--<div class="top_bar prt-topbar-wrapper bg-base-dark text-base-white clearfix">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="d-flex flex-row align-items-center justify-content-center">
-                            <div class="top_bar_contact_item">
-                                <span><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>We all match you with a good, an experienced and a reliable babysitter that suits your requirements.</span>
-                            </div>
-                            <div class="top_bar_contact_item">
-                                <a href="about-us.html">Learn More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>-->
-        <!-- topbar end -->
-
-        <!-- site-header-menu -->
     @include('frontend.common.header')
-    <!-- site-header-menu end-->
-    </header>
-    <!-- header end -->
 
-@yield('content')
+    @yield('content')
 
 <!-- footer start -->
     @include('frontend.common.footer')

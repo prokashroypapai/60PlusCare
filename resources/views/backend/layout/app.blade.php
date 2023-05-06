@@ -97,7 +97,7 @@
                             <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
                                 Settings
                             </a>
-                            <a class="dropdown-item d-flex align-items-center justify-content-between" href="{{url('logout')}}">
+                            <a class="dropdown-item d-flex align-items-center justify-content-between" href="{{url('admin/logout')}}">
                                 <span>Log Out</span>
                             </a>
                         </div>
