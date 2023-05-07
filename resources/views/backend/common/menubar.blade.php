@@ -19,6 +19,7 @@
                             <a href="{{url('admin/services')}}" class="dropdown-item">Services</a>
                             <a href="{{url('admin/members')}}" class="dropdown-item">Members</a>
                             <a href="{{url('admin/subscriptions')}}" class="dropdown-item">Subscriptions</a>
+                            <a href="{{url('admin/memberships')}}" class="dropdown-item">Memberships</a>
                         </div>
                     </li>
 
@@ -58,6 +59,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="topnav-more">
                             <a href="{{url('admin/staffs')}}" class="dropdown-item">Staffs</a>
+                            <a href="{{url('admin/doctors')}}" class="dropdown-item">Doctors</a>
                             <a href="{{url('admin/locations')}}" class="dropdown-item">Locations</a>
                         </div>
                     </li>

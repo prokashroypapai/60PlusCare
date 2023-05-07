@@ -18,6 +18,7 @@ class Package extends Model
         'package_price',
         'package_price_duration',
         'package_details',
+        'package_summary',
         'num_days',
         'status'
     ];

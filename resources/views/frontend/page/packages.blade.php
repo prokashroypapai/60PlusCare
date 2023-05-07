@@ -250,10 +250,10 @@
                             </tr>
                             <tr>
                                 <td></td>
-                                <td><button class="btn btn-primary">Avail Package</button></td>
-                                <td><button class="btn btn-primary">Avail Package</button></td>
-                                <td><button class="btn btn-primary">Avail Package</button></td>
-                                <td><button class="btn btn-primary">Avail Package</button></td>
+                                <td><button class="btn btn-primary" onclick='window.location.href="{{url('register')}}"'>Avail Package</button></td>
+                                <td><button class="btn btn-primary" onclick='window.location.href="{{url('register')}}"'>Avail Package</button></td>
+                                <td><button class="btn btn-primary" onclick='window.location.href="{{url('register')}}"'>Avail Package</button></td>
+                                <td><button class="btn btn-primary" onclick='window.location.href="{{url('register')}}"'>Avail Package</button></td>
                             </tr>
                             <tr>
                                 <td style="background-color: #b2ffae">Payment Mode</td>

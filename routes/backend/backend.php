@@ -16,6 +16,12 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     //staffs
     require __DIR__ . '/staff.php';
 
+    //doctor
+    require __DIR__ . '/doctor.php';
+
+    //membership
+    require __DIR__ . '/membership.php';
+
     //service
     require __DIR__ . '/service.php';
 

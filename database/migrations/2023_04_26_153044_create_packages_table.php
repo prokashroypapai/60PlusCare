@@ -18,6 +18,7 @@ return new class extends Migration
             $table->float('package_price', 10,2)->nullable();
             $table->string('package_price_duration', 5)->nullable();
             $table->longText('package_details')->nullable();
+            $table->text('package_summary')->nullable();
             $table->integer('num_days')->nullable();
             $table->boolean('status')->default(1);
             $table->timestamps();

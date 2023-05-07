@@ -36,7 +36,7 @@ class StaffController extends Controller
         $data = [
             'name' => $request->name,
             'email' => $request->email,
-            'mobile' => $request->mobile,
+            'mobile' => '+91' . $request->mobile,
             'password' => bcrypt($request->password),
             'permission' => $request->permission,
             'status' => User::STATUS_ACTIVE

@@ -13,12 +13,15 @@ class Doctor extends Model
         'user_id',
         'picture_id',
         'doctor_name',
+        'doctor_slug',
         'doctor_designation',
         'doctor_experience',
+        'is_home',
         'status'
     ];
 
     protected $casts = [
+        'is_home' => 'boolean',
         'status' => 'boolean'
     ];
 

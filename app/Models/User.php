@@ -19,6 +19,8 @@ class User extends Authenticatable
     const PERMISSION_MANAGER = 1;
     const PERMISSION_MEMBER = 2;
 
+    const defaultPassword = '12345678';
+
     protected $fillable = [
         'name',
         'email',

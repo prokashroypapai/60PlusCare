@@ -74,6 +74,14 @@
                                 </div>
 
                                 <div class="form-group">
+                                    <label for="package_summary">Summary</label>
+                                    @if ($errors->has('package_summary'))
+                                        <span class="text-danger">{{ $errors->first('package_summary') }}</span>
+                                    @endif
+                                    <textarea id="package_summary" name="package_summary" class="form-control" rows="20">{{$package->package_summary}}</textarea>
+                                </div>
+
+                                <div class="form-group">
                                     <label for="num_days">Number of days</label>
                                     @if ($errors->has('num_days'))
                                         <span class="text-danger">{{ $errors->first('num_days') }}</span>

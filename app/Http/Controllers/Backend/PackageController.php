@@ -41,6 +41,7 @@ class PackageController extends Controller
             'package_price' => $request->package_price,
             'package_price_duration' => $request->package_price_duration,
             'package_details' => $request->package_details,
+            'package_summary' => $request->package_summary,
             'num_days' => $request->num_days,
             'status' => Package::STATUS_ACTIVE
         ];
@@ -84,6 +85,7 @@ class PackageController extends Controller
             'package_price' => $request->package_price,
             'package_price_duration' => $request->package_price_duration,
             'package_details' => $request->package_details,
+            'package_summary' => $request->package_summary,
             'num_days' => $request->num_days,
             'status' => $request->status
         ];

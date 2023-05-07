@@ -91,7 +91,7 @@
                                             <a href="{{url('/')}}">Home</a>
                                         </li>
                                         <li class="mega-menu-item">
-                                            <a href="{{url('/')}}">About</a>
+                                            <a href="{{url('/about')}}">About</a>
                                         </li>
                                         <li class="mega-menu-item submenu">
                                             <a href="#" class="mega-menu-link">Services</a>
@@ -151,7 +151,7 @@
                                                             <div class="content">
                                                                 <ul class="menu-col-img">
                                                                     <li>
-                                                                        <a href="about.html">
+                                                                        <a href="https://pbs.twimg.com/media/FDZuWk_VgAgKWZ9?format=jpg&name=medium">
                                                                             <img class="img-fluid" src="https://pbs.twimg.com/media/FDZuWk_VgAgKWZ9?format=jpg&name=medium" alt="bimg">
                                                                         </a>
                                                                     </li>
@@ -177,7 +177,7 @@
                                             <div class="widget_icon">
                                             </div>
                                             <div class="widget_content">
-                                                <button class="registerBtn">REGISTER</button>
+                                                <button class="registerBtn" onclick='window.location.href="{{url('register')}}"'>REGISTER</button>
                                             </div>
                                         </div>
                                     </div>
