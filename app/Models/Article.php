@@ -27,4 +27,16 @@ class Article extends Model
         'posted_at' => 'datetime',
         'status' => 'boolean'
     ];
+
+    public function scopeActive(){
+        return $this->where('status', true);
+    }
+
+    public function articlePicture(){
+        return $this->hasOne(Picture::class, 'id', 'picture_id');
+    }
+
+    public function articleUser(){
+        return $this->hasOne(User::class, 'id', 'user_id');
+    }
 }

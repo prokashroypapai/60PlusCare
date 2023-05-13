@@ -18,6 +18,11 @@ class MembershipController extends Controller
         return view('backend.membership.index', compact('memberships'));
     }
 
+    public function show($id){
+        $membership = Membership::findorFail($id);
+        return view('backend.membership.show', compact('membership'));
+    }
+
     public function action($id, $action){
         $membership = Membership::findorFail($id);
 

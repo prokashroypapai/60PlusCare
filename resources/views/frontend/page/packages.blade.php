@@ -215,6 +215,15 @@
                             </tr>
                             <tr>
                                 <td style="background-color: #f1ffc5">
+                                    Medicines Upto 20% Discount
+                                </td>
+                                <td>YES</td>
+                                <td>YES</td>
+                                <td>YES</td>
+                                <td>YES *</td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: #f1ffc5">
                                     Pathology Test Discount off upto 20%
                                     <p>(from our Associated NABL certified Laboratory)</p>
                                 </td>
@@ -243,10 +252,10 @@
                                 <td style="background-color: #b2ffae">
                                     Monthly Charges for Individual / Couple
                                 </td>
-                                <td>₹7200</td>
-                                <td>₹3600</td>
-                                <td>₹1800</td>
-                                <td>₹1100</td>
+                                <td>₹7900</td>
+                                <td>₹4400</td>
+                                <td>₹2200</td>
+                                <td>₹1400</td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -274,9 +283,9 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td style="background-color: #f1ffc5">Dietician Teleconsultation</td>
+                                <td style="background-color: #f1ffc5">DOCTORS Home Visit</td>
                                 <td colspan="4">
-                                    Starting from ₹600 per Consultation
+                                    Starting from ₹1500 per Consultation
                                 </td>
                             </tr>
                             <tr>

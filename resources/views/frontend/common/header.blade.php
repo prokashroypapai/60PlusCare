@@ -93,23 +93,8 @@
                                         <li class="mega-menu-item">
                                             <a href="{{url('/about')}}">About</a>
                                         </li>
-                                        <li class="mega-menu-item submenu">
-                                            <a href="#" class="mega-menu-link">Services</a>
-                                            <ul class="mega-submenu">
-                                                <li>
-                                                    <div class="row">
-                                                        <div class="col-menu col-xl-12 col-lg-12">
-                                                            <div class="content">
-                                                                <ul class="menu-col">
-                                                                    <li><a href="{{url('services')}}">All Services</a></li>
-                                                                    <li><a href="{{url('services/physiotherapy')}}">Physiotherapy</a></li>
-                                                                    <li><a href="{{url('services/diet-nutrition')}}">Diet & Nutrition</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                        <li class="mega-menu-item">
+                                            <a href="{{url('/services/physiotherapy')}}">Physiotherapy</a>
                                         </li>
                                         <li class="mega-menu-item megamenu-fw submenu">
                                             <a href="#" class="mega-menu-link">Knowledge</a>
@@ -123,7 +108,7 @@
                                                                     <li><a href="{{url('packages')}}">Packages</a></li>
                                                                     <li><a href="{{url('doctors')}}">Doctors</a></li>
                                                                     <li><a href="{{url('patient-study')}}">Patient Study</a></li>
-                                                                    <li><a href="{{url('physiotherapy')}}">Physiotherapy</a></li>
+                                                                    <li><a href="{{url('services/diet-nutrition')}}">Diet & Nutrition</a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>

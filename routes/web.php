@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\WelcomeController;
 use App\Http\Controllers\Frontend\ServiceController;
 use App\Http\Controllers\Frontend\RegisterController;
+use App\Http\Controllers\Frontend\ArticleController;
+use App\Http\Controllers\Frontend\GalleryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +38,12 @@ Route::get('city/{location_slug?}', [WelcomeController::class, 'location']);
 
 //member register
 Route::get('register', [RegisterController::class, 'index']);
+
+//article
+Route::get('article/{slug?}', [ArticleController::class, 'index']);
+
+//gallery
+Route::get('gallery/{slug?}', [GalleryController::class, 'index']);
 
 //all paths
 Route::get('/{path?}', [WelcomeController::class, 'getpages'])->where('path', '.*');

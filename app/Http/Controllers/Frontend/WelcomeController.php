@@ -17,7 +17,7 @@ class WelcomeController extends Controller
 
     //all pages
     public function getpages($path, Request $request){
-        $page = Page::where('page_slug', $path)->first();
+        $page = Page::where('page_slug', $path)->where('status', true)->first();
 
         if(!$path || !$page){
             abort(404);

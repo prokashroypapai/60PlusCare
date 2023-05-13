@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\MemberController;
+use App\Http\Controllers\API\WelcomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,6 @@ use App\Http\Controllers\API\MemberController;
 
 //member registration
 Route::post('registerMember', [MemberController::class, 'store']);
+
+//contact
+Route::post('contact', [WelcomeController::class, 'contact']);

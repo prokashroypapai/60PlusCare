@@ -5,16 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Gallery extends Model
+class Testimonial extends Model
 {
     use HasFactory;
 
-    const STATUS_ACTIVE = 1;
-    const STATUS_INACTIVE = 0;
-
     protected $fillable = [
-        'gallery_name',
-        'gallery_slug',
+        'user_id',
+        'picture_id',
+        'name',
+        'designation',
+        'comment',
+        'rating',
         'status'
     ];
 
@@ -26,7 +27,7 @@ class Gallery extends Model
         return $this->where('status', true);
     }
 
-    public function galleryImages(){
-        return $this->hasMany(GalleryImage::class);
+    public function testimonialPicture(){
+        return $this->hasOne(Picture::class, 'id', 'picture_id');
     }
 }

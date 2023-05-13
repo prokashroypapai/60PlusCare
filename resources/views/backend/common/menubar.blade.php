@@ -30,8 +30,8 @@
                         <div class="dropdown-menu" aria-labelledby="topnav-pages">
                             <a href="{{url('admin/pages')}}" class="dropdown-item">Pages</a>
                             <a href="{{ url('admin/galleries') }}" class="dropdown-item">Gallery</a>
-                            <a href="{{url('sliders')}}" class="dropdown-item">Sliders</a>
-                            <a href="{{url('articles')}}" class="dropdown-item">Articles</a>
+                            <a href="{{url('admin/articles')}}" class="dropdown-item">Articles</a>
+                            <a href="{{url('admin/testimonials')}}" class="dropdown-item">Testimonials</a>
                         </div>
                     </li>
 

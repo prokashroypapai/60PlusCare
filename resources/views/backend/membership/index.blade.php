@@ -52,7 +52,7 @@
                                         <td>{{$membership->email}}</td>
                                         <td>{{$membership->city}}</td>
                                         <td>
-                                            <button class="btn btn-success" onclick="myFunc({{$membership->id}}, 'accept')">Accept</button>
+                                            <button class="btn btn-success" onclick="myFunc({{$membership->id}}, '')">Accept</button>
                                             <button class="btn btn-danger" onclick="myFunc({{$membership->id}}, 'reject')">Reject</button>
                                         </td>
                                     </tr>
@@ -73,7 +73,7 @@
 
     <script>
         function myFunc(id, action){
-            window.location.href = "{{url('admin/memberships')}}" + '/' + id + '/' + action;
+            window.location.href = "{{url('admin/membership')}}" + '/' + id + '/' + action;
         }
     </script>
 @endsection

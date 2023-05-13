@@ -42,4 +42,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
 
     //gallery
     require __DIR__ . '/gallery.php';
+
+    //article
+    require __DIR__ . '/article.php';
+
+    //testimonial
+    require __DIR__ . '/testimonial.php';
 });
