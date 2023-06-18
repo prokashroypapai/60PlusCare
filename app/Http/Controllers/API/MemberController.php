@@ -12,7 +12,7 @@ class MemberController extends Controller
     public function store(Request $request){
         $validator = Validator::make($request->all(),
             [
-                'package_id' => 'required',
+                /*'package_id' => 'required',*/
                 'name' => 'required',
                 'email' => 'required|email',
                 'mobile' => 'required|digits:10',
@@ -33,7 +33,8 @@ class MemberController extends Controller
         }
 
         $data = [
-            'package_id' => $request->package_id,
+            /*'package_id' => $request->package_id,*/
+            'package_id' => 5,
             'name' => $request->name,
             'email' => $request->email,
             'mobile' => '+91' . $request->mobile,

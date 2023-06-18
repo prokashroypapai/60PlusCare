@@ -2,7 +2,7 @@
 @section('content')
 
     <!-- page-title -->
-    <div class="prt-page-title-row prt-bg prt-bgimage-yes bgimage-baby-01">
+    <div class="prt-page-title-row prt-bg prt-bgimage-yes" style="background-image: url({{asset('static/images/bgimage-20.jpg')}})">
         <div class="prt-page-title-row-inner prt-bg-layer bg-base-bodycolor">
             <div class="prt-page-title-row-wrapper-inner"></div>
         </div>
@@ -72,7 +72,7 @@
                     </div>
                     <div class="col-xl-6 res-1199-mt-30 align-self-center">
                         <div class="prt_single_image-wrapper text-start">
-                            <img width="686" height="568" class="img-fluid" src="{{asset('static/images/bgimage_2.jpg')}}" alt="single-06">
+                            <img width="686" height="568" class="img-fluid shadow" src="{{asset('static/images/bgimage-20.jpg')}}" alt="single-06">
                         </div>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
         <section class="prt-row about02-our-focus-section clearfix bg-white">
             <div class="container">
                 <div class="row row-equal-height">
-                    <div class="col-lg-4 col-md-4 col-sm-8 col-12">
+                    <div class="col-lg-4 col-md-4 col-sm-8 col-12" id="vision">
                         <div class="featured-icon-box style5">
                             <div class="featured-icon">
                                 <div class="prt-icon prt-icon_element-size-md">
@@ -101,7 +101,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-8 col-12">
+                    <div class="col-lg-4 col-md-4 col-sm-8 col-12" id="mission">
                         <div class="featured-icon-box style5">
                             <div class="featured-icon">
                                 <div class="prt-icon prt-icon_element-size-md">
@@ -120,7 +120,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-8 col-12">
+                    <div class="col-lg-4 col-md-4 col-sm-8 col-12" id="initiative">
                         <div class="featured-icon-box style5">
                             <div class="featured-icon">
                                 <div class="prt-icon prt-icon_element-size-md">

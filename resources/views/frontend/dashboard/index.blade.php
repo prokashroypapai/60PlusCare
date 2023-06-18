@@ -2,7 +2,7 @@
 @section('content')
 
     <!-- page-title -->
-    <div class="prt-page-title-row prt-bg prt-bgimage-yes">
+    <div class="prt-page-title-row prt-bg prt-bgimage-yes" style="background-image: url({{asset('static/images/bgimage-3.jpg')}})">
         <div class="prt-page-title-row-inner prt-bg-layer bg-base-bodycolor">
             <div class="prt-page-title-row-wrapper-inner"></div>
         </div>
@@ -57,8 +57,11 @@
                                                                     <li>
                                                                         <div class="prt-team-list-title">Package: </div>
                                                                         <div class="prt-team-list-value">
-                                                                            <span class="badge bg-success">ACTIVE</span>
-                                                                            <span class="badge bg-danger">INACTIVE</span>
+                                                                            @if(count(Auth::user()->userActiveSubscriptions) > 0)
+                                                                                <span class="badge bg-success">ACTIVE</span>
+                                                                            @else
+                                                                                <span class="badge bg-danger">INACTIVE</span>
+                                                                            @endif
                                                                         </div>
                                                                     </li>
                                                                     <li>

@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="bg-base-dark text-base-white d-flex flex-row align-items-center justify-content-between header-spacing">
+                    <div class="d-flex flex-row align-items-center justify-content-between header-spacing" style="background-color: var(--primaryColor)">
                         <div class="align-self-center">
                             <div class="top_bar_contact_item">
                                 <div class="top_bar_icon prt-icon prt-icon_element-onlytxt">
@@ -32,25 +32,25 @@
                         <div class="align-self-center">
                             <ul class="social-icons">
                                 <li>
-                                    <a href="https://www.facebook.com" aria-label="facebook">
+                                    <a href="https://twitter.com/60PlusClinic" aria-label="twitter">
+                                        <img src="{{asset('static/images/twitter.png')}}" width="30" height="30">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/60PlusClinic" aria-label="facebook">
                                         <img src="{{asset('static/images/facebook.png')}}" width="30" height="30">
                                     </a>
                                 </li>
-                                <li>
+                                <!--<li>
                                     <a href="https://instagram.com/" aria-label="instagram">
                                         <img src="{{asset('static/images/instagram.png')}}" width="30" height="30">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com" aria-label="twitter">
-                                        <img src="{{asset('static/images/twitter.png')}}" width="30" height="30">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://twitter.com" aria-label="youtube">
                                         <img src="{{asset('static/images/youtube.png')}}" width="30" height="30">
                                     </a>
-                                </li>
+                                </li>-->
                             </ul>
                         </div>
                     </div>
@@ -91,7 +91,7 @@
                                             <a href="{{url('/')}}">Home</a>
                                         </li>
                                         <li class="mega-menu-item">
-                                            <a href="{{url('/about')}}">About</a>
+                                            <a href="{{url('/services')}}">Services</a>
                                         </li>
                                         <li class="mega-menu-item">
                                             <a href="{{url('/services/physiotherapy')}}">Physiotherapy</a>
@@ -105,6 +105,7 @@
                                                             <h3 class="title">About 60 Plus Care</h3>
                                                             <div class="content">
                                                                 <ul class="menu-col">
+                                                                    <li><a href="{{url('about')}}">About</a></li>
                                                                     <li><a href="{{url('packages')}}">Packages</a></li>
                                                                     <li><a href="{{url('doctors')}}">Doctors</a></li>
                                                                     <li><a href="{{url('patient-study')}}">Patient Study</a></li>
@@ -128,7 +129,6 @@
                                                                 <ul class="menu-col">
                                                                     <li><a href="{{url('gallery')}}">Gallery</a></li>
                                                                     <li><a href="{{url('article')}}">Article</a></li>
-                                                                    <li><a href="{{url('faq')}}">FAQ</a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -176,16 +176,3 @@
     </div>
     <!-- site-header-menu end-->
 </header><!-- header end -->
-<style>
-    .registerBtn{
-        background-color: #c3215e;
-        color: #fff;
-        font-weight: 600;
-        letter-spacing: 1px;
-        transition: 0.2s;
-        border-radius: 2px;
-    }
-    .registerBtn:active{
-        transform: scale(0.96);
-    }
-</style>

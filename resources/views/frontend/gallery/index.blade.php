@@ -2,7 +2,7 @@
 @section('content')
 
     <!-- page-title -->
-    <div class="prt-page-title-row prt-bg prt-bgimage-yes bgimage-pet-01">
+    <div class="prt-page-title-row prt-bg prt-bgimage-yes bgimage-pet-01" style="background-image: url({{asset(isset($galleries[0]->galleryImages[0]->GalleryPicture->image_thumb) ? $galleries[0]->galleryImages[0]->GalleryPicture->image_thumb : \App\Models\Picture::getDefaultImage()->image_thumb)}})">
         <div class="prt-page-title-row-inner prt-bg-layer bg-base-bodycolor">
             <div class="prt-page-title-row-wrapper-inner"></div>
         </div>
@@ -52,11 +52,12 @@
                     <div class="col-lg-3">
                         <div class="featured-imagebox featured-imagebox-team style2">
                             <div class="featured-thumbnail">
-                                <img class="img-fluid" src="{{ asset(isset($gallery->galleryImages[0]->image_thumb) ? $gallery->galleryImages[0]->image_thumb : \App\Models\Picture::getDefaultImage()->image_thumb)}}" width="277" height="301" alt="image">
+                                <img class="img-fluid" src="{{ asset(isset($gallery->galleryImages[0]->GalleryPicture->image_thumb) ? $gallery->galleryImages[0]->GalleryPicture->image_thumb : \App\Models\Picture::getDefaultImage()->image_thumb)}}" width="277" height="301" alt="image">
                             </div>
                             <div class="featured-content">
                                 <div class="featured-title">
                                     <h3><a href="{{url('gallery/' . $gallery->gallery_slug)}}">{{$gallery->gallery_name}}</a></h3>
+                                    {{$gallery->galleryImages[0]->GalleryPicture->image_thumb}}
                                 </div>
                             </div>
                         </div>

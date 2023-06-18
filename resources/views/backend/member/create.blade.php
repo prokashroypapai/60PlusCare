@@ -66,6 +66,11 @@
                                     <input type="password" id="password" name="password" class="form-control">
                                 </div>
 
+                                <!--<div class="form-group">
+                                    <input type="checkbox" id="no_auto_number" name="no_auto_number" value="1">
+                                    <label for="no_auto_number">Do not use Auto Registration Number</label>
+                                </div>-->
+
                                 <button type="submit" class="btn btn-primary waves-effect waves-light">Save</button>
 
                             </form>
@@ -75,4 +80,11 @@
             </div>
         </div>
     </div>
+    <script>
+        $('#mobile').focus(function(){
+            if($(this).val().substring(0,3) !== '+91'){
+                $(this).val("+91" + $(this).val());
+            }
+        });
+    </script>
 @endsection

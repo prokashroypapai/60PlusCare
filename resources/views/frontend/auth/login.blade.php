@@ -2,7 +2,7 @@
 @section('content')
 
     <!-- page-title -->
-    <div class="prt-page-title-row prt-bg prt-bgimage-yes">
+    <div class="prt-page-title-row prt-bg prt-bgimage-yes" style="background-image: url({{asset('static/images/bgimage-3.jpg')}})">
         <div class="prt-page-title-row-inner prt-bg-layer bg-base-bodycolor">
             <div class="prt-page-title-row-wrapper-inner"></div>
         </div>
@@ -12,14 +12,14 @@
                     <div class="col-lg-12">
                         <div class="prt-page-title-row-heading">
                             <div class="page-title-heading">
-                                <h2 class="title">Contact us</h2>
+                                <h2 class="title">Login</h2>
                             </div>
                             <div class="breadcrumb-wrapper">
                                     <span>
-                                        <a href="index.html">Home</a>
+                                        <a href="{{url('/')}}">Home</a>
                                     </span>
                                 <span>
-                                        <a href="#">Contact Us</a>
+                                        <a href="#">Login</a>
                                     </span>
                             </div>
                         </div>
@@ -78,7 +78,7 @@
                                         <input name="password" type="password" value="{{old('password')}}" placeholder="Email Address">
                                     </div>
                                     <div class="mt-5">
-                                        <button type="submit" value="submit">Login</button>
+                                        <button type="submit" value="submit" class="registerBtn">Login</button>
                                     </div>
                                 </div>
                             </form>

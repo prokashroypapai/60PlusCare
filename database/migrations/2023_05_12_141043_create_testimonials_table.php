@@ -18,7 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('picture_id')->nullable();
             $table->foreign('picture_id')->references('id')->on('pictures');
             $table->string('name', 30)->nullable();
-            $table->string('designation', 20)->nullable();
+            $table->string('designation', 30)->nullable();
             $table->text('comment')->nullable();
             $table->tinyInteger('rating')->nullable();
             $table->boolean('status')->default(1);

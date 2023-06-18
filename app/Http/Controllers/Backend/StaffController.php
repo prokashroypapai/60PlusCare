@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class StaffController extends Controller
 {
@@ -20,15 +21,15 @@ class StaffController extends Controller
     public function store(Request $request){
         $request->validate([
             'name' => 'required',
-            'email' => 'email',
-            'mobile' => 'required|digits:10',
+            'email' => 'email|unique:users',
+            'mobile' => 'required',
             'password' => 'required',
             'permission' => 'required'
         ],[
             'name.required' => 'Name is required',
             'email.email' => 'Valid email is required',
+            'email.unique' => 'Email already exists',
             'mobile.required' => 'Mobile number is required',
-            'mobile.digits' => 'Valid Mobile number is required',
             'password.required' => 'Password is required',
             'permission.required' => 'Permission is required'
         ]);
@@ -36,7 +37,7 @@ class StaffController extends Controller
         $data = [
             'name' => $request->name,
             'email' => $request->email,
-            'mobile' => '+91' . $request->mobile,
+            'mobile' => $request->mobile,
             'password' => bcrypt($request->password),
             'permission' => $request->permission,
             'status' => User::STATUS_ACTIVE
@@ -58,22 +59,27 @@ class StaffController extends Controller
     }
 
     public function update(Request $request){
+        $id = $request->id;
+
         $request->validate([
             'name' => 'required',
-            'email' => 'email',
-            'mobile' => 'required|digits:10',
+            'email' => ['nullable',
+                Rule::unique('users')->ignore($id),
+            ],
+            'mobile' => ['required',
+                Rule::unique('users')->ignore($id),
+            ],
             'permission' => 'required'
         ],[
-            'name.required' => 'Name is required',
-            'email.email' => 'Valid email is required',
-            'mobile.required' => 'Mobile number is required',
-            'mobile.digits' => 'Valid Mobile number is required',
+            'email.unique' => 'Email is already exists',
+            'mobile.required' => 'Mobile is required',
+            'mobile.unique' => 'Mobile number already exists',
             'permission.required' => 'Permission is required'
         ]);
 
         $user = User::findorFail($request->id);
 
-        if($request->password == ""){
+        if($request->password != ""){
             $data = [
                 'name' => $request->name,
                 'email' => $request->email,

@@ -16,6 +16,10 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('alternate_no', 15)->nullable();
+            $table->string('registration_no', 15)->unique();
+            $table->boolean('is_policy')->default(false);
+            $table->string('policy_number', 30)->nullable();
+            $table->boolean('is_medical_allergy')->default(false);
             $table->string('id_type', 30)->nullable();
             $table->string('id_no', 20)->nullable();
             $table->date('dob')->nullable();
@@ -33,7 +37,7 @@ return new class extends Migration
             $table->string('facebook_id', 191)->nullable();
             $table->string('staying_with', 10)->nullable();
             $table->string('location_type', 30)->nullable();
-            $table->string('security_available', 30)->nullable();
+            $table->string('security_available', 40)->nullable();
             $table->string('blood_group', 3)->nullable();
             $table->string('medical_condition', 191)->nullable();
             $table->text('hospitalization_history')->nullable();

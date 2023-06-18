@@ -2,7 +2,7 @@
 @section('content')
 
     <!-- page-title -->
-    <div class="prt-page-title-row prt-bg prt-bgimage-yes">
+    <div class="prt-page-title-row prt-bg prt-bgimage-yes" style="background-image: url({{asset(isset($location->locationPicture->image_full) ? $location->locationPicture->image_full : \App\Models\Picture::getDefaultImage()->image_full)}})">
         <div class="prt-page-title-row-inner prt-bg-layer bg-base-bodycolor">
             <div class="prt-page-title-row-wrapper-inner"></div>
         </div>

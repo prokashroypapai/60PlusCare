@@ -2,7 +2,7 @@
 @section('content')
 
     <!-- page-title -->
-    <div class="prt-page-title-row prt-bg prt-bgimage-yes">
+    <div class="prt-page-title-row prt-bg prt-bgimage-yes" style="background-image: url({{asset('static/images/bgimage-8.jpg')}})">
         <div class="prt-page-title-row-inner prt-bg-layer bg-base-bodycolor">
             <div class="prt-page-title-row-wrapper-inner"></div>
         </div>
@@ -122,7 +122,7 @@
                             <div class="prt-col-wrapper-bg-layer prt-bg-layer"></div>
                             <div class="layer-content"></div>
                         </div>
-                        <img class="prt-equal-height-image" src="images/bg-image/col-bgimage-17.jpg" alt="col-bgimage-17">
+                        <img class="prt-equal-height-image" src="{{asset('static/images/bgimage-21.jpg')}}" alt="col-bgimage-17">
                     </div>
                     <div class="col-lg-5">
                         <div class="bg-base-white spacing-33">

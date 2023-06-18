@@ -21,7 +21,7 @@ class ManagerMiddleware
             return $next($request);
         }
         else{
-            abort(999);
+            return redirect('admin/login');
         }
     }
 }

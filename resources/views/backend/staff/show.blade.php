@@ -89,4 +89,11 @@
             </div>
         </div>
     </div>
+    <script>
+        $('#mobile').focus(function(){
+            if($(this).val().substring(0,3) !== '+91'){
+                $(this).val("+91" + $(this).val());
+            }
+        });
+    </script>
 @endsection

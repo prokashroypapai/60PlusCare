@@ -19,7 +19,7 @@
 
 </head>
 
-<body style="background-image: linear-gradient(45deg, #c9187d, #c20648)">
+<body style="background-image: linear-gradient(45deg, #2e3640, #293340)">
 
 <div>
     <div class="container">

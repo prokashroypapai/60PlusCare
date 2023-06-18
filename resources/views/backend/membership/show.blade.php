@@ -42,7 +42,9 @@
                                     @endif
                                     <select id="package_id" name="package_id" class="form-control">
                                         <option value="0">Select</option>
-                                        <option value="1">Name</option>
+                                        @foreach(\App\Models\Package::get() as $package)
+                                            <option value="{{$package->id}}" @if($package->id == $membership->package_id) selected @endif>{{$package->package_name}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
 

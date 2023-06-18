@@ -69,7 +69,7 @@
 
                                 <div class="form-group">
                                     <label for="">Location Image</label>
-                                    <img src="{{asset($location->locationPicture->image_thumb)}}" width="75px" height="75px">
+                                    <img src="{{asset(isset($location->locationPicture->image_thumb) ? $location->locationPicture->image_thumb : \App\Models\Picture::getDefaultImage()->image_thumb)}}" width="75px" height="75px">
                                 </div>
 
                                 <div class="form-group">

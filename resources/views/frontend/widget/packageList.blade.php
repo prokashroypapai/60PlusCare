@@ -2,7 +2,7 @@
 @section('content')
 
     <!-- page-title -->
-    <div class="prt-page-title-row prt-bg prt-bgimage-yes bgimage-pet-03">
+    <div class="prt-page-title-row prt-bg prt-bgimage-yes" style="background-image: url({{asset('static/images/bgimage-10.jpg')}})">
         <div class="prt-page-title-row-inner prt-bg-layer bg-base-bodycolor">
             <div class="prt-page-title-row-wrapper-inner"></div>
         </div>
@@ -12,18 +12,17 @@
                     <div class="col-lg-12">
                         <div class="prt-page-title-row-heading">
                             <div class="page-title-heading">
-                                <h2 class="title">Pet Services details</h2>
+                                <h2 class="title">Packages</h2>
                             </div>
                             <div class="breadcrumb-wrapper">
-                                    <span>
-                                        <a href="index.html">Home</a>
-                                    </span>
                                 <span>
-                                        <a href="services-2.html">Pet Services</a>
-                                    </span>
+                                    <a href="{{url('/')}}">Home</a>
+                                </span>
                                 <span>
-                                        <a href="#">Services Details</a>
-                                    </span>
+                                    <a href="#">
+                                        Packages
+                                    </a>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -37,7 +36,7 @@
     <div class="site-main">
 
         <!-- services-section -->
-        <section class="prt-row service-detail03-service-section bg-base-white clearfix">
+        <section class="prt-row team-section bg-base-grey clearfix">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -73,7 +72,7 @@
                                     </p>
                                 </div>
                                 <p>
-                                    <a href="{{url('register?package_id=' . $package->id)}}">
+                                    <a href="{{url('register?package_id=' . $package->id)}}" style="color: var(--primaryColor)">
                                         Proceed with {{$package->package_name}} Package
                                     </a>
                                 </p>

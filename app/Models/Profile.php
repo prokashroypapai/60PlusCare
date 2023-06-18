@@ -12,6 +12,10 @@ class Profile extends Model
     protected $fillable = [
         'user_id',
         'alternate_no',
+        'registration_no',
+        'is_policy',
+        'policy_number',
+        'is_medical_allergy',
         'id_type',
         'id_no',
         'dob',
@@ -39,5 +43,7 @@ class Profile extends Model
 
     protected $casts = [
         //'dob' => 'date:Y-m-d'
+        'is_policy' => 'boolean',
+        'is_medical_allergy' => 'boolean'
     ];
 }

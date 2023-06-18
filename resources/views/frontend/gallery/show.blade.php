@@ -2,7 +2,7 @@
 @section('content')
 
     <!-- page-title -->
-    <div class="prt-page-title-row prt-bg prt-bgimage-yes bgimage-pet-01">
+    <div class="prt-page-title-row prt-bg prt-bgimage-yes bgimage-pet-01" style="background-image: url({{ asset(isset($gallery->galleryImages[0]->GalleryPicture->image_thumb) ? $gallery->galleryImages[0]->GalleryPicture->image_thumb : \App\Models\Picture::getDefaultImage()->image_thumb) }})">
         <div class="prt-page-title-row-inner prt-bg-layer bg-base-bodycolor">
             <div class="prt-page-title-row-wrapper-inner"></div>
         </div>

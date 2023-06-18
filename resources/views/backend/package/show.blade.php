@@ -70,7 +70,7 @@
                                     @if ($errors->has('package_details'))
                                         <span class="text-danger">{{ $errors->first('package_details') }}</span>
                                     @endif
-                                    <textarea id="package_details" name="package_details" class="form-control" rows="20">{{$package->package_details}}</textarea>
+                                    <textarea id="package_details" name="package_details" class="form-control" rows="10">{{$package->package_details}}</textarea>
                                 </div>
 
                                 <div class="form-group">
@@ -78,7 +78,7 @@
                                     @if ($errors->has('package_summary'))
                                         <span class="text-danger">{{ $errors->first('package_summary') }}</span>
                                     @endif
-                                    <textarea id="package_summary" name="package_summary" class="form-control" rows="20">{{$package->package_summary}}</textarea>
+                                    <textarea id="package_summary" name="package_summary" class="form-control" rows="10">{{$package->package_summary}}</textarea>
                                 </div>
 
                                 <div class="form-group">

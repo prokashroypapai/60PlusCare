@@ -2,7 +2,7 @@
 @section('content')
 
     <!-- page-title -->
-    <div class="prt-page-title-row prt-bg prt-bgimage-yes">
+    <div class="prt-page-title-row prt-bg prt-bgimage-yes" style="background-image: url({{asset($articles[0]->articlePicture->image_full)}})">
         <div class="prt-page-title-row-inner prt-bg-layer bg-base-bodycolor">
             <div class="prt-page-title-row-wrapper-inner"></div>
         </div>
@@ -39,7 +39,7 @@
                 <!-- row -->
                 <div class="row">
 
-                    @foreach(\App\Models\Article::active()->get() as $article)
+                    @foreach($articles as $article)
                     <div class="col-lg-6 col-md-6">
                         <div class="row g-0 featured-imagebox featured-imagebox-blog style3">
                             <div class="col-xl-6 col-lg-12">

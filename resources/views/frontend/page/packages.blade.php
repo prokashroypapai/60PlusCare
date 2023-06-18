@@ -2,7 +2,7 @@
 @section('content')
 
     <!-- page-title -->
-    <div class="prt-page-title-row prt-bg prt-bgimage-yes">
+    <div class="prt-page-title-row prt-bg prt-bgimage-yes" style="background-image: url({{asset('static/images/bgimage-10.jpg')}})">
         <div class="prt-page-title-row-inner prt-bg-layer bg-base-bodycolor">
             <div class="prt-page-title-row-wrapper-inner"></div>
         </div>
@@ -259,10 +259,10 @@
                             </tr>
                             <tr>
                                 <td></td>
-                                <td><button class="btn btn-primary" onclick='window.location.href="{{url('register')}}"'>Avail Package</button></td>
-                                <td><button class="btn btn-primary" onclick='window.location.href="{{url('register')}}"'>Avail Package</button></td>
-                                <td><button class="btn btn-primary" onclick='window.location.href="{{url('register')}}"'>Avail Package</button></td>
-                                <td><button class="btn btn-primary" onclick='window.location.href="{{url('register')}}"'>Avail Package</button></td>
+                                <td><button class="btn btn-primary" onclick='window.location.href="{{url('register?package_id=3')}}"'>Avail Package</button></td>
+                                <td><button class="btn btn-primary" onclick='window.location.href="{{url('register?package_id=4')}}"'>Avail Package</button></td>
+                                <td><button class="btn btn-primary" onclick='window.location.href="{{url('register?package_id=5')}}"'>Avail Package</button></td>
+                                <td><button class="btn btn-primary" onclick='window.location.href="{{url('register?package_id=6')}}"'>Avail Package</button></td>
                             </tr>
                             <tr>
                                 <td style="background-color: #b2ffae">Payment Mode</td>

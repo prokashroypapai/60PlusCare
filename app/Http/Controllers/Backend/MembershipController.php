@@ -75,4 +75,8 @@ class MembershipController extends Controller
 
         return redirect()->back()->with('success', 'Saved successfully');
     }
+
+    public function update(Request $request){
+        //
+    }
 }

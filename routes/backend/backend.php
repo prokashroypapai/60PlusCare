@@ -7,8 +7,12 @@ use App\Http\Controllers\Backend\WelcomeController;
 require __DIR__ . '/auth.php';
 
 
-Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
+Route::group(['prefix' => 'admin', 'middleware' => 'manager'], function() {
     Route::get('/', [WelcomeController::class, 'home']);
+
+    Route::get('info', function (){
+        return view('backend/siteinfo.info');
+    });
 
     //location
     require __DIR__ . '/location.php';
@@ -48,4 +52,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
 
     //testimonial
     require __DIR__ . '/testimonial.php';
+
+    //contact
+    require __DIR__ . '/contact.php';
+
+    //noticeboard
+    require __DIR__ . '/noticeboard.php';
 });

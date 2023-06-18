@@ -116,7 +116,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="text-center text-lg-left">
-                            2023 © Sundarini Naturals
+                            2023 © {{env('APP_NAME')}}
                         </div>
                     </div>
                     <div class="col-md-6">

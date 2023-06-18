@@ -4,7 +4,7 @@
             <div class="row g-0">
                 <div class="col-lg-8">
                     <div class="prt-bg prt-col-bgcolor-yes prt-left-span bg-base-dark spacing-42">
-                        <div class="prt-col-wrapper-bg-layer prt-bg-layer"></div>
+                        <div class="prt-col-wrapper-bg-layer prt-bg-layer" style="background-color: var(--secondaryColor)"></div>
                         <div class="layer-content">
                             <div class="row">
                                 <div class="col-md-6">
@@ -37,19 +37,18 @@
                                 <div class="col-md-6">
                                     <div class="widget-area mt-30">
                                         <div class="widget link-widget clearfix">
-                                            <h3 class="widget-title">All links</h3>
+                                            <h3 class="widget-title">Important links</h3>
                                             <div class="link-widget-menu d-block d-sm-flex">
                                                 <ul class="menu-footer-link">
-                                                    <li><a href="about-us.html">About Company</a></li>
-                                                    <li><a href="about-us-2.html">Customer Insights</a></li>
-                                                    <li><a href="our-team.html">Meet Our Team</a></li>
-                                                    <li><a href="blog.html">News & Insights</a></li>
+                                                    <li><a href="{{url('/about')}}">About</a></li>
+                                                    <li><a href="{{url('/doctors')}}">Doctors</a></li>
+                                                    <li><a href="{{url('packages')}}">Packages</a></li>
+                                                    <li><a href="{{url('newsletters')}}">Newsletters</a></li>
+                                                    <li><a href="{{url('offers')}}">Offers</a></li>
                                                 </ul>
                                                 <ul class="menu-footer-services">
-                                                    <li><a href="services-1.html">Our Services</a></li>
-                                                    <li><a href="services-2.html">Forensic Science</a></li>
-                                                    <li><a href="contact-us.html">Privacy Policy</a></li>
-                                                    <li><a href="contact-us.html">Customer Insights</a></li>
+                                                    <li><a href="{{url('terms-condition')}}">Terms of service</a></li>
+                                                    <li><a href="{{url('privacy-policy')}}">Privacy policy</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -61,7 +60,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="prt-bg prt-col-bgcolor-yes prt-right-span bg-base-dark-two spacing-43">
-                        <div class="prt-col-wrapper-bg-layer prt-bg-layer"></div>
+                        <div class="prt-col-wrapper-bg-layer prt-bg-layer" style="background-color: var(--secondaryColorSub1)"></div>
                         <div class="layer-content">
                             <div class="row">
                                 <div class="col-lg-12">
@@ -95,23 +94,21 @@
             </div>
         </div>
     </div>
-    <div class="bottom-footer-text bg-base-dark-three text-base-white">
+    <div class="bottom-footer-text bg-base-dark-three text-base-white" style="background-color: var(--secondaryColorSub2)">
         <div class="container">
             <div class="copyright">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="d-flex align-items-center justify-content-center">
-                            <span class="cpy-text">Copyright@2023 60pluscare. All Rights Reserved.</span>
+                            <span class="cpy-text">©2023 Copyright 60 Plus Care. All Rights Reserved </span>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="d-flex align-items-center justify-content-center">
                             <div class="menu-footer-menu">
-                                <ul class="footer-nav-menu">
-                                    <li><a href="contact-us.html">Privacy Policy</a></li>
-                                    <li><a href="contact-us.html">Term Of Use</a></li>
-                                    <li><a href="contact-us.html">Support</a></li>
-                                </ul>
+                                <p>
+                                    Website Created & Maintained by <a href="https://www.algoflow.in" target="_blank">Algoflow</a>
+                                </p>
                             </div>
                         </div>
                     </div>

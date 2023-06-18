@@ -15,9 +15,9 @@
                                     <a href="{{url('/admin')}}">Home</a>
                                 </li>
                                 <li class="breadcrumb-item">
-                                    <a href="{{url('admin/Testimonials')}}">Testimonials</a>
+                                    <a href="{{url('admin/testimonials')}}">Testimonials</a>
                                 </li>
-                                <li class="breadcrumb-item active">{{$testimonial->title}}</li>
+                                <li class="breadcrumb-item active">{{$testimonial->id}}</li>
                             </ol>
                         </div>
 

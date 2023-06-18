@@ -2,7 +2,7 @@
 @section('content')
 
     <!-- page-title -->
-    <div class="prt-page-title-row prt-bg prt-bgimage-yes">
+    <div class="prt-page-title-row prt-bg prt-bgimage-yes" style="background-image: url({{asset('static/images/bgimage-9.jpg')}})">
         <div class="prt-page-title-row-inner prt-bg-layer bg-base-bodycolor">
             <div class="prt-page-title-row-wrapper-inner"></div>
         </div>
@@ -60,7 +60,7 @@
                                                         <div class="prt-short-desc">
                                                             {{$doctor->doctor_experience}}
                                                         </div>
-                                                        <div class="prt-team-data">
+                                                        <!--<div class="prt-team-data">
                                                             <div class="prt-team-details-wrapper">
                                                                 <ul class="prt-team-details-list clearfix">
                                                                     <li>
@@ -81,8 +81,8 @@
                                                                     </li>
                                                                 </ul>
                                                             </div>
-                                                        </div>
-                                                        <div class="prt-team-member-social-contact">
+                                                        </div>-->
+                                                        <!--<div class="prt-team-member-social-contact">
                                                             <div class="prt-social-links-wrapper mt-20">
                                                                 <ul class="social-icons">
                                                                     <li class="social-facebook">
@@ -99,7 +99,7 @@
                                                                     </li>
                                                                 </ul>
                                                             </div>
-                                                        </div>
+                                                        </div>-->
                                                     </div>
                                                 </div>
                                             </div>

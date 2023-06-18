@@ -32,6 +32,7 @@
                             <a href="{{ url('admin/galleries') }}" class="dropdown-item">Gallery</a>
                             <a href="{{url('admin/articles')}}" class="dropdown-item">Articles</a>
                             <a href="{{url('admin/testimonials')}}" class="dropdown-item">Testimonials</a>
+                            <a href="{{url('admin/noticeboards')}}" class="dropdown-item">Notice Boards</a>
                         </div>
                     </li>
 
@@ -40,7 +41,7 @@
                             <i class="bx bxs-eraser"></i>Settings <div class="arrow-down"></div>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="topnav-forms">
-                            <a href="{{url('info')}}" class="dropdown-item">Info</a>
+                            <a href="{{url('admin/info')}}" class="dropdown-item">Info</a>
                         </div>
                     </li>
 
@@ -49,7 +50,7 @@
                             <i class="bx bx-doughnut-chart"></i>Care <div class="arrow-down"></div>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="topnav-charts">
-                            <a href="{{url('contacts')}}" class="dropdown-item">Contacts</a>
+                            <a href="{{url('admin/contacts')}}" class="dropdown-item">Contacts</a>
                         </div>
                     </li>
 

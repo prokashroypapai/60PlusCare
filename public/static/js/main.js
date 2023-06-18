@@ -1,28 +1,3 @@
-/** ==========================================================================================
-
-  Project :   Famado Baby and Old Care Html template
-  Author :    themetechmount
-
-========================================================================================== */
-
-/** ===============
-
- .. Preloader
- .. header_search
- .. Fixed-header
- .. Menu
- .. Number rotator
- .. Skillbar
- .. Tab
- .. Accordion
- .. Isotope
- .. Prettyphoto
- .. Slick_slider
- .. Back to top 
-
- =============== */
-
-
 jQuery(function($) {
     "use strict";
 
@@ -39,8 +14,8 @@ jQuery(function($) {
 /*------------------------------------------------------------------------------*/
 /* header_search
 /*------------------------------------------------------------------------------*/
-    
-    $(".header_search").each(function(){  
+
+    $(".header_search").each(function(){
         $(".search_btn", this).on("click", function(e){
 
             e.preventDefault();
@@ -51,28 +26,28 @@ jQuery(function($) {
             if ($('.header_search a').hasClass('open')) {
 
                 $( ".header_search a i" ).removeClass('icon-cancel').addClass('icon-search');
-                
-                $(this).removeClass('open').addClass('sclose');    
 
-            } 
+                $(this).removeClass('open').addClass('sclose');
+
+            }
 
             else {
                 $(".header_search a").removeClass('sclose').addClass('open');
 
-                $( ".header_search a i" ).removeClass('icon-search').addClass('icon-cancel');  
-                
+                $( ".header_search a i" ).removeClass('icon-search').addClass('icon-cancel');
+
             }
         });
 
     });
 
- 
+
 /*------------------------------------------------------------------------------*/
 /* Fixed-header
 /*------------------------------------------------------------------------------*/
 
     $(window).on("scroll",function(){
-        if ( matchMedia( 'only screen and (min-width: 1200px)' ).matches ) 
+        if ( matchMedia( 'only screen and (min-width: 1200px)' ).matches )
         {
             if ($(window).scrollTop() >= 50 ) {
 
@@ -100,27 +75,27 @@ jQuery(function($) {
                 getHeight = $(window).height(),
                 getIn = getNav.find("ul.menu").data("in"),
                 getOut = getNav.find("ul.menu").data("out");
-            
+
             if ( matchMedia( 'only screen and (max-width: 1920px)' ).matches ) {
-                                                     
+
                 // Enable click event
                 $("nav.main-menu ul.menu").each(function(){
-                    
+
                     // Dropdown Fade Toggle
                     $("a.mega-menu-link", this).on('click', function (e) {
                         var t = $(this);
                         t.toggleClass('active').next('ul').toggleClass('active');
-                    });    
-                }); 
+                    });
+                });
             }
         },
     };
-    
+
     $('.btn-show-menu-mobile').on('click', function(e) {
-        $(this).toggleClass('is-active'); 
-        $('.menu-mobile').toggleClass('show').delay( 600 ).fadeIn( 300 ); 
+        $(this).toggleClass('is-active');
+        $('.menu-mobile').toggleClass('show').delay( 600 ).fadeIn( 300 );
         return false;
-        e.preventDefault();  
+        e.preventDefault();
     });
 
     var $nav = $('.btn-show-menu-mobile');
@@ -136,12 +111,12 @@ jQuery(function($) {
 /*------------------------------------------------------------------------------*/
 /* Animation on scroll: Number rotator
 /*------------------------------------------------------------------------------*/
-    
+
     $("[data-appear-animation]").each(function() {
     var self      = $(this);
     var animation = self.data("appear-animation");
     var delay     = (self.data("appear-animation-delay") ? self.data("appear-animation-delay") : 0);
-        
+
         if( $(window).width() > 959 ) {
             self.html('0');
             self.waypoint(function(direction) {
@@ -169,11 +144,11 @@ jQuery(function($) {
     });
 
 
-   
+
 /*------------------------------------------------------------------------------*/
 /* Skillbar
 /*------------------------------------------------------------------------------*/
-    
+
     $('.prt-progress-bar').each(function() {
         $(this).find('.progress-bar').width(0);
     });
@@ -231,10 +206,10 @@ jQuery(function($) {
             var short_digit = digit / 100;
             var size_val = circle_box.data("size");
             jQuery(".prt-circle", circle_box)
-                .circleProgress({ value: 0, duration: 8000, size: size_val, startAngle: startangle_val, 
+                .circleProgress({ value: 0, duration: 8000, size: size_val, startAngle: startangle_val,
                     thickness: thickness_val, linecap:linecap_val, emptyFill: emptyFill_val, fill: fill_val })
                 .on("circle-animation-progress", function (event, progress, stepValue) {
-                    
+
                     circle_box.find(".prt-fid-number").html(before + Math.round(stepValue * 100) + after);
                 });
         }
@@ -254,7 +229,7 @@ jQuery(function($) {
 
 
     jQuery( document ).ready(function($) { aqovo_logMarginPadding_content();});
-    function aqovo_logMarginPadding_content(){ 
+    function aqovo_logMarginPadding_content(){
         jQuery(".prt-expandcontent-yes").each(function () {
             var prt_column_div = '';
             var scrren_size = jQuery(window).width();
@@ -276,12 +251,12 @@ jQuery(function($) {
 
 /*------------------------------------------------------------------------------*/
 /* Tab
-/*------------------------------------------------------------------------------*/ 
+/*------------------------------------------------------------------------------*/
 
     $('.prt-tabs').each(function() {
         $(this).children('.content-tab').children().hide();
         $(this).children('.content-tab').children().first().show();
-        $(this).find('.tabs').children('li').on('click', function(e) {  
+        $(this).find('.tabs').children('li').on('click', function(e) {
         var liActive = $(this).index(),
         contentActive = $(this).siblings().removeClass('active').parents('.prt-tabs').children('.content-tab').children().eq(liActive);
         contentActive.addClass('active').fadeIn('slow');
@@ -292,11 +267,11 @@ jQuery(function($) {
     });
 
     $(document).ready(function() {
-        $('.prt-tabs.slider-tab > .tabs').children('li').on('click', function(e) {  
-            var tab = $(this).closest('.prt-tabs > .tabs > .tab'), 
+        $('.prt-tabs.slider-tab > .tabs').children('li').on('click', function(e) {
+            var tab = $(this).closest('.prt-tabs > .tabs > .tab'),
             index = $(this).closest('.prt-tabs > .tabs > li').index();
-            $(this).parents('.prt-tabs').children(' .tabs').children('li.active ').removeClass('active'); 
-            $(this).addClass('active'); 
+            $(this).parents('.prt-tabs').children(' .tabs').children('li.active ').removeClass('active');
+            $(this).addClass('active');
             $(this).addClass('active').parents('.prt-tabs').children('.content-tab').find('.content-inner').not('.content-inner:eq(' + index + ')').slideUp();
             $(this).addClass('active').parents('.prt-tabs').children('.content-tab').find('.content-inner:eq(' + index + ')').slideDown();
             e.preventDefault();
@@ -317,7 +292,7 @@ jQuery(function($) {
 
         if ($this.next().hasClass('show')) {
 
-            $this.next().removeClass('show');   
+            $this.next().removeClass('show');
             $this.next().slideUp('easeInExpo');
 
         } else {
@@ -340,7 +315,7 @@ jQuery(function($) {
 
    $(function () {
 
-        if ( $().isotope ) {           
+        if ( $().isotope ) {
             var $container = $('.isotope-project');
             $container.imagesLoaded(function(){
                 $container.isotope({
@@ -349,7 +324,7 @@ jQuery(function($) {
                 });
             });
 
-            $('.portfolio-filter li').on('click',function() {                           
+            $('.portfolio-filter li').on('click',function() {
                 var selector = $(this).find("a").attr('data-filter');
                 $('.portfolio-filter li').removeClass('active');
                 $(this).addClass('active');
@@ -361,7 +336,7 @@ jQuery(function($) {
    });
 
 
-    
+
 /*------------------------------------------------------------------------------*/
 /* Prettyphoto
 /*------------------------------------------------------------------------------*/
@@ -374,7 +349,7 @@ jQuery(function($) {
     //                 jQuery(this).attr('data-rel','prettyPhoto');
     //             }
     //         }
-    //     });     
+    //     });
     //     jQuery('a[data-gal^="prettyPhoto"]').prettyPhoto();
     //     jQuery('a.prt_prettyphoto').prettyPhoto();
     //     jQuery('a[data-gal^="prettyPhoto"]').prettyPhoto();
@@ -391,17 +366,17 @@ jQuery(function($) {
                     jQuery(this).attr('data-rel','prettyPhoto');
                 }
             }
-        });    
+        });
         jQuery('a[data-rel^="prettyPhoto"]').prettyPhoto();
     });
-    
+
 
     $(window).on('load', function(){
 
     function gridMasonry(){
         var grid = $(".masonry-grid")
         if( grid.length ){
-            
+
           grid.isotope({
             itemSelector: '.masonry-grid-item',
             percentPosition: true,
@@ -410,7 +385,7 @@ jQuery(function($) {
               columnWidth: '.grid-sizer',
             },
           });
-            
+
         }
     }
     gridMasonry();
@@ -423,7 +398,7 @@ jQuery(function($) {
         speed: 1000,
         infinite: true,
         arrows: false,
-        dots: false,                   
+        dots: false,
         autoplay: false,
         centerMode : false,
 
@@ -513,7 +488,7 @@ jQuery(function($) {
           }
         }
       ]
-        
+
     });
 
 /*------------------------------------------------------------------------------*/
@@ -532,7 +507,7 @@ jQuery(function($) {
 /*------------------------------------------------------------------------------*/
 
     $(".header_calender").click(function(){
-        $(".menu-calendar").toggle();  
+        $(".menu-calendar").toggle();
     });
 
 /*------------------------------------------------------------------------------*/
@@ -540,9 +515,9 @@ jQuery(function($) {
 /*------------------------------------------------------------------------------*/
 
     $(window).on("scroll",function(){
-        if (jQuery(this).scrollTop() >= 40){        
+        if (jQuery(this).scrollTop() >= 40){
             jQuery('.circulate-image').hide();
-        } 
+        }
         else {
             jQuery('.circulate-image').show();
         }
@@ -554,18 +529,18 @@ jQuery(function($) {
 
     $('#selectbox').each(function(){
     var $this = $(this), numberOfOptions = $(this).children('option').length;
-  
-    $this.addClass('select-hidden'); 
+
+    $this.addClass('select-hidden');
     $this.wrap('<div class="select"></div>');
     $this.after('<div class="select-styled"></div>');
 
     var $styledSelect = $this.next('div.select-styled');
     $styledSelect.text($this.children('option').eq(0).text());
-  
+
     var $list = $('<ul />', {
         'class': 'select-options'
     }).insertAfter($styledSelect);
-  
+
     for (var i = 0; i < numberOfOptions; i++) {
         $('<li />', {
             text: $this.children('option').eq(i).text(),
@@ -575,9 +550,9 @@ jQuery(function($) {
         //  $('li[rel="' + $this.children('option').eq(i).val() + '"]').addClass('is-selected')
         //}
     }
-  
+
     var $listItems = $list.children('li');
-  
+
     $styledSelect.click(function(e) {
         e.stopPropagation();
         $('div.select-styled.active').not(this).each(function(){
@@ -585,7 +560,7 @@ jQuery(function($) {
         });
         $(this).toggleClass('active').next('ul.select-options').toggle();
     });
-  
+
     $listItems.click(function(e) {
         e.stopPropagation();
         $styledSelect.text($(this).text()).removeClass('active');
@@ -593,7 +568,7 @@ jQuery(function($) {
         $list.hide();
         //console.log($this.val());
     });
-  
+
     $(document).click(function() {
         $styledSelect.removeClass('active');
         $list.hide();
@@ -604,8 +579,8 @@ jQuery(function($) {
 /*------------------------------------------------------------------------------*/
 /* Back to top
 /*------------------------------------------------------------------------------*/
-    
-    // ===== Scroll to Top ==== 
+
+    // ===== Scroll to Top ====
     jQuery('#totop').hide();
 
     $(window).on("scroll",function(){

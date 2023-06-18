@@ -2,7 +2,7 @@
 @section('content')
 
     <!-- page-title -->
-    <div class="prt-page-title-row prt-bg prt-bgimage-yes bgimage-nany-04">
+    <div class="prt-page-title-row prt-bg prt-bgimage-yes" style="background-image: url({{asset('static/images/bgimage-14.jpg')}})">
         <div class="prt-page-title-row-inner prt-bg-layer bg-base-bodycolor">
             <div class="prt-page-title-row-wrapper-inner"></div>
         </div>
@@ -39,7 +39,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="prt_single_image-wrapper text-center">
-                            <img class="img-fluid" src="{{asset('static/images/single-img-23.jpg')}}" alt="image">
+                            <img class="img-fluid" src="{{asset('static/images/bgimage-15.jpg')}}" alt="image">
                         </div>
                     </div>
                 </div>
@@ -66,12 +66,12 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="prt_single_image-wrapper">
-                            <img class="img-fluid" src="{{asset('static/images/single-img-24.jpg')}}" alt="image">
+                            <img class="img-fluid" src="{{asset('static/images/bgimage-16.jpg')}}" alt="image">
                         </div>
                     </div>
                     <div class="col-md-8 res-767-mt-15">
                         <div class="prt_single_image-wrapper">
-                            <img class="img-fluid" src="{{asset('static/images/single-img-25.jpg')}}" alt="image">
+                            <img class="img-fluid" src="{{asset('static/images/bgimage-17.jpg')}}" alt="image">
                         </div>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="featured-icon-box icon-align-before-title style12">
                             <div class="featured-icon">
-                                <img src="https://60pluscare.in/static/img/myIcons/neurology.png" width="55" height="55">
+                                <img src="{{asset('static/images/neurology.png')}}" width="55" height="55">
                             </div>
                             <div class="featured-title">
                                 <h3>Neurology Physiotherapy</h3>
@@ -104,7 +104,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="featured-icon-box icon-align-before-title style12">
                             <div class="featured-icon">
-                                <img src="https://60pluscare.in/static/img/myIcons/Orthopaedic.png" width="55" height="55">
+                                <img src="{{asset('static/images/Orthopaedic.png')}}" width="55" height="55">
                             </div>
                             <div class="featured-title">
                                 <h3>Orthopaedic Physiotherapy</h3>
@@ -121,7 +121,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="featured-icon-box icon-align-before-title style12">
                             <div class="featured-icon">
-                                <img src="https://60pluscare.in/static/img/myIcons/pediatrics.png" width="55" height="55">
+                                <img src="{{asset('static/images/pediatrics.png')}}" width="55" height="55">
                             </div>
                             <div class="featured-title">
                                 <h3>
@@ -131,7 +131,7 @@
                             <div class="featured-content">
                                 <div class="featured-desc">
                                     <p>
-                                        "Pediatrics Physiotherapy isn't physical therapy just for athletes and adults in recovery?"
+                                        Pediatrics Physiotherapy isn't physical therapy just for athletes and adults in recovery?
                                     </p>
                                 </div>
                             </div>
@@ -140,7 +140,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="featured-icon-box icon-align-before-title style12">
                             <div class="featured-icon">
-                                <img src="https://60pluscare.in/static/img/myIcons/Geriatric.png" width="55" height="55"/>
+                                <img src="{{asset('static/images/Geriatric.png')}}" width="55" height="55"/>
                             </div>
                             <div class="featured-title">
                                 <h3>
@@ -159,7 +159,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="featured-icon-box icon-align-before-title style12">
                             <div class="featured-icon">
-                                <img src="https://60pluscare.in/static/img/myIcons/pelvis.png" width="55" height="55">
+                                <img src="{{asset('static/images/pelvis.png')}}" width="55" height="55">
                             </div>
                             <div class="featured-title">
                                 <h3>
@@ -178,7 +178,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="featured-icon-box icon-align-before-title style12">
                             <div class="featured-icon">
-                                <img src="https://60pluscare.in/static/img/myIcons/surgical-instrument.png" width="55" height="55">
+                                <img src="{{asset('static/images/surgical-instrument.png')}}" width="55" height="55">
                             </div>
                             <div class="featured-title">
                                 <h3>
@@ -205,7 +205,7 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="prt_single_image-wrapper">
-                            <img class="img-fluid" src="{{asset('static/images/single-img-26.jpg')}}" alt="image">
+                            <img class="img-fluid" src="{{asset('static/images/bgimage-18.jpg')}}" alt="image">
                         </div>
                     </div>
 
@@ -253,7 +253,7 @@
                     <div class="col-lg-4">
                         <div class="featured-imagebox featured-imagebox-services style3">
                             <div class="featured-thumbnail">
-                                <img class="img-fluid" src="https://60pluscare.in/static/img/PhysiotherapyFacilities/Laser%20therapy.jpg" width="447" height="191" alt="service-01">
+                                <img class="img-fluid" src="{{asset('static/images/Laser-therapy.jpg')}}" width="447" height="191" alt="service-01">
                             </div>
                             <div class="featured-content">
                                 <div class="featured-title">
@@ -265,7 +265,7 @@
                     <div class="col-lg-4">
                         <div class="featured-imagebox featured-imagebox-services style3">
                             <div class="featured-thumbnail">
-                                <img class="img-fluid" src="https://60pluscare.in/static/img/PhysiotherapyFacilities/Electrotherapy.jpg" width="447" height="191" alt="service-02">
+                                <img class="img-fluid" src="{{asset('static/images/Electrotherapy.jpg')}}" width="447" height="191" alt="service-02">
                             </div>
                             <div class="featured-content">
                                 <div class="featured-title">
@@ -277,7 +277,7 @@
                     <div class="col-lg-4">
                         <div class="featured-imagebox featured-imagebox-services style3">
                             <div class="featured-thumbnail">
-                                <img class="img-fluid" src="https://60pluscare.in/static/img/PhysiotherapyFacilities/Exercise%20therapy.jpg" width="447" height="191" alt="service-03">
+                                <img class="img-fluid" src="{{asset('static/images/Exercise-therapy.jpg')}}" width="447" height="191" alt="service-03">
                             </div>
                             <div class="featured-content">
                                 <div class="featured-title">
@@ -304,7 +304,7 @@
                         <!--prt-pricing-plan-->
                         <div class="prt-pricing-plan">
                             <div class="prt-p_table-image">
-                                <img class="img-fluid" width="448" height="217" src="https://60pluscare.in/static/img/PhysiotherapyConditions/class14_laser.jpg" alt="image">
+                                <img class="img-fluid" width="448" height="217" src="{{asset('static/images/class14_laser.jpg')}}" alt="image">
                             </div>
                             <div class="prt-p_table-body" style="padding-top: 10px;">
                                 <div class="prt-p_table-title">
@@ -329,7 +329,7 @@
                         <!--prt-pricing-plan-->
                         <div class="prt-pricing-plan">
                             <div class="prt-p_table-image">
-                                <img class="img-fluid" width="448" height="217" src="https://60pluscare.in/static/img/PhysiotherapyConditions/dry_needling.jpg" alt="image">
+                                <img class="img-fluid" width="448" height="217" src="{{asset('static/images/dry_needling.jpg')}}" alt="image">
                             </div>
                             <div class="prt-p_table-body" style="padding-top: 10px;">
                                 <div class="prt-p_table-title">
@@ -356,7 +356,7 @@
                         <!--prt-pricing-plan-->
                         <div class="prt-pricing-plan">
                             <div class="prt-p_table-image">
-                                <img class="img-fluid" width="448" height="217" src="https://60pluscare.in/static/img/PhysiotherapyConditions/myofasial.jpg" alt="image">
+                                <img class="img-fluid" width="448" height="217" src="{{asset('static/images/myofasial.jpg')}}" alt="image">
                             </div>
                             <div class="prt-p_table-body" style="padding-top: 10px;">
                                 <div class="prt-p_table-title">
@@ -374,7 +374,7 @@
                         <!--prt-pricing-plan-->
                         <div class="prt-pricing-plan">
                             <div class="prt-p_table-image">
-                                <img class="img-fluid" width="448" height="217" src="https://60pluscare.in/static/img/PhysiotherapyConditions/blood_flow.jpg" alt="image">
+                                <img class="img-fluid" width="448" height="217" src="{{asset('static/images/blood_flow.jpg')}}" alt="image">
                             </div>
                             <div class="prt-p_table-body" style="padding-top: 10px;">
                                 <div class="prt-p_table-title">
@@ -395,7 +395,7 @@
                         <!--prt-pricing-plan-->
                         <div class="prt-pricing-plan">
                             <div class="prt-p_table-image">
-                                <img class="img-fluid" width="448" height="217" src="https://60pluscare.in/static/img/PhysiotherapyConditions/cupping.jpg" alt="image">
+                                <img class="img-fluid" width="448" height="217" src="{{asset('static/images/cupping.jpg')}}" alt="image">
                             </div>
                             <div class="prt-p_table-body" style="padding-top: 10px;">
                                 <div class="prt-p_table-title">
@@ -414,7 +414,7 @@
                         <!--prt-pricing-plan-->
                         <div class="prt-pricing-plan">
                             <div class="prt-p_table-image">
-                                <img class="img-fluid" width="448" height="217" src="https://60pluscare.in/static/img/PhysiotherapyConditions/therabond.jpg" alt="image">
+                                <img class="img-fluid" width="448" height="217" src="{{asset('static/images/therabond.jpg')}}" alt="image">
                             </div>
                             <div class="prt-p_table-body" style="padding-top: 10px;">
                                 <div class="prt-p_table-title">
@@ -430,7 +430,7 @@
                         <!--prt-pricing-plan-->
                         <div class="prt-pricing-plan">
                             <div class="prt-p_table-image">
-                                <img class="img-fluid" width="448" height="217" src="https://60pluscare.in/static/img/PhysiotherapyConditions/kinesio.jpg" alt="image">
+                                <img class="img-fluid" width="448" height="217" src="{{asset('static/images/kinesio.jpg')}}" alt="image">
                             </div>
                             <div class="prt-p_table-body" style="padding-top: 10px;">
                                 <div class="prt-p_table-title">
@@ -446,7 +446,7 @@
                         <!--prt-pricing-plan-->
                         <div class="prt-pricing-plan">
                             <div class="prt-p_table-image">
-                                <img class="img-fluid" width="448" height="217" src="https://60pluscare.in/static/img/PhysiotherapyConditions/physio_ball.jpg" alt="image">
+                                <img class="img-fluid" width="448" height="217" src="{{asset('static/images/physio_ball.jpg')}}" alt="image">
                             </div>
                             <div class="prt-p_table-body" style="padding-top: 10px;">
                                 <div class="prt-p_table-title">
@@ -471,7 +471,7 @@
                     <div class="col-lg-3">
                         <div class="featured-imagebox featured-imagebox-services style3">
                             <div class="featured-thumbnail">
-                                <img class="img-fluid" src="https://60pluscare.in/static/img/PhysiotherapyConditions/Neck%20pain.jpg" width="447" height="191" alt="service-01">
+                                <img class="img-fluid" src="{{asset('static/images/Neck-pain.jpg')}}" width="447" height="191" alt="service-01">
                             </div>
                             <div class="featured-content">
                                 <div class="featured-title">
@@ -483,7 +483,7 @@
                     <div class="col-lg-3">
                         <div class="featured-imagebox featured-imagebox-services style3">
                             <div class="featured-thumbnail">
-                                <img class="img-fluid" src="https://60pluscare.in/static/img/PhysiotherapyConditions/Shoulder%20pain.jpg" width="447" height="191" alt="service-02">
+                                <img class="img-fluid" src="{{asset('static/images/Shoulder-pain.jpg')}}" width="447" height="191" alt="service-02">
                             </div>
                             <div class="featured-content">
                                 <div class="featured-title">
@@ -495,7 +495,7 @@
                     <div class="col-lg-3">
                         <div class="featured-imagebox featured-imagebox-services style3">
                             <div class="featured-thumbnail">
-                                <img class="img-fluid" src="https://60pluscare.in/static/img/PhysiotherapyConditions/Hand%20pain.jpg" width="447" height="191" alt="service-03">
+                                <img class="img-fluid" src="{{asset('static/images/Hand-pain.jpg')}}" width="447" height="191" alt="service-03">
                             </div>
                             <div class="featured-content">
                                 <div class="featured-title">
@@ -507,7 +507,7 @@
                     <div class="col-lg-3">
                         <div class="featured-imagebox featured-imagebox-services style3">
                             <div class="featured-thumbnail">
-                                <img class="img-fluid" src="https://60pluscare.in/static/img/PhysiotherapyConditions/footPain-heelpain.jpg" width="447" height="191" alt="service-03">
+                                <img class="img-fluid" src="{{asset('static/images/footPain-heelpain.jpg')}}" width="447" height="191" alt="service-03">
                             </div>
                             <div class="featured-content">
                                 <div class="featured-title">
@@ -519,7 +519,7 @@
                     <div class="col-lg-3">
                         <div class="featured-imagebox featured-imagebox-services style3">
                             <div class="featured-thumbnail">
-                                <img class="img-fluid" src="https://60pluscare.in/static/img/PhysiotherapyConditions/Back%20pain.jpg" width="447" height="191" alt="service-03">
+                                <img class="img-fluid" src="{{asset('static/images/Back-pain.jpg')}}" width="447" height="191" alt="service-03">
                             </div>
                             <div class="featured-content">
                                 <div class="featured-title">
@@ -531,7 +531,7 @@
                     <div class="col-lg-3">
                         <div class="featured-imagebox featured-imagebox-services style3">
                             <div class="featured-thumbnail">
-                                <img class="img-fluid" src="https://60pluscare.in/static/img/PhysiotherapyConditions/Hip%20pain.jpg" width="447" height="191" alt="service-03">
+                                <img class="img-fluid" src="{{asset('static/images/Hip-pain.jpg')}}" width="447" height="191" alt="service-03">
                             </div>
                             <div class="featured-content">
                                 <div class="featured-title">
@@ -543,7 +543,7 @@
                     <div class="col-lg-3">
                         <div class="featured-imagebox featured-imagebox-services style3">
                             <div class="featured-thumbnail">
-                                <img class="img-fluid" src="https://60pluscare.in/static/img/PhysiotherapyConditions/Leg%20pain.jpg" width="447" height="191" alt="service-03">
+                                <img class="img-fluid" src="{{asset('static/images/Leg-pain.jpg')}}" width="447" height="191" alt="service-03">
                             </div>
                             <div class="featured-content">
                                 <div class="featured-title">
@@ -555,7 +555,7 @@
                     <div class="col-lg-3">
                         <div class="featured-imagebox featured-imagebox-services style3">
                             <div class="featured-thumbnail">
-                                <img class="img-fluid" src="https://60pluscare.in/static/img/PhysiotherapyConditions/Ankle%20pain.jpg" width="447" height="191" alt="service-03">
+                                <img class="img-fluid" src="{{asset('static/images/Ankle-pain.jpg')}}" width="447" height="191" alt="service-03">
                             </div>
                             <div class="featured-content">
                                 <div class="featured-title">
@@ -567,7 +567,7 @@
                     <div class="col-lg-3">
                         <div class="featured-imagebox featured-imagebox-services style3">
                             <div class="featured-thumbnail">
-                                <img class="img-fluid" src="https://60pluscare.in/static/img/PhysiotherapyConditions/fracture.jpg" width="447" height="191" alt="service-03">
+                                <img class="img-fluid" src="{{asset('static/images/fracture.jpg')}}" width="447" height="191" alt="service-03">
                             </div>
                             <div class="featured-content">
                                 <div class="featured-title">
@@ -579,7 +579,7 @@
                     <div class="col-lg-3">
                         <div class="featured-imagebox featured-imagebox-services style3">
                             <div class="featured-thumbnail">
-                                <img class="img-fluid" src="https://60pluscare.in/static/img/PhysiotherapyConditions/Neuropathic.jpg" width="447" height="191" alt="service-03">
+                                <img class="img-fluid" src="{{asset('static/images/Neuropathic.jpg')}}" width="447" height="191" alt="service-03">
                             </div>
                             <div class="featured-content">
                                 <div class="featured-title">
@@ -591,7 +591,7 @@
                     <div class="col-lg-3">
                         <div class="featured-imagebox featured-imagebox-services style3">
                             <div class="featured-thumbnail">
-                                <img class="img-fluid" src="https://60pluscare.in/static/img/PhysiotherapyConditions/Spinal%20problem.jpg" width="447" height="191" alt="service-03">
+                                <img class="img-fluid" src="{{asset('static/images/Spinal-problem.jpg')}}" width="447" height="191" alt="service-03">
                             </div>
                             <div class="featured-content">
                                 <div class="featured-title">
@@ -603,7 +603,7 @@
                     <div class="col-lg-3">
                         <div class="featured-imagebox featured-imagebox-services style3">
                             <div class="featured-thumbnail">
-                                <img class="img-fluid" src="https://60pluscare.in/static/img/PhysiotherapyConditions/stroke%20paralysis.jpg" width="447" height="191" alt="service-03">
+                                <img class="img-fluid" src="{{asset('static/images/stroke-paralysis.jpg')}}" width="447" height="191" alt="service-03">
                             </div>
                             <div class="featured-content">
                                 <div class="featured-title">
@@ -627,85 +627,43 @@
                             <div class="prt-col-wrapper-bg-layer prt-bg-layer"></div>
                             <div class="layer-content"></div>
                         </div>
-                        <img class="prt-equal-height-image img-fluid w-100" src="images/bg-image/col-bgimage-22.jpg" alt="bg-image">
+                        <img class="prt-equal-height-image img-fluid w-100" src="{{asset('static/images/bgimage-22.jpg')}}" alt="bg-image">
                     </div>
                     <div class="col-lg-6 align-self-center">
                         <div class="pl-15 mt-30 res-991-pl-0">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="slick_slider testimonial-02" data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "arrows":false, "autoplay":true, "dots":false, "infinite":true, "responsive":[{"breakpoint":992,"settings":{"slidesToShow": 1}},{"breakpoint":840,"settings":{"slidesToShow": 1}}]}'>
+                                    @foreach(\App\Models\Testimonial::active()->skip(0)->limit(3)->get() as $testimonial)
                                         <!-- testimonials -->
                                         <div class="testimonials style2">
                                             <div class="testimonial-content">
                                                 <div class="testimonial-avatar">
                                                     <div class="testimonial-img">
-                                                        <img width="90" height="90" class="img-fluid" src="https://60pluscare.in/static/img/team/Picture11.jpg" alt="testimonial-img">
+                                                        <img width="90" height="90" class="img-fluid" src="{{asset($testimonial->testimonialPicture->image_thumb)}}" alt="testimonial-img">
                                                     </div>
                                                 </div>
                                                 <div class="testimonial-caption">
-                                                    <h3>Alexsam Jhon Martin</h3>
-                                                    <label> - Chairman and founder</label>
+                                                    <h3>{{$testimonial->name}}</h3>
+                                                    <label> - {{$testimonial->designation}}</label>
                                                 </div>
                                                 <div class="star-ratings">
                                                     <ul class="rating">
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
+                                                        @for($i=0; $i<=5; $i++)
+                                                            @if($i <= $testimonial->rating)
+                                                                <li><i class="fa fa-star"></i></li>
+                                                            @else
+                                                                <li><i class="fa fa-star-o"></i></li>
+                                                            @endif
+                                                        @endfor
                                                     </ul>
                                                 </div>
-                                                <blockquote>Thank you so much for providing such caring and kind childcare on our recent visit to Madrid. This was our second time using MissBabysitter. We’ll definitely use you again on our next trip.</blockquote>
+                                                <blockquote>
+                                                    {{$testimonial->comment}}
+                                                </blockquote>
                                             </div>
                                         </div><!-- testimonials end -->
-                                        <!-- testimonials -->
-                                        <div class="testimonials style2">
-                                            <div class="testimonial-content">
-                                                <div class="testimonial-avatar">
-                                                    <div class="testimonial-img">
-                                                        <img width="90" height="90" class="img-fluid" src="https://60pluscare.in/static/img/team/Picture11.jpg" alt="testimonial-img">
-                                                    </div>
-                                                </div>
-                                                <div class="testimonial-caption">
-                                                    <h3>Sam Curran</h3>
-                                                    <label> - Businessman</label>
-                                                </div>
-                                                <div class="star-ratings">
-                                                    <ul class="rating">
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <blockquote>Thank you so much Miss Babysitter! the boys had such a great time with her.Thanks for helping make our stay so much easier. We were able to get out on a couple as adults without a care in the world!</blockquote>
-                                            </div>
-                                        </div><!-- testimonials end -->
-                                        <!-- testimonials -->
-                                        <div class="testimonials style2">
-                                            <div class="testimonial-content">
-                                                <div class="testimonial-avatar">
-                                                    <div class="testimonial-img">
-                                                        <img width="90" height="90" class="img-fluid" src="https://60pluscare.in/static/img/team/Picture11.jpg" alt="testimonial-img">
-                                                    </div>
-                                                </div>
-                                                <div class="testimonial-caption">
-                                                    <h3>Nathan Smith</h3>
-                                                    <label> - Journalist</label>
-                                                </div>
-                                                <div class="star-ratings">
-                                                    <ul class="rating">
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                        <li><i class="fa fa-star"></i></li>
-                                                    </ul>
-                                                </div>
-                                                <blockquote>After the first night they asked every day when she was coming back. We were able to get out on a couple of dates to explore Barcelona as adults without a care in the world!</blockquote>
-                                            </div>
-                                        </div><!-- testimonials end -->
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>

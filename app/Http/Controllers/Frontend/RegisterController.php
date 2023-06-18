@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class RegisterController extends Controller
 {
     public function index(Request $request){
-        if($request->package_id == ''){
+        /*if($request->package_id == ''){
             return view('frontend.widget.packageList');
         }
 
@@ -17,8 +17,13 @@ class RegisterController extends Controller
 
         if(!$package){
             return redirect('register');
-        }
+        }*/
 
-        return view('frontend.auth.register', compact('package'));
+        $package= [
+            'id' => 1,
+            'package_name' => 'Package'
+        ];
+
+        return view('frontend.auth.register-2', compact('package'));
     }
 }

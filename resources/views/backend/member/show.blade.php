@@ -29,7 +29,7 @@
                                     <a href="{{url('/admin')}}">Home</a>
                                 </li>
                                 <li class="breadcrumb-item">
-                                    <a href="{{url('admin/members')}}">Staffs</a>
+                                    <a href="{{url('admin/members')}}">Members</a>
                                 </li>
                                 <li class="breadcrumb-item active">{{$user->name}}</li>
                             </ol>
@@ -118,6 +118,44 @@
                                 </div>
 
                                 <div class="form-group">
+                                    <label for="registration_no">Registration No</label>
+                                    @if ($errors->has('registration_no'))
+                                        <span class="text-danger">{{ $errors->first('alternate_no') }}</span>
+                                    @endif
+                                    <input type="text" id="registration_no" name="registration_no" class="form-control" placeholder="" value="{{$user->userProfile->registration_no}}" readonly>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="is_policy">Is Policy / Mediclaim Holder</label>
+                                    @if ($errors->has('is_policy'))
+                                        <span class="text-danger">{{ $errors->first('is_policy') }}</span>
+                                    @endif
+                                    <select id="is_policy" name="is_policy" class="form-control">
+                                        <option value="1" @if($user->userProfile->is_policy == true) selected @endif>YES</option>
+                                        <option value="0" @if($user->userProfile->is_policy == false) selected @endif>NO</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="policy_number">Policy Number</label>
+                                    @if ($errors->has('policy_number'))
+                                        <span class="text-danger">{{ $errors->first('policy_number') }}</span>
+                                    @endif
+                                    <input type="text" id="policy_number" name="policy_number" class="form-control" placeholder="" value="{{$user->userProfile->policy_number}}">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="is_medical_allergy">Have Medical Allergy?</label>
+                                    @if ($errors->has('is_medical_allergy'))
+                                        <span class="text-danger">{{ $errors->first('is_medical_allergy') }}</span>
+                                    @endif
+                                    <select id="is_medical_allergy" name="is_medical_allergy" class="form-control">
+                                        <option value="1" @if($user->userProfile->is_medical_allergy == true) selected @endif>YES</option>
+                                        <option value="0" @if($user->userProfile->is_medical_allergy == false) selected @endif>NO</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
                                     <label for="id_type">Id Proof</label>
                                     @if ($errors->has('id_type'))
                                         <span class="text-danger">{{ $errors->first('id_type') }}</span>
@@ -145,7 +183,7 @@
                                     @if ($errors->has('dob'))
                                         <span class="text-danger">{{ $errors->first('dob') }}</span>
                                     @endif
-                                    <input type="text" id="dob" name="dob" class="form-control" placeholder="27-02-1975" value="{{$user->userProfile->dob}}">
+                                    <input type="text" id="dob" name="dob" class="form-control" data-toggle="input-mask" data-mask-format="00-00-0000" placeholder="DD-MM-YYYY" value="{{$user->userProfile->dob != null ? \Carbon\Carbon::parse($user->userProfile->dob)->format('d-m-Y') : null}}" autocomplete="off">
                                 </div>
 
                                 <div class="form-group">
@@ -189,7 +227,7 @@
                                     @if ($errors->has('spouse_dob'))
                                         <span class="text-danger">{{ $errors->first('spouse_dob') }}</span>
                                     @endif
-                                    <input type="text" id="spouse_dob" name="spouse_dob" class="form-control" placeholder="27-02-1975" value="{{$user->userProfile->spouse_dob}}">
+                                    <input type="text" id="spouse_dob" name="spouse_dob" class="form-control" data-toggle="input-mask" data-mask-format="00-00-0000" placeholder="DD-MM-YYYY" value="{{$user->userProfile->spouse_dob != null ? \Carbon\Carbon::parse($user->userProfile->spouse_dob)->format('d-m-Y') : null}}" autocomplete="off">
                                 </div>
 
                                 <div class="form-group">
@@ -205,7 +243,7 @@
                                     @if ($errors->has('anniversary_date'))
                                         <span class="text-danger">{{ $errors->first('anniversary_date') }}</span>
                                     @endif
-                                    <input type="text" id="anniversary_date" name="anniversary_date" class="form-control" placeholder="27-02-1975" value="{{$user->userProfile->anniversary_date}}">
+                                    <input type="text" id="anniversary_date" name="anniversary_date" class="form-control" data-toggle="input-mask" data-mask-format="00-00-0000" placeholder="DD-MM-YYYY" value="{{$user->userProfile->anniversary_date != null ? \Carbon\Carbon::parse($user->userProfile->anniversary_date)->format('d-m-Y') : null}}" autocomplete="off">
                                 </div>
 
                                 <div class="form-group">
@@ -355,4 +393,16 @@
             </div>
         </div>
     </div>
+    <!-- Mask Js-->
+    <script src="{{asset('backend/plugins/jquery-mask/jquery.mask.min.js')}}"></script>
+    <!-- Mask Custom Js-->
+    <script src="{{asset('backend/pages/mask-demo.js')}}"></script>
+
+    <script>
+        $('#mobile').focus(function(){
+            if($(this).val().substring(0,3) !== '+91'){
+                $(this).val("+91" + $(this).val());
+            }
+        });
+    </script>
 @endsection

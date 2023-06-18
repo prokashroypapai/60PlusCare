@@ -4,7 +4,10 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Profile;
+use App\Models\Service\MembershipNumber;
 use App\Models\User;
+use App\Services\CreateRegistrationnoService;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class MemberController extends Controller
@@ -18,26 +21,27 @@ class MemberController extends Controller
         return view('backend.member.create');
     }
 
-    public function store(Request $request){
+    public function store(Request $request, CreateRegistrationnoService $createRegistrationnoService){
         $request->validate([
             'name' => 'required',
             'email' => 'email|unique:users',
-            'mobile' => 'required|digits:10|unique:users',
+            'mobile' => 'required|unique:users',
             'password' => 'required'
         ],[
             'name.required' => 'Name is required',
             'email.email' => 'Valid email is required',
             'email.unique' => 'Email already exists',
             'mobile.required' => 'Mobile number is required',
-            'mobile.digits' => 'Valid Mobile number is required',
             'mobile.unique' => 'Mobile already exists',
             'password.required' => 'Password is required'
         ]);
 
+        $is_valid = 0;
+
         $data = [
             'name' => $request->name,
             'email' => $request->email,
-            'mobile' => '+91' . $request->mobile,
+            'mobile' => $request->mobile,
             'password' => bcrypt($request->password),
             'permission' => User::PERMISSION_MEMBER,
             'status' => User::STATUS_ACTIVE
@@ -45,9 +49,16 @@ class MemberController extends Controller
 
         $user = User::create($data);
 
-        Profile::create([
-            'user_id' => $user->id
-        ]);
+        if($is_valid == 1) {
+            Profile::create([
+                'user_id' => $user->id,
+            ]);
+        }else{
+            Profile::create([
+                'user_id' => $user->id,
+                'registration_no' => $createRegistrationnoService->createRegistrationNumber($user->id)
+            ]);
+        }
 
         if($user){
             return redirect()->back()->with('success', 'Saved successfully');
@@ -113,9 +124,11 @@ class MemberController extends Controller
     }
 
     public function memberProfileUpdate(Request $request){
-        $request->validate([
+        /*$request->validate([
             'user_id' => 'required',
-            'alternate_no' => 'required',
+            'registration_no' => 'required',
+            'is_policy' => 'required',
+            'is_medical_allergy' => 'required',
             'id_type' => 'required|not_in:0',
             'id_no' => 'required',
             'dob' => 'required',
@@ -124,7 +137,6 @@ class MemberController extends Controller
             'spouse_name' => 'required',
             'spouse_dob' => 'required',
             'children_no' => 'required',
-            'anniversary_date' => 'required',
             'address' => 'required',
             'city' => 'required',
             'pin_code' => 'required',
@@ -137,21 +149,29 @@ class MemberController extends Controller
             'hospitalization_history' => 'required',
             'personal_doctor_details' => 'required',
             'sponsored_by' => 'required|not_in:0'
-        ]);
+        ]);*/
 
         $user = User::where('id', $request->user_id)->first();
 
+        $dob = $request->dob != "" ? Carbon::parse($request->dob)->format('Y-m-d') : null;
+        $spouse_dob = $request->spouse_dob != "" ? Carbon::parse($request->spouse_dob)->format('Y-m-d') : null;
+        $anniversary_date = $request->anniversary_date != "" ? Carbon::parse($request->anniversary_date)->format('Y-m-d') : null;
+
         $data = [
             'alternate_no' => $request->alternate_no,
+            /*'registration_no' => $request->registration_no,*/
+            'is_policy' => $request->is_policy,
+            'policy_number' => $request->policy_number,
+            'is_medical_allergy' => $request->is_medical_allergy,
             'id_type' => $request->id_type,
             'id_no' => $request->id_no,
-            'dob' => $request->dob,
+            'dob' => $dob,
             'gender' => $request->gender,
             'marital_status' => $request->marital_status,
             'spouse_name' => $request->spouse_name,
-            'spouse_dob' => $request->spouse_dob,
+            'spouse_dob' => $spouse_dob,
             'children_no' => $request->children_no,
-            'anniversary_date' => $request->anniversary_date,
+            'anniversary_date' => $anniversary_date,
             'address' => $request->address,
             'city' => $request->city,
             'pin_code' => $request->pin_code,
