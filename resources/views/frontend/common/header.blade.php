@@ -136,8 +136,8 @@
                                                             <div class="content">
                                                                 <ul class="menu-col-img">
                                                                     <li>
-                                                                        <a href="https://pbs.twimg.com/media/FDZuWk_VgAgKWZ9?format=jpg&name=medium">
-                                                                            <img class="img-fluid" src="https://pbs.twimg.com/media/FDZuWk_VgAgKWZ9?format=jpg&name=medium" alt="bimg">
+                                                                        <a href="{{asset('static/images/60clinic-banner-offer.jpg')}}" title="60Plus Banner Offer" target="_blank">
+                                                                            <img class="img-fluid" src="{{asset('static/images/60clinic-banner-offer.jpg')}}" alt="60Plus Banner Offer">
                                                                         </a>
                                                                     </li>
                                                                 </ul>

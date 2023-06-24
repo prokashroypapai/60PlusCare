@@ -7,6 +7,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Neuton:wght@400;700&display=swap');
 
+:root {
+    --primaryColor: #b6c134;
+    --secondaryColor: #2e3640;
+    --secondaryColorSub1: #293340;
+    --secondaryColorSub2: #192029;
+    --body-font-color: #333333;
+    --base-bodyfont: 'Lato', sans-serif;
+    --base-bodyfont-Size: 16px;
+    --base-bodyfont-color: #686976;
+    --base-skin: #ff4880;
+    --base-skin2: #f00;
+    --base-dark: #242864;
+    --base-dark-two: #22255f;
+    --base-dark-three: #1d2056;
+    --base-grey: #f6f8fe;
+    --base-white: #ffffff;
+    --base-headingfont: 'Playfair Display', serif;
+    --base-headingfont-color: #242864;
+    --base-dark-border: #dedede;
+    --base-light-border: #ffffff33;
+    --base-opacity-text: #ffffffd9;
+}
+
 
 /** Variables **/
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -164,30 +187,8 @@ menu, ol, ul {
 
 /** Typography Variable **/
 
-:root {
-    --primaryColor: #b6c134;
-    --secondaryColor: #2e3640;
-    --secondaryColorSub1: #293340;
-    --secondaryColorSub2: #192029;
-    --base-bodyfont: 'Lato', sans-serif;
-    --base-bodyfont-Size: 16px;
-    --base-bodyfont-color: #686976;
-    --base-skin: #ff4880;
-    --base-skin2: #f00;
-    --base-dark: #242864;
-    --base-dark-two: #22255f;
-    --base-dark-three: #1d2056;
-    --base-grey: #f6f8fe;
-    --base-white: #ffffff;
-    --base-headingfont: 'Playfair Display', serif;
-    --base-headingfont-color: #242864;
-    --base-dark-border: #dedede;
-    --base-light-border: #ffffff33;
-    --base-opacity-text: #ffffffd9;
-}
-
 /** Typo Colors **/
-.border-color: { color: var(--base-dark-border);}
+.border-color { color: var(--base-dark-border);}
 .bodyfont-color { color: var(--base-bodyfont-color);}
 .headingfont-color { color: var(--base-headingfont-color); }
 
@@ -1289,8 +1290,6 @@ nav.main-menu ul.menu > li:hover > a { color: var(--base-skin); }
     height: 1px;
     width: 100%;
     opacity: 1;
-    transform-origin: center right;
-    -webkit-transform-origin: center right;
     -webkit-transform: scale(0,1);
     -khtml-transform: scale(0,1);
     -moz-transform: scale(0,1);
@@ -1366,7 +1365,6 @@ nav.main-menu ul.menu > li:hover > a { color: var(--base-skin); }
 .footer .mailchimp-inputbox button[type="submit"]:after {
     position: absolute;
     content: "\e844";
-    font-family: 'fontello';
     right: 10px;
     top: -10px;
 }
@@ -1611,45 +1609,6 @@ ul.footer-nav-menu li:last-child:after {
     background-size: cover;
     background-repeat: no-repeat;
 }
-.prt-page-title-row {
-    background-image: url(../images/bg-pagetitle/pagetitle-bg.jpg);
-}
-.prt-page-title-row.bgimage-baby-01 {
-   background-image: url(../images/bg-pagetitle/baby-01.jpg);
-}
-.prt-page-title-row.bgimage-baby-02 {
-   background-image: url(../images/bg-pagetitle/baby-02.jpg);
-}
-.prt-page-title-row.bgimage-baby-03 {
-   background-image: url(../images/bg-pagetitle/baby-03.jpg);
-}
-.prt-page-title-row.bgimage-baby-04 {
-   background-image: url(../images/bg-pagetitle/baby-04.jpg);
-}
-.prt-page-title-row.bgimage-nany-01 {
-   background-image: url(../images/bg-pagetitle/nany-01.jpg);
-}
-.prt-page-title-row.bgimage-nany-02 {
-   background-image: url(../images/bg-pagetitle/nany-02.jpg);
-}
-.prt-page-title-row.bgimage-nany-03 {
-   background-image: url(../images/bg-pagetitle/nany-03.jpg);
-}
-.prt-page-title-row.bgimage-nany-04 {
-   background-image: url(../images/bg-pagetitle/nany-04.jpg);
-}
-.prt-page-title-row.bgimage-pet-01 {
-   background-image: url(../images/bg-pagetitle/pet-01.jpg);
-}
-.prt-page-title-row.bgimage-pet-02 {
-   background-image: url(../images/bg-pagetitle/pet-02.jpg);
-}
-.prt-page-title-row.bgimage-pet-03 {
-   background-image: url(../images/bg-pagetitle/pet-03.jpg);
-}
-.prt-page-title-row.bgimage-pet-04 {
-   background-image: url(../images/bg-pagetitle/pet-04.jpg);
-}
 
 .prt-page-title-row.prt-bg.prt-bgimage-yes > .prt-page-title-row-inner {
     opacity: 0.52;
@@ -1697,9 +1656,7 @@ ul.footer-nav-menu li:last-child:after {
 .breadcrumb-wrapper span:not(:last-child) a:hover { color: var(--base-skin); }
 .breadcrumb-wrapper span:not(:last-child):after {
     position: absolute;
-    content: "\e809";
-    font-family: "fontello";
-    font-size: 14px;
+    content: "|";
     line-height: 20px;
     right: 9px;
     top: 0px;
@@ -2255,7 +2212,6 @@ article.prt-blog-classic .prt-blog-classic-content {
 .prt-blog-single blockquote .qoute-text-02:before {
     position: absolute;
     content: '';
-    background-image: url(../images/quote-01.svg);
     background-repeat: no-repeat;
     height: 70px;
     width: 70px;
@@ -2536,7 +2492,6 @@ section.error-404 {
     padding-bottom: 100px;
 }
 section.error-404:before {
-    content: url(../images/404-bg.png);
     position: absolute;
     bottom: -72px;
     left: 0;
@@ -2784,13 +2739,13 @@ section.error-404 .prt_floating_shape_04 {
   top: 26px;
   right: 15px;
   transform: rotate(0deg);
-  transition: all 0.s ease;
+  transition: all 0.3s ease;
 }
 .select-styled.active:after {
   top: 19px;
   border-color: #ff4880 transparent transparent transparent;
   transform: rotate(180deg);
-  transition: all 0.s ease;
+  transition: all 0.3s ease;
 }
 .select-options {
   display: none;

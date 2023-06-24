@@ -1,2 +1,7 @@
 User-agent: *
-Disallow:
+Allow: /
+Disallow:/cgi-bin/
+Disallow:/admin/
+Disallow:/public/admin/
+
+Sitemap: https://60pluscare.in/sitemap.xml

@@ -12,7 +12,9 @@ use Illuminate\Http\Request;
 class WelcomeController extends Controller
 {
     public function index(){
-        return view('frontend.home.index');
+        $page = Page::where('page_slug', '/')->first();
+        $metaseo = Seo::where('page_id', $page->id)->first();
+        return view('frontend.home.index', compact('metaseo'));
     }
 
     //all pages

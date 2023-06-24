@@ -43,59 +43,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="pl-15 pr-15">
-                            <div class="prt-horizontal_sep"></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="home02-fid">
-                                    <div class="row g-0">
-                                        <div class="col-lg-4 col-md-6 col-sm-12">
-                                            <div class="prt-fid inside prt-fid-with-icon style4">
-                                                <div class="prt-fid-icon-wrapper">
-                                                    <i class="flaticon-couple"></i>
-                                                </div>
-                                                <div class="prt-fid-contents">
-                                                    <h4 class="prt-fid-inner">
-                                                        <span data-appear-animation="animateDigits" data-from="0" data-to="580" data-interval="25" data-before="" data-before-style="sup" data-after="+" data-after-style="sub" class="numinate">580</span>
-                                                        <span class="fid-sup">k</span>
-                                                    </h4>
-                                                </div>
-                                                <h3 class="prt-fid-title">Happy Patients</h3>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 col-sm-12">
-                                            <div class="prt-fid inside prt-fid-with-icon style4">
-                                                <div class="prt-fid-icon-wrapper">
-                                                    <i class="flaticon-family"></i>
-                                                </div>
-                                                <div class="prt-fid-contents">
-                                                    <h4 class="prt-fid-inner">
-                                                        <span data-appear-animation="animateDigits" data-from="0" data-to="650" data-interval="25" data-before="" data-before-style="sup" data-after="+" data-after-style="sub" class="numinate">650</span>
-                                                        <span class="fid-sup">+</span>
-                                                    </h4>
-                                                </div>
-                                                <h3 class="prt-fid-title">Agency follower</h3>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 col-sm-12">
-                                            <div class="prt-fid inside prt-fid-with-icon style4">
-                                                <div class="prt-fid-icon-wrapper">
-                                                    <i class="flaticon-nursing-home"></i>
-                                                </div>
-                                                <div class="prt-fid-contents">
-                                                    <h4 class="prt-fid-inner">
-                                                        <span data-appear-animation="animateDigits" data-from="0" data-to="30" data-interval="5" data-before="" data-before-style="sup" data-after="+" data-after-style="sub" class="numinate">30</span>
-                                                        <span class="fid-sup">+</span>
-                                                    </h4>
-                                                </div>
-                                                <h3 class="prt-fid-title">Worldwide Partners</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

@@ -24,6 +24,9 @@ require __DIR__ . '/backend/backend.php';
 //auth
 require __DIR__ . '/frontend/auth.php';
 
+//sitemap
+require __DIR__ . '/frontend/sitemap.php';
+
 //homepage
 Route::get('/', [WelcomeController::class, 'index']);
 

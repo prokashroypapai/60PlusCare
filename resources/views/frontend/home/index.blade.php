@@ -2,7 +2,6 @@
 @section('content')
 
     <div class="col-12">
-
         @if(count(\App\Models\Noticeboard::active()->get()) > 0)
         <div class="noticeBoard">
             <h3>Important Infos</h3>
@@ -23,8 +22,6 @@
                     </div>
                 </div>
                 @endforeach
-
-
             </div>
         </div>
         @endif
