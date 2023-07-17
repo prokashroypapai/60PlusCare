@@ -10,7 +10,7 @@
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
-                            <h3>Chat with Us</h3>
+                            <h6>Chat with Us</h6>
                         </div>
                         <div class="featured-desc">
                             <p class="text-dark">
@@ -29,9 +29,9 @@
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
-                            <h3>Call us Any Question?</h3>
+                            <h6>Call us Any Question?</h6>
                         </div>
-                        <div class="featured-desc">
+                        <div class="text-dark">
                             <p>Get 24/7 Emergency <br>Call us: <a href="tel:8296 111 777">(+91) 8296 111 777</a></p>
                         </div>
                     </div>
@@ -46,7 +46,7 @@
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
-                            <h3>Register for Elder Care Services!</h3>
+                            <h6>Register for Elder Care Services!</h6>
                         </div>
                         <div class="featured-desc">
                             <p><a href="{{url('register')}}">Register Now</a></p>

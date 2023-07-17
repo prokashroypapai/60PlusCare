@@ -11,10 +11,10 @@
                     <!-- section title -->
                     <div class="section-title mt-0">
                         <div class="title-header">
-                            <h3 class="text-white">About {{env('APP_NAME')}}</h3>
-                            <h2 class="text-white">
+                            <h5 class="text-white">About {{env('APP_NAME')}}</h5>
+                            <h6 class="text-white">
                                 Team <span class="text-base-skin">60 Plus</span> Help You to Age Gracefully <span class="text-base-skin">At Your Home</span>!
-                            </h2>
+                            </h6>
                         </div>
                     </div>
                     <div class="mt_24 res-991-mt-20">

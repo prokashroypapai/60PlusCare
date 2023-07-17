@@ -15,7 +15,7 @@
                                     <a href="{{url('/')}}">Home</a>
                                 </li>
                                 <li class="breadcrumb-item">
-                                    <a href="{{url('pages')}}">Pages</a>
+                                    <a href="{{url('admin/pages')}}">Pages</a>
                                 </li>
                                 <li class="breadcrumb-item active">{{$page->page_title}}</li>
                             </ol>

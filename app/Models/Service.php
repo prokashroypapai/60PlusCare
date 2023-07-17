@@ -32,4 +32,9 @@ class Service extends Model
     public function servicePicture(){
         return $this->hasOne(Picture::class, 'id', 'picture_id');
     }
+
+    //service has seo
+    public function serviceSeo(){
+        return $this->hasOne(Seo::class);
+    }
 }

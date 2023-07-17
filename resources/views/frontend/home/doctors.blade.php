@@ -5,7 +5,7 @@
                 <!-- section title -->
                 <div class="section-title title-style-center_text">
                     <div class="title-header">
-                        <h2>Our Team Of <span>Doctors & Elder care</span> Professionals</h2>
+                        <h3>Our Team Of <span>Doctors & Elder care</span> Professionals</h3>
                     </div>
                     <div class="title-desc">
                         <p>
@@ -25,7 +25,7 @@
                         </div>
                         <div class="featured-content">
                             <div class="featured-title">
-                                <h3><a href="{{url('doctors/?id=' . $doctor->id)}}">{{$doctor->doctor_name}}</a></h3>
+                                <h4><a href="{{url('doctors/?id=' . $doctor->id)}}">{{$doctor->doctor_name}}</a></h4>
                             </div>
                             <div class="featured-desc">
                                 <p>{{$doctor->doctor_designation}}</p>

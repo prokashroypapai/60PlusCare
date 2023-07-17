@@ -34,4 +34,9 @@ class Location extends Model
     public function locationPicture(){
         return $this->hasOne(Picture::class, 'id', 'picture_id');
     }
+
+    //location has seo
+    public function locationSeo(){
+        return $this->hasOne(Seo::class);
+    }
 }

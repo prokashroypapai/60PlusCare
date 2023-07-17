@@ -5,7 +5,7 @@
                 <!-- section title -->
                 <div class="section-title mt-20 mb-0 res-767-mt_10">
                     <div class="title-header">
-                        <h2>We provide a best Elder Care <span>Services in Kolkata.</span></h2>
+                        <h3>We provide a best Elder Care <span>Services in Kolkata.</span></h3>
                     </div>
                     <div class="title-desc">
                         <p>
@@ -21,9 +21,9 @@
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
-                            <h3>
-                                <a href="#">24x7 Medical Emergency Assistance</a>
-                            </h3>
+                            <h5 class="text-white">
+                                24x7 Medical Emergency Assistance
+                            </h5>
                         </div>
                         <div class="featured-desc">
                             <p>
@@ -40,7 +40,7 @@
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
-                            <h3><a href="#">Prioritised Hospitalisation</a></h3>
+                            <h5 class="text-white">Prioritised Hospitalisation</h5>
                         </div>
                         <div class="featured-desc">
                             <p>
@@ -57,7 +57,7 @@
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
-                            <h3><a href="#">Affordable & Customised</a></h3>
+                            <h5 class="text-white">Affordable & Customised</h5>
                         </div>
                         <div class="featured-desc">
                             <p>We provide the Most Affordable, Tailor made, Comprehensive, Coordinated Elder Care & Home Care Packages as per your need. No Yearly RENEWAL Charges</p>
@@ -72,7 +72,7 @@
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
-                            <h3><a href="#">Doctor Consultation</a></h3>
+                            <h5 class="text-white">Doctor Consultation</h5>
                         </div>
                         <div class="featured-desc">
                             <p>
@@ -89,7 +89,7 @@
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
-                            <h3><a href="#">Care Managers</a></h3>
+                            <h5 class="text-white">Care Managers</h5>
                         </div>
                         <div class="featured-desc">
                             <p>Our Professional Elder Care Managers or Geriatric Animators serve and take care of social needs of the elders for better living and healing.</p>
@@ -104,7 +104,7 @@
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
-                            <h3><a href="#">Trained Nurses</a></h3>
+                            <h5 class="text-white">Trained Nurses</h5>
                         </div>
                         <div class="featured-desc">
                             <p>
@@ -121,7 +121,7 @@
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
-                            <h3><a href="#">Post Discharge Care At Home</a></h3>
+                            <h5 class="text-white">Post Discharge Care At Home</h5>
                         </div>
                         <div class="featured-desc">
                             <p>
@@ -138,7 +138,7 @@
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
-                            <h3><a href="#">Physiotherapy & Rehabilitation</a></h3>
+                            <h5 class="text-white">Physiotherapy & Rehabilitation</h5>
                         </div>
                         <div class="featured-desc">
                             <p>
@@ -155,7 +155,7 @@
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
-                            <h3><a href="#">Medical Devices</a></h3>
+                            <h5 class="text-white">Medical Devices</h5>
                         </div>
                         <div class="featured-desc">
                             <p>
@@ -172,11 +172,11 @@
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
-                            <h3><a href="#">Telemedicines</a></h3>
+                            <h5 class="text-white">Telemedicine</h5>
                         </div>
                         <div class="featured-desc">
                             <p>
-                                We coordinate and organise Teleconsultation with our Doctors, Nurses, Dieticians, Psychologists & Counsellors.
+                                We coordinate and organise Teleconsultation with our Doctors, Nurses, Dietitians, Psychologists & Counsellors.
                             </p>
                         </div>
                     </div>
@@ -189,7 +189,7 @@
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
-                            <h3><a href="#">Medicines & Vaccines</a></h3>
+                            <h5 class="text-white">Medicines & Vaccines</h5>
                         </div>
                         <div class="featured-desc">
                             <p>
@@ -206,7 +206,7 @@
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
-                            <h3><a href="#">Pathology & Diagnostic Tests</a></h3>
+                            <h5 class="text-white">Pathology & Diagnostic Tests</h5>
                         </div>
                         <div class="featured-desc">
                             <p>

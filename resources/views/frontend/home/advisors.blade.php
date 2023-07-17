@@ -5,7 +5,7 @@
                 <!-- section title -->
                 <div class="section-title title-style-center_text">
                     <div class="title-header">
-                        <h2>Our <span>Honorary Advisors</span></h2>
+                        <h3><span>Honorary Advisors</span> of {{env('APP_NAME')}}</h3>
                     </div>
                     <div class="title-desc">
                         <p>
@@ -20,13 +20,13 @@
             <div class="col-lg-3">
                 <div class="featured-imagebox featured-imagebox-team">
                     <div class="featured-thumbnail">
-                        <img class="img-fluid" src="{{asset(\App\Models\Picture::getDefaultImage()->image_thumb)}}" width="277" height="301" alt="image">
+                        <img class="img-fluid" src="{{asset('static/images/prof-dr-sukumar-mukherjee.webp')}}" width="277" height="301" alt="image">
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
-                            <h3>
+                            <strong>
                                 <a href="#">Prof Dr Sukumar Mukherjee</a>
-                            </h3>
+                            </strong>
                         </div>
                         <div class="featured-desc">
                             <p>Chief Advisor of Health, West Bengal</p>
@@ -42,9 +42,9 @@
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
-                            <h3>
+                            <strong>
                                 <a href="#">Prof Dr Suhita Chatterjee</a>
-                            </h3>
+                            </strong>
                         </div>
                         <div class="featured-desc">
                             <p>Department of Humanities & Social Sciences, IIT Kharagpur</p>
@@ -60,9 +60,9 @@
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
-                            <h3>
+                            <strong>
                                 <a href="#">Dr Nilanjana Ghosh</a>
-                            </h3>
+                            </strong>
                         </div>
                         <div class="featured-desc">
                             <p>Assistant Professor, Department of Community Medicine, AIIMS Gauhati</p>
@@ -74,13 +74,13 @@
             <div class="col-lg-3">
                 <div class="featured-imagebox featured-imagebox-team">
                     <div class="featured-thumbnail">
-                        <img class="img-fluid" src="{{asset(\App\Models\Picture::getDefaultImage()->image_thumb)}}" width="277" height="301" alt="image">
+                        <img class="img-fluid" src="{{asset('static/images/Koushik-Nath.jpg')}}" width="277" height="301" alt="image">
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
-                            <h3>
+                            <strong>
                                 <a href="#">Koushik Nath</a>
-                            </h3>
+                            </strong>
                         </div>
                         <div class="featured-desc">
                             <p>Vice President - Information Technology, ITC</p>

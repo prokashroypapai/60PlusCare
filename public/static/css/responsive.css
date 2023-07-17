@@ -1,3 +1,7 @@
+.auto_size{
+    width: 175px;
+    height: auto
+}
 @media only screen and (min-width: 1801px){
 
 	/* Bg-Layer */
@@ -132,7 +136,8 @@
 }
 
 @media only screen and (min-width: 1200px){
-
+    .prt-header-style-03 .top_bar_contact_item:not(:first-child):before { content: ''; background-color: var(--secondaryColor);
+        position: absolute; width: 1px; height: 26px; top: 9px; left: -1px; }
 	/* header */
 	.prt-stickable-header.fixed-header {
 		z-index: 2;
@@ -154,7 +159,7 @@
 	.prt-header-style-02 .site-header-menu { min-height: 129px; }
 	.prt-header-style-02 .prt-stickable-header.fixed-header { height: 83px; background-color: var(--base-dark);}
 	.prt-header-style-02 .prt-stickable-header.fixed-header nav.main-menu ul.menu > li > a { height: 83px; line-height: 83px; }
-	.prt-header-style-02 .prt-stickable-header.fixed-header .top_bar { display: none; }
+	.prt-header-style-02 .prt-stickable-header.fixed-header .top_bar { display: block; }
 	.prt-header-style-02 .prt-stickable-header.fixed-header .one-side-border-left { border: none; }
 
 	/*prt-header-style-03*/
@@ -216,16 +221,18 @@
 	.res-1199-p-0 { padding: 0; }
 	.res-1199-plr-15 { padding-left: 15px !important; padding-right: 15px !important; }
 
-	.top_bar, .header_extra, .header_btn, .header_cta, .widget_info { display: none !important; }
+    .top_bar {display: block !important;}
+    .header_item{margin-right: 35%;}
+	.header_extra, .header_btn, .header_cta, .widget_info { display: none !important; }
 	.prt-header-style-02.bg-base-dark .top_bar_line:after { content: unset; }
-	.prt-header-style-03 .header-spacing { padding-left: 0px; padding-right: 0px; }
+	.prt-header-style-03 .header-spacing { padding-left: 15px; padding-right: 15px; }
 
 	rs-layer#slider-2-slide-1-layer-2 label,
 	rs-layer#slider-2-slide-1-layer-3 label,
 	rs-layer#slider-2-slide-1-layer-4 label { display: none; }
 
 	/* Header */
-	.site-branding { padding: 25px 0 25px; }
+	.site-branding { padding: 10px 0 10px; }
 	.menubar.is-active .menubar-inner,
    	.menubar.is-active .menubar-inner:after,
    	.menubar.is-active .menubar-inner:before { background-color: var(--base-white); transition: all 0.5s ease; transition-delay: 600ms; }
@@ -730,6 +737,9 @@
 @media (max-width: 680px) {
 	.spacing-5 { padding: 200px 0 250px; }
 	.spacing-6 { margin-top: -530px; }
+    #callIcon, #mailIcon, .social-icons{display: none !important;}
+    .prt-header-style-03 .top_bar_contact_item:not(:nth-child(3)):before { content: ''; background-color: var(--secondaryColor);
+        position: absolute; width: 1px; height: 26px; top: 9px; left: -1px; }
 }
 
 @media (max-width: 675px) {
@@ -837,7 +847,7 @@
 }
 
 @media only screen and (max-width: 480px) {
-
+    .auto_size{width: 100px;height: auto}
 	.spacing-5 { padding: 200px 0 260px; }
 	.spacing-6 { margin-top: -520px; }
 	.spacing-35 { padding: 0; }
@@ -855,7 +865,7 @@
 }
 
 @media only screen and (max-width: 420px) {
-
+    .auto_size{width: 100px;height: auto}
 	.prt-row.home01-testimonial-section { padding: 40px 0 160px; }
 	.spacing-5 { padding: 340px 0 350px; }
 	.spacing-6 { margin-top: -680px; }

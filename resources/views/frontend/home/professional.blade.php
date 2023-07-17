@@ -5,10 +5,7 @@
                 <!-- section title -->
                 <div class="section-title title-style-center_text">
                     <div class="title-header">
-                        <h2>Our Team Of <span>Elder Care </span> Professionals</h2>
-                    </div>
-                    <div class="title-desc">
-                        <p>Highly Coordinated, Connected, Compassionate, Caring, Committed & Cohesive Team of Elder Care Professionals – 6S Team of Doctors and Elder Care Professionals are our backbone for providing 360-degree care and All Types of Medical & Non-medical services.</p>
+                        <h3>Our Team Of <span>Elder Care </span> Professionals</h3>
                     </div>
                 </div><!-- section title end -->
             </div>
@@ -21,7 +18,7 @@
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
-                            <h3><a href="#">Ms.Chandana Jana</a></h3>
+                            <h4 class="text-white">Ms.Chandana Jana</h4>
                         </div>
                         <div class="featured-desc">
                             <p>Nursing In-Charge</p>
@@ -36,7 +33,7 @@
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
-                            <h3><a href="#">Saibal Dhar</a></h3>
+                            <h4 class="text-white">Saibal Dhar</h4>
                         </div>
                         <div class="featured-desc">
                             <p>Manager - Customer Relation</p>
@@ -51,7 +48,7 @@
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
-                            <h3><a href="#">Raj Hossain</a></h3>
+                            <h4 class="text-white">Raj Hossain</h4>
                         </div>
                         <div class="featured-desc">
                             <p>Manager - Elder Care</p>

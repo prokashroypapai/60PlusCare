@@ -5,17 +5,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="d-flex flex-row align-items-center justify-content-between header-spacing" style="background-color: var(--primaryColor)">
+                    <div class="d-flex flex-row align-items-center justify-content-between header-spacing bg-base-skin-Primary">
                         <div class="align-self-center">
-                            <div class="top_bar_contact_item">
+                            <div class="top_bar_contact_item" id="callIcon">
                                 <div class="top_bar_icon prt-icon prt-icon_element-onlytxt">
                                     <i class="flaticon flaticon-phone-call"></i>
                                 </div>
-                                <span><a href="tel:+91 8296111777">+91 8296 111 777</a></span>
+                                <span><a href="tel:+91 8296111777" rel="nofollow noindex">+91 8296 111 777</a></span>
                             </div>
-                            <div class="top_bar_contact_item">
+                            <div class="top_bar_contact_item" id="mailIcon">
                                 <div class="top_bar_icon prt-icon prt-icon_element-onlytxt"><i class="flaticon flaticon-email"></i></div>
-                                <a href="mailto:info@60plusclinic.com">info@60plusclinic.com</a>
+                                <a href="mailto:info@60plusclinic.com" rel="nofollow noindex">info@60plusclinic.com</a>
                             </div>
                             <div class="top_bar_contact_item">
                                 <a href="{{url('dashboard')}}">Member's Zone</a>
@@ -32,25 +32,15 @@
                         <div class="align-self-center">
                             <ul class="social-icons">
                                 <li>
-                                    <a href="https://twitter.com/60PlusClinic" aria-label="twitter">
-                                        <img src="{{asset('static/images/twitter.png')}}" width="30" height="30">
+                                    <a href="https://twitter.com/the60pluscare" aria-label="twitter" title="{{env('APP_NAME')}} on Twitter">
+                                        <img src="{{asset('static/images/twitter.png')}}" width="30" height="30" alt="{{env('APP_NAME')}} on Twitter">
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.facebook.com/60PlusClinic" aria-label="facebook">
-                                        <img src="{{asset('static/images/facebook.png')}}" width="30" height="30">
+                                    <a href="https://www.facebook.com/60PlusCareElderCareHomeCare" aria-label="facebook" title="{{env('APP_NAME')}} on Facebook">
+                                        <img src="{{asset('static/images/facebook.png')}}" width="30" height="30" alt="{{env('APP_NAME')}} on Facebook">
                                     </a>
                                 </li>
-                                <!--<li>
-                                    <a href="https://instagram.com/" aria-label="instagram">
-                                        <img src="{{asset('static/images/instagram.png')}}" width="30" height="30">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com" aria-label="youtube">
-                                        <img src="{{asset('static/images/youtube.png')}}" width="30" height="30">
-                                    </a>
-                                </li>-->
                             </ul>
                         </div>
                     </div>
@@ -71,18 +61,16 @@
                             <div class="d-flex align-items-center justify-content-start">
                                 <!-- site-branding -->
                                 <div class="site-branding">
-                                    <h1>
-                                        <a class="home-link" href="{{url('/')}}" title="" rel="home">
-                                            <img id="logo-img" width="175" height="49" class="img-fluid auto_size" src="{{ asset('static/images/logo.png') }}" alt="logo-img">
-                                        </a>
-                                    </h1>
+                                    <a class="home-link" href="{{url('/')}}" title="{{env('APP_NAME')}} Homepage" rel="home">
+                                        <img id="logo-img" class="img-fluid auto_size" src="{{ asset('static/images/logo.webp') }}" alt="{{env('APP_NAME')}} Homepage">
+                                    </a>
                                 </div><!-- site-branding end -->
                             </div>
                             <div class="d-flex align-items-center justify-content-end">
                                 <div class="btn-show-menu-mobile menubar menubar--squeeze">
-                                            <span class="menubar-box">
-                                                <span class="menubar-inner"></span>
-                                            </span>
+                                    <span class="menubar-box">
+                                        <span class="menubar-inner"></span>
+                                    </span>
                                 </div>
                                 <!-- menu -->
                                 <nav class="main-menu menu-mobile" id="menu">
@@ -94,7 +82,7 @@
                                             <a href="{{url('/services')}}">Services</a>
                                         </li>
                                         <li class="mega-menu-item">
-                                            <a href="{{url('/services/physiotherapy')}}">Physiotherapy</a>
+                                            <a href="{{url('/physiotherapy')}}">Physiotherapy</a>
                                         </li>
                                         <li class="mega-menu-item megamenu-fw submenu">
                                             <a href="#" class="mega-menu-link">Knowledge</a>
@@ -102,19 +90,19 @@
                                                 <li>
                                                     <div class="row">
                                                         <div class="col-menu col-xl-3 col-lg-12">
-                                                            <h3 class="title">About 60 Plus Care</h3>
+                                                            <strong class="title">About 60 Plus Care</strong>
                                                             <div class="content">
                                                                 <ul class="menu-col">
                                                                     <li><a href="{{url('about')}}">About</a></li>
                                                                     <li><a href="{{url('packages')}}">Packages</a></li>
                                                                     <li><a href="{{url('doctors')}}">Doctors</a></li>
                                                                     <li><a href="{{url('patient-study')}}">Patient Study</a></li>
-                                                                    <li><a href="{{url('services/diet-nutrition')}}">Diet & Nutrition</a></li>
+                                                                    <li><a href="{{url('diet-nutrition')}}">Diet & Nutrition</a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
                                                         <div class="col-menu col-xl-3 col-lg-12">
-                                                            <h3 class="title">Locations</h3>
+                                                            <strong class="title">Locations</strong>
                                                             <div class="content">
                                                                 <ul class="menu-col">
                                                                     @foreach(\App\Models\Location::active()->select('location_name', 'location_slug')->get() as $location)
@@ -124,7 +112,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-menu col-xl-3 col-lg-12">
-                                                            <h3 class="title">Other Links</h3>
+                                                            <strong class="title">Other Links</strong>
                                                             <div class="content">
                                                                 <ul class="menu-col">
                                                                     <li><a href="{{url('gallery')}}">Gallery</a></li>
@@ -137,7 +125,7 @@
                                                                 <ul class="menu-col-img">
                                                                     <li>
                                                                         <a href="{{asset('static/images/60clinic-banner-offer.jpg')}}" title="60Plus Banner Offer" target="_blank">
-                                                                            <img class="img-fluid" src="{{asset('static/images/60clinic-banner-offer.jpg')}}" alt="60Plus Banner Offer">
+                                                                            <img class="img-fluid" src="{{asset('static/images/60clinic-banner-offer.webp')}}" alt="60Plus Banner Offer">
                                                                         </a>
                                                                     </li>
                                                                 </ul>
@@ -156,16 +144,8 @@
                                     </ul>
                                 </nav><!-- menu end -->
                                 <!-- header_extra -->
-                                <div class="header_extra d-flex flex-row align-items-center">
-                                    <div class="header_item">
-                                        <div class="widget_info">
-                                            <div class="widget_icon">
-                                            </div>
-                                            <div class="widget_content">
-                                                <button class="registerBtn" onclick='window.location.href="{{url('register')}}"'>REGISTER</button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="flex-row align-items-center header_item">
+                                    <button class="registerBtn" onclick='window.location.href="{{url('register')}}"'>REGISTER</button>
                                 </div><!-- header_extra end -->
                             </div>
                         </div><!-- site-navigation end-->

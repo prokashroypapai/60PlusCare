@@ -2,7 +2,7 @@
 @section('content')
 
     <!-- page-title -->
-    <div class="prt-page-title-row prt-bg prt-bgimage-yes" style="background-image: url({{asset('static/images/bgimage-11.jpg')}})">
+    <div class="prt-page-title-row prt-bg prt-bgimage-yes" style="background-image: url({{asset('static/images/about60pluscarewebp')}})">
         <div class="prt-page-title-row-inner prt-bg-layer bg-base-bodycolor">
             <div class="prt-page-title-row-wrapper-inner"></div>
         </div>
@@ -58,7 +58,7 @@
                     </div>
                     <div class="col-xl-6 res-1199-mt-30 align-self-center">
                         <div class="prt_single_image-wrapper text-start">
-                            <img width="686" height="568" class="img-fluid" src="{{asset('static/images/patient_book.jpg')}}" alt="single-06">
+                            <img width="686" height="568" class="img-fluid" src="{{asset('static/images/patient_book.jpg')}}" alt="Patient Study at 60 Plus Care">
                         </div>
                     </div>
                 </div>

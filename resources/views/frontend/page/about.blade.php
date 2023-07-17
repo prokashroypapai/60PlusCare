@@ -2,7 +2,7 @@
 @section('content')
 
     <!-- page-title -->
-    <div class="prt-page-title-row prt-bg prt-bgimage-yes" style="background-image: url({{asset('static/images/bgimage-20.jpg')}})">
+    <div class="prt-page-title-row prt-bg prt-bgimage-yes bgAbout">
         <div class="prt-page-title-row-inner prt-bg-layer bg-base-bodycolor">
             <div class="prt-page-title-row-wrapper-inner"></div>
         </div>
@@ -34,7 +34,7 @@
     <div class="site-main">
 
         <!-- about-section -->
-        <section class="prt-row about01-about-section bg-base-grey clearfix">
+        <section class="prt-row about01-about-section bg-base-grey clearfix" id="aboutSection">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6">
@@ -72,7 +72,7 @@
                     </div>
                     <div class="col-xl-6 res-1199-mt-30 align-self-center">
                         <div class="prt_single_image-wrapper text-start">
-                            <img width="686" height="568" class="img-fluid shadow" src="{{asset('static/images/bgimage-20.jpg')}}" alt="single-06">
+                            <img width="686" height="568" class="img-fluid shadow" src="{{asset('static/images/about60pluscare.webp')}}" alt="single-06">
                         </div>
                     </div>
                 </div>

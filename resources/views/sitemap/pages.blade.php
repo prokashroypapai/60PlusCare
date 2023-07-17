@@ -1,62 +1,62 @@
 <?php echo '<?xml version="1.0" encoding="UTF-8"?>' ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://60pluscare.in/</loc>
+        <loc>https://www.60pluscare.in/</loc>
         <changefreq>always</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://60pluscare.in/about</loc>
+        <loc>https://www.60pluscare.in/about</loc>
         <changefreq>always</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://60pluscare.in/services</loc>
+        <loc>https://www.60pluscare.in/services</loc>
         <changefreq>always</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://60pluscare.in/services/physiotherapy</loc>
+        <loc>https://www.60pluscare.in/physiotherapy</loc>
         <changefreq>always</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://60pluscare.in/services/diet-nutrition</loc>
+        <loc>https://www.60pluscare.in/diet-nutrition</loc>
         <changefreq>always</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://60pluscare.in/packages</loc>
+        <loc>https://www.60pluscare.in/packages</loc>
         <changefreq>always</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://60pluscare.in/doctors</loc>
+        <loc>https://www.60pluscare.in/doctors</loc>
         <changefreq>always</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://60pluscare.in/patient-study</loc>
+        <loc>https://www.60pluscare.in/patient-study</loc>
         <changefreq>always</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://60pluscare.in/gallery</loc>
+        <loc>https://www.60pluscare.in/gallery</loc>
         <changefreq>always</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://60pluscare.in/testimonials</loc>
+        <loc>https://www.60pluscare.in/testimonials</loc>
         <changefreq>always</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://60pluscare.in/contact</loc>
+        <loc>https://www.60pluscare.in/contact</loc>
         <changefreq>always</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://60pluscare.in/register</loc>
+        <loc>https://www.60pluscare.in/register</loc>
         <changefreq>always</changefreq>
         <priority>1.0</priority>
     </url>

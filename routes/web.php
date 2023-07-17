@@ -48,5 +48,10 @@ Route::get('article/{slug?}', [ArticleController::class, 'index']);
 //gallery
 Route::get('gallery/{slug?}', [GalleryController::class, 'index']);
 
+//offline
+Route::get('/offline', function () {
+    return view('vendor/laravelpwa/offline');
+});
+
 //all paths
 Route::get('/{path?}', [WelcomeController::class, 'getpages'])->where('path', '.*');

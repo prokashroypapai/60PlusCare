@@ -5,7 +5,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Neuton:wght@400;700&display=swap');
 
 :root {
     --primaryColor: #b6c134;
@@ -196,6 +195,8 @@ menu, ol, ul {
 .bg-base-skin { background-color: var(--base-skin);}
 .bg-base-skin-Primary { background-color: var(--primaryColor);}
 .bg-base-skin-Secondary { background-color: var(--secondaryColor);}
+.bg-base-skin-SecondarySub1 { background-color: var(--secondaryColorSub1);}
+.bg-base-skin-SecondarySub2 { background-color: var(--secondaryColorSub2);}
 .bg-base-dark { background-color: var(--base-dark);}
 .bg-base-grey { background-color: var(--base-grey);}
 .bg-base-white { background-color: var(--base-white);}
@@ -924,21 +925,21 @@ ul.social-icons{
 .prt-header-style-03 .top_bar_contact_item span { font-size: 14px; display: inline-block; margin-bottom: 0;}
 .prt-header-style-03 .top_bar_contact_item a { font-size: 14px; display: inline-block; text-transform: capitalize; }
 .prt-header-style-03 .top_bar_contact_item:not(:first-child) { margin-left: 12px; padding-left: 14px; }
-.prt-header-style-03 .top_bar_contact_item:not(:first-child):before { content: ''; background-color: var(--secondaryColor);
-    position: absolute; width: 1px; height: 26px; top: 9px; left: -1px; }
+
 
 /*  ===============================================
     Header
 ------------------------*/
 /** SiteBrand(logo) **/
-.site-branding {
+/*.site-branding {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+}*/
+/*
 .site-branding h1 { font-size: 30px; line-height: 30px; margin-bottom: 0; }
 .site-branding h1 a { line-height: inherit; }
-
+*/
 /*site-navigation*/
 .site-navigation {
     position: relative;
@@ -1632,7 +1633,8 @@ ul.footer-nav-menu li:last-child:after {
 .page-title-heading h2 {
     text-transform: capitalize;
     font-weight: 400;
-    font-size: 58px;
+    /*font-size: 58px;*/
+    font-size: 16px;
     line-height: 78px;
     margin-bottom: 0;
     color: var(--base-white);
@@ -1986,7 +1988,7 @@ blockquote .qoute-text p { margin-bottom: 0; }
 /*------------------------------------------------------------------------------*/
 /*  single_services
 /*------------------------------------------------------------------------------*/
-.prt-service-single-content-area div:not(.featured-title) > h3 { font-size: 30px; line-height: 40px; }
+.prt-service-single-content-area div:not(.featured-title) > h4 { font-size: 30px; line-height: 40px; }
 .prt-service-single-content-area p:not(:last-child) { margin-bottom: 25px; }
 .prt-service-single-content-area .prt_fatured_image-wrapper { position: relative; overflow: hidden;}
 .prt-service-single-content-area img { width: 100%; }
@@ -2799,4 +2801,10 @@ section.error-404 .prt_floating_shape_04 {
 }
 .registerBtn:active{
     transform: scale(0.96);
+}
+.bgphysiotherapy{
+    background-image: url(../images/bgimage-14.jpg);
+}
+.bgAbout{
+    background-image: url(../images/aboutUs.webp);
 }

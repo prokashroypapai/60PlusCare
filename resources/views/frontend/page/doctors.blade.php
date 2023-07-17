@@ -2,7 +2,7 @@
 @section('content')
 
     <!-- page-title -->
-    <div class="prt-page-title-row prt-bg prt-bgimage-yes" style="background-image: url({{asset('static/images/bgimage-9.jpg')}})">
+    <div class="prt-page-title-row prt-bg prt-bgimage-yes" style="background-image: url({{asset('static/images/bgimage-9.webp')}})">
         <div class="prt-page-title-row-inner prt-bg-layer bg-base-bodycolor">
             <div class="prt-page-title-row-wrapper-inner"></div>
         </div>
@@ -44,7 +44,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="featured-imagebox featured-imagebox-team">
                             <div class="featured-thumbnail">
-                                <img class="img-fluid" src="{{asset($doctor->doctorPicture->image_thumb)}}" width="277" height="301" alt="image">
+                                <img class="img-fluid" src="{{asset($doctor->doctorPicture->image_thumb)}}" width="277" height="301" alt="{{$doctor->doctor_name}} at {{env('APP_NAME')}}">
                             </div>
                             <div class="featured-content">
                                 <div class="featured-title">

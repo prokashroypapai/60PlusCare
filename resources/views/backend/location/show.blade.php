@@ -27,6 +27,7 @@
             <!-- end page title -->
 
             <div class="row">
+
                 <div class="col-xl-6">
                     <div class="card">
                         <div class="card-body">
@@ -97,6 +98,81 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-xl-6">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <form method="post" action="{{url('admin/seo/update')}}" enctype="multipart/form-data">
+                                @csrf
+                                <input type="hidden" name="id" value="{{$location->id}}">
+                                <input type="hidden" name="type" value="location">
+
+                                <div class="form-group">
+                                    <label for="meta_title">Meta Title: </label>
+                                    @if ($errors->has('meta_title'))
+                                        <span class="text-danger">{{ $errors->first('meta_title') }}</span>
+                                    @endif
+                                    <input type="text" class="form-control" id="meta_title" name="meta_title" value="{{isset($location->locationSeo->meta_title) ? $location->locationSeo->meta_title : null}}">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="meta_description">Meta Description: </label>
+                                    @if ($errors->has('meta_description'))
+                                        <span class="text-danger">{{ $errors->first('meta_description') }}</span>
+                                    @endif
+                                    <textarea class="form-control" id="meta_description" name="meta_description">{{isset($location->locationSeo->meta_description) ? $location->locationSeo->meta_description : null}}</textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="meta_keyword">Meta Keyword: </label>
+                                    @if ($errors->has('meta_keyword'))
+                                        <span class="text-danger">{{ $errors->first('meta_keyword') }}</span>
+                                    @endif
+                                    <input type="text" class="form-control" id="meta_keyword" name="meta_keyword" value="{{isset($location->locationSeo->meta_keyword) ? $location->locationSeo->meta_keyword : null}}">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="og_title">OG Title: </label>
+                                    @if ($errors->has('og_title'))
+                                        <span class="text-danger">{{ $errors->first('og_title') }}</span>
+                                    @endif
+                                    <input type="text" class="form-control" id="og_title" name="og_title" value="{{isset($location->locationSeo->og_title) ? $location->locationSeo->og_title : null}}">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="og_description">OG Description: </label>
+                                    @if ($errors->has('og_description'))
+                                        <span class="text-danger">{{ $errors->first('og_description') }}</span>
+                                    @endif
+                                    <textarea class="form-control" id="og_description" name="og_description">{{isset($location->locationSeo->og_description) ? $location->locationSeo->og_description : null}}</textarea>
+                                </div>
+
+                                @if(isset($location->locationSeo->og_image))
+                                    <div class="form-group">
+                                        <label for="og_image">OG Image: </label>
+                                        <img src="{{asset($location->locationSeo->seoPicture->image_thumb)}}" width="75" height="75"/>
+                                    </div>
+                                @endif
+
+                                <div class="form-group">
+                                    <label for="useDefault" data-toggle="tooltip" data-placement="top" title="OG image will be default image">
+                                        <input type="checkbox" name="useDefault" id="useDefault" value="1"> Use Default Image
+                                    </label>
+                                </div>
+
+                                <div class="form-group" id="uploadPic">
+                                    <label for="upload">Upload Image: </label>
+                                    @if ($errors->has('upload'))
+                                        <span class="text-danger">{{ $errors->first('upload') }}</span>
+                                    @endif
+                                    <input type="file" class="form-control" id="upload" name="upload">
+                                </div>
+                                <button type="submit" class="btn btn-primary waves-effect waves-light">Save</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

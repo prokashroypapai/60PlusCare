@@ -3,7 +3,6 @@
 
 namespace App\Services;
 
-
 use App\Models\Picture;
 use Image;
 

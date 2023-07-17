@@ -19,7 +19,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="testimonial-caption">
-                                                    <h3>{{$testimonial->name}}</h3>
+                                                    <h6>{{$testimonial->name}}</h6>
                                                     <label> - {{$testimonial->designation}}</label>
                                                 </div>
                                                 <div class="star-ratings">
@@ -51,7 +51,7 @@
                     <div class="prt-col-wrapper-bg-layer prt-bg-layer"></div>
                     <div class="layer-content"></div>
                 </div>
-                <img class="prt-equal-height-image img-fluid w-100" src="{{asset('static/images/bgimage-2.jpg')}}" alt="bg-image">
+                <img class="prt-equal-height-image img-fluid w-100" src="{{asset('static/images/bgimage-2.webp')}}" alt="bg-image">
             </div>
         </div>
     </div>

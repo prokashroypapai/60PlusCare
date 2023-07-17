@@ -56,8 +56,11 @@
                             </div>
                             <div class="featured-content">
                                 <div class="featured-title">
-                                    <h3><a href="{{url('gallery/' . $gallery->gallery_slug)}}">{{$gallery->gallery_name}}</a></h3>
-                                    {{$gallery->galleryImages[0]->GalleryPicture->image_thumb}}
+                                    <h3>
+                                        <a class="text-white" href="{{url('gallery/' . $gallery->gallery_slug)}}">
+                                            {{$gallery->gallery_name}}
+                                        </a>
+                                    </h3>
                                 </div>
                             </div>
                         </div>

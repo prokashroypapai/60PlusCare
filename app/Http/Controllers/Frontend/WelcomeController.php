@@ -49,6 +49,8 @@ class WelcomeController extends Controller
             abort(404);
         }
 
-        return view('frontend.location.index', compact('location'));
+        $metaseo = Seo::where('location_id', $location->id)->first();
+
+        return view('frontend.location.index', compact('location', 'metaseo'));
     }
 }

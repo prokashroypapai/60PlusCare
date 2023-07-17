@@ -4,13 +4,13 @@
             <div class="col-xl-6">
                 <div class="section-title mt-20">
                     <div class="title-header">
-                        <h2>
+                        <h3>
                             An Initiative by Doctors to Simplify the Quality of Lives of Elders at home <span>since 2008.</span>
-                        </h2>
+                        </h3>
                     </div>
                     <div class="title-desc">
                         <p class="pr-50">
-                            FIRST EVER ELDER CARE & HOME CARE FOR SENIOR CITIZENS UNDER SUPERVISION OF DOCTORS.
+                            <strong>First ever elder care & home care for senior citizens under supervision of doctors.</strong>
                         </p>
                     </div>
                 </div>
@@ -27,16 +27,16 @@
                                     </div>
                                     <div class="featured-content">
                                         <div class="featured-title">
-                                            <h3>
+                                            <strong>
                                                 Vision
-                                            </h3>
+                                            </strong>
                                         </div>
                                         <div class="featured-desc">
                                             <p>To help keep elders healthy, jovial , happy and productive, yet being in their own homes.</p>
                                         </div>
                                     </div>
                                     <div class="featured-bottom">
-                                        <a class="prt-btn btn-inline prt-btn-color-dark" href="{{url('about#vision')}}">explore more</a>
+                                        <a class="prt-btn btn-inline prt-btn-color-dark" href="{{url('about#vision')}}">explore Vision</a>
                                     </div>
                                 </div>
                             </div>
@@ -49,9 +49,9 @@
                                     </div>
                                     <div class="featured-content">
                                         <div class="featured-title">
-                                            <h3>
+                                            <strong>
                                                 Mission
-                                            </h3>
+                                            </strong>
                                         </div>
                                         <div class="featured-desc">
                                             <p>
@@ -60,7 +60,7 @@
                                         </div>
                                     </div>
                                     <div class="featured-bottom">
-                                        <a class="prt-btn btn-inline prt-btn-color-dark" href="{{url('about#mission')}}">explore more</a>
+                                        <a class="prt-btn btn-inline prt-btn-color-dark" href="{{url('about#mission')}}">explore Mission</a>
                                     </div>
                                 </div>
                             </div>
@@ -73,9 +73,9 @@
                                     </div>
                                     <div class="featured-content">
                                         <div class="featured-title">
-                                            <h3>
+                                            <strong>
                                                 Why Us?
-                                            </h3>
+                                            </strong>
                                         </div>
                                         <div class="featured-desc">
                                             <p>
@@ -87,7 +87,7 @@
                                         </div>
                                     </div>
                                     <div class="featured-bottom">
-                                        <a class="prt-btn btn-inline prt-btn-color-dark" href="{{url('about#initiative')}}">explore more</a>
+                                        <a class="prt-btn btn-inline prt-btn-color-dark" href="{{url('about#initiative')}}">Know More</a>
                                     </div>
                                 </div>
                             </div>
@@ -100,7 +100,7 @@
                                     </div>
                                     <div class="featured-content">
                                         <div class="featured-title">
-                                            <h3>Caring For Elders</h3>
+                                            <strong>Caring For Elders</strong>
                                         </div>
                                         <div class="featured-desc text-start">
                                             <ul>
@@ -111,7 +111,7 @@
                                         </div>
                                     </div>
                                     <div class="featured-bottom">
-                                        <a class="prt-btn btn-inline prt-btn-color-dark" href="{{url('about')}}">Explore more</a>
+                                        <a class="prt-btn btn-inline prt-btn-color-dark" href="{{url('about#aboutSection')}}">About Us</a>
                                     </div>
                                 </div>
                             </div>
@@ -124,7 +124,7 @@
                     <div class="prt-col-wrapper-bg-layer prt-bg-layer res-991-mr-0"></div>
                     <div class="layer-content"></div>
                 </div>
-                <img class="prt-equal-height-image img-fluid w-100" src="{{asset('static/images/bgimage-1.jpg')}}" alt="bg-image">
+                <img class="prt-equal-height-image img-fluid w-100" src="{{asset('static/images/bgimage-1.webp')}}" alt="bg-image">
             </div>
         </div>
 

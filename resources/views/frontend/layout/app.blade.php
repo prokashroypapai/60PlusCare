@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="author" content="https://60pluscare.in/">
+    <meta name="author" content="60pluscare.in">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow"/>
 
@@ -49,7 +49,7 @@
     <meta property="og:title" content="{!! isset($metaseo['meta_title']) ? $metaseo['meta_title'] : env('APP_NAME') !!}" />
     <meta property="og:type" content="Website" />
     <meta property="og:url" content="https://60pluscare.in/" />
-    <meta property="og:site_name" content="60pluscare.in" />
+    <meta property="og:site_name" content="60 Plus Care" />
     <meta property="og:description" content="{!! isset($metaseo['meta_description']) ? $metaseo['meta_description'] : env('APP_NAME') !!}" />
     <meta property="og:image" content="{{isset($metaseo->SeoPicture->image_full) ? asset($metaseo->SeoPicture->image_full) : asset(\App\Models\Picture::getDefaultImage()->image_full)}}" />
     <meta property="og:image:secure" content="{{isset($metaseo->SeoPicture->image_full) ? asset($metaseo->SeoPicture->image_full) : asset(\App\Models\Picture::getDefaultImage()->image_full)}}" />
@@ -85,7 +85,7 @@
         ]
     }
 </script>
-
+    @laravelPWA
 </head>
 <body>
 

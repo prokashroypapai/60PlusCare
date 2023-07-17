@@ -5,7 +5,7 @@
                 <!-- section title -->
                 <div class="section-title title-style-center_text">
                     <div class="title-header">
-                        <h2>Team At <span>60 Plus Care</span></h2>
+                        <h3>Team At <span>60 Plus Care</span></h3>
                     </div>
                 </div><!-- section title end -->
                 <div class="title-desc">
@@ -24,7 +24,7 @@
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
-                            <h3><a href="#">Dr Dipankar Debnath</a></h3>
+                            <h4><a href="#">Dr Dipankar Debnath</a></h4>
                         </div>
                         <div class="featured-desc">
                             <p>Founder | Medical Director Consultant in Geriatric Medicine</p>
@@ -40,7 +40,7 @@
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
-                            <h3><a href="#">Milan Chakraborty</a></h3>
+                            <h4><a href="#">Milan Chakraborty</a></h4>
                         </div>
                         <div class="featured-desc">
                             <p>Advisor - Growth & Development Founder & Director of ABIL</p>
@@ -56,7 +56,7 @@
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
-                            <h3><a href="#">Koushik Nath</a></h3>
+                            <h4 rel="nofollow"><a href="#">Koushik Nath</a></h4>
                         </div>
                         <div class="featured-desc">
                             <p>Honorary IT Advisor Security Architect, CISCO Systems, USA</p>
