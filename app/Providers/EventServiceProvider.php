@@ -2,6 +2,12 @@
 
 namespace App\Providers;
 
+use App\Events\AppointmentmailProcessed;
+use App\Events\ContactmailProcessed;
+use App\Events\RegistermailProcessed;
+use App\Listeners\SendAppointmentmailNotification;
+use App\Listeners\SendContactmailNotification;
+use App\Listeners\SendRegistermailNotification;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -17,6 +23,15 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         Registered::class => [
             SendEmailVerificationNotification::class,
+        ],
+        ContactmailProcessed::class => [
+            SendContactmailNotification::class,
+        ],
+        AppointmentmailProcessed::class => [
+            SendAppointmentmailNotification::class,
+        ],
+        RegistermailProcessed::class => [
+            SendRegistermailNotification::class,
         ],
     ];
 

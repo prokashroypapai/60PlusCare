@@ -84,7 +84,7 @@
                                         <textarea id="message"></textarea>
                                     </div>
                                     <div class="form-group py-3">
-                                        <button class="btn btn-success">Submit</button>
+                                        <button class="btn btn-success" id="submitBtn">Submit</button>
                                     </div>
                                     <div id="errorDiv"></div>
                                 </form>
@@ -155,6 +155,12 @@
                         mobile:mobile,
                         city:city,
                         message:message
+                    },
+                    beforeSend: function(){
+                        $("#submitBtn").attr('disabled', true);
+                    },
+                    complete: function(){
+                        $("#submitBtn").attr('disabled', false);
                     },
                     success:function(response){
                         //console.log(response);

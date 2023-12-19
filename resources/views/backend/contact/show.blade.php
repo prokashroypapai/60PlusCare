@@ -40,7 +40,7 @@
                                 Mobile: <a href="tel:{{$contact->mobile}}" class="btn btn-success">{{$contact->mobile}}</a>
                             </div>
                             <div class="form-group">
-                                Description: <strong>{{$contact->description}}</strong>
+                                Description: <strong>{{$contact->comment}}</strong>
                             </div>
                             <div class="form-group">
                                 Date: <strong>{{$contact->created_at->format('d M Y')}}</strong>

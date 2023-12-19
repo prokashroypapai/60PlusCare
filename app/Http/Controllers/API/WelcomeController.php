@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Events\AppointmentmailProcessed;
+use App\Events\ContactmailProcessed;
 use App\Http\Controllers\Controller;
 use App\Models\Appointment;
 use App\Models\Contact;
@@ -44,7 +46,14 @@ class WelcomeController extends Controller
 
         $contact = Contact::create($data);
 
-        if($contact) {
+        $data2 = array(
+            'to_email' => 'care@60pluscare.in',
+            'name' => $request->name
+        );
+
+        $sendEmail = event(new ContactmailProcessed($data2));
+
+        if($sendEmail) {
             return response()->json(['status' => 200, 'msg' => 'Successfully Saved']);
         }
         else{
@@ -91,7 +100,14 @@ class WelcomeController extends Controller
 
         $createAppointment = Appointment::create($data);
 
-        if($createAppointment) {
+        $data2 = array(
+            'to_email' => 'care@60pluscare.in',
+            'name' => $request->name
+        );
+
+        $sendEmail = event(new AppointmentmailProcessed($data2));
+
+        if($sendEmail) {
             return response()->json(['status' => 200, 'msg' => 'Successfully Saved']);
         }
         else{

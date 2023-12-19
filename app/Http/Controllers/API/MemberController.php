@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Events\RegistermailProcessed;
 use App\Http\Controllers\Controller;
 use App\Models\Member;
 use App\Models\Membership;
@@ -47,7 +48,14 @@ class MemberController extends Controller
 
         $membership = Membership::create($data);
 
-        if($membership) {
+        $data2 = array(
+            'to_email' => 'care@60pluscare.in',
+            'name' => $request->name
+        );
+
+        $sendEmail = event(new RegistermailProcessed($data2));
+
+        if($sendEmail) {
             return response()->json(['status' => 200, 'msg' => 'Successfully Saved']);
         }
         else{
