@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box d-flex align-items-center justify-content-between">
-                        <h4 class="mb-0 font-size-18">Memberships</h4>
+                        <h4 class="mb-0 font-size-18">Membership Requests</h4>
 
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
@@ -33,7 +33,6 @@
                                 <thead>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Package</th>
                                     <th>Name</th>
                                     <th>Mobile</th>
                                     <th>Email</th>
@@ -46,14 +45,14 @@
                                 @foreach($memberships as $membership)
                                     <tr>
                                         <td>{{$membership->id}}</td>
-                                        <td>{{$membership->membershipPackage->package_name}}</td>
                                         <td>{{$membership->name}}</td>
                                         <td>{{$membership->mobile}}</td>
                                         <td>{{$membership->email}}</td>
                                         <td>{{$membership->city}}</td>
                                         <td>
-                                            <button class="btn btn-success" onclick="myFunc({{$membership->id}}, '')">Accept</button>
-                                            <button class="btn btn-danger" onclick="myFunc({{$membership->id}}, 'reject')">Reject</button>
+                                            <!--<button class="btn btn-success" onclick="myFunc({{$membership->id}}, 'accept')">Accept</button>
+                                            <button class="btn btn-danger" onclick="myFunc({{$membership->id}}, 'reject')">Reject</button>-->
+                                                <a href="{{ url('admin/membership/' . $membership->id) }}" class="btn btn-primary">Action</a>
                                         </td>
                                     </tr>
                                 @endforeach

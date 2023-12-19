@@ -6,6 +6,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://www.60pluscare.in/elder-care</loc>
+        <changefreq>always</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://www.60pluscare.in/about</loc>
         <changefreq>always</changefreq>
         <priority>1.0</priority>

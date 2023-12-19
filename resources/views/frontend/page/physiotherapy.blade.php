@@ -7,6 +7,7 @@
             60 Plus Care provides best physiotherapy treatment at home in Kolkata. We have experienced physiotherapists working since 2008 provides you best treatment.
             Our senior doctors take care of every patient at home. View our best plans of your choice and start physiotherapy service with 60 Plus Care with affordable cost.
         </p>
+        <h2>Best Physiotherapist, Physiotherapy Doctors In Kolkata</h2>
     </div>
     <style>
         .headingMain {
@@ -19,35 +20,6 @@
         }
     </style>
 
-    <!-- page-title -->
-    <div class="prt-page-title-row prt-bg prt-bgimage-yes bgphysiotherapy">
-        <div class="prt-page-title-row-inner prt-bg-layer bg-base-bodycolor">
-            <div class="prt-page-title-row-wrapper-inner"></div>
-        </div>
-        <div class="layer-content">
-            <div class="container-fluid p-0">
-                <div class="row align-items-center">
-                    <div class="col-lg-12">
-                        <div class="prt-page-title-row-heading">
-                            <div class="page-title-heading">
-                                <h2 class="title">Best Physiotherapist, Physiotherapy Doctors In Kolkata</h2>
-                            </div>
-                            <div class="breadcrumb-wrapper">
-                                    <span>
-                                        <a href="{{url('/')}}">Home</a>
-                                    </span>
-                                <span>
-                                        <a href="#">Physiotherapy</a>
-                                    </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- page-title end -->
-
     <!--site-main start-->
     <div class="site-main">
 
@@ -57,7 +29,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="prt_single_image-wrapper text-center">
-                            <img class="img-fluid" src="{{asset('static/images/bgimage-15.jpg')}}" alt="60 Plus Care provides Best Physiotherapy Service in Kolkata">
+                            <img loading="lazy" class="img-fluid rounded" src="{{asset('static/images/60plus-care-physiotherapy-service-at-home.jpg')}}" alt="60 Plus Care provides Best Physiotherapy Service in Kolkata">
                         </div>
                     </div>
                 </div>
@@ -69,7 +41,7 @@
                             </div>
                             <div class="title-desc">
                                 <p>
-                                    Revive Physiotherapy and advanced Rehabilitation centre is one of the best centre provides OPD services,Research and Innovations in the field of Physiotherapy.
+                                    Revive Physiotherapy and advanced Rehabilitation centre is one of the best centre provides OPD services, Research and Innovations in the field of <strong>Physiotherapy service in Kolkata</strong>.
                                 </p>
                                 <p>
                                     Equipped with Latest inventions with High Skilled Committed Physiotherapists are the strength of our success.
@@ -260,12 +232,6 @@
             </div>
         </section>
         <!-- list-section-end -->
-
-        @include('frontend.widget.facilities')
-
-        <!-- special-treatment-section -->
-        @include('frontend.widget.specialTreatment')
-        <!-- special-treatment-section -->
 
         <!-- service-section -->
         @include('frontend.widget.bodyConditions')

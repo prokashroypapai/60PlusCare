@@ -32,7 +32,7 @@
     <script>
         tinymce.init({
             selector: 'textarea#product_name, textarea#product_details, textarea#product_benefit, textarea#product_uses, textarea#story_description, textarea#description',
-            menubar: false
+            menubar: true
         });
     </script>
 

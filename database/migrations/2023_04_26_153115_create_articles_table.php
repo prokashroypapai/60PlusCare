@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('title', 191)->nullable();
             $table->string('slug', 191)->nullable();
             $table->longText('description')->nullable();
-            $table->tinyInteger('num_of_views')->default(0);
+            $table->integer('num_of_views')->default(0);
             $table->boolean('status')->default(1);
             $table->timestamps();
         });

@@ -11,7 +11,7 @@
                         <div class="prt-client-logo-tooltip">
                             <div class="prt-client-logo-tooltip-inner">
                                 <div class="client-thumbnail">
-                                    <img width="105" height="auto" class="img-fluid" src="{{asset('static/images/associate2.jpg')}}" alt="image">
+                                    <img loading='lazy' width="120" height="auto" class="img-fluid" src="{{asset('static/images/apollo-diagnostics-logo.webp')}}" alt="Apollo Diagnostics Associate of {{env('APP_NAME')}}">
                                 </div>
                             </div>
                         </div>
@@ -20,7 +20,7 @@
                         <div class="prt-client-logo-tooltip">
                             <div class="prt-client-logo-tooltip-inner">
                                 <div class="client-thumbnail">
-                                    <img width="105" height="auto" class="img-fluid" src="{{asset('static/images/associate3.jpg')}}" alt="image">
+                                    <img loading='lazy' width="120" height="auto" class="img-fluid" src="{{asset('static/images/apollo24x7-logo.webp')}}" alt="Apollo 24x7 Associate of {{env('APP_NAME')}}">
                                 </div>
                             </div>
                         </div>
@@ -29,7 +29,7 @@
                         <div class="prt-client-logo-tooltip">
                             <div class="prt-client-logo-tooltip-inner">
                                 <div class="client-thumbnail">
-                                    <img width="105" height="auto" class="img-fluid" src="{{asset('static/images/associate5.jpg')}}" alt="image">
+                                    <img loading='lazy' width="120" height="auto" class="img-fluid" src="{{asset('static/images/titan-eye-plus-new.webp')}}" alt="Titan Eye Plus Associate of {{env('APP_NAME')}}">
                                 </div>
                             </div>
                         </div>
@@ -38,7 +38,7 @@
                         <div class="prt-client-logo-tooltip">
                             <div class="prt-client-logo-tooltip-inner">
                                 <div class="client-thumbnail">
-                                    <img width="105" height="auto" class="img-fluid" src="{{asset('static/images/associate6.jpg')}}" alt="image">
+                                    <img loading='lazy' width="280" height="auto" class="img-fluid" src="{{asset('static/images/indian-bank-logo.webp')}}" alt="Indian Bank Associate of {{env('APP_NAME')}}">
                                 </div>
                             </div>
                         </div>
@@ -47,16 +47,7 @@
                         <div class="prt-client-logo-tooltip">
                             <div class="prt-client-logo-tooltip-inner">
                                 <div class="client-thumbnail">
-                                    <img width="105" height="auto" class="img-fluid" src="{{asset('static/images/associate7.jpg')}}" alt="image">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="client-box">
-                        <div class="prt-client-logo-tooltip">
-                            <div class="prt-client-logo-tooltip-inner">
-                                <div class="client-thumbnail">
-                                    <img width="105" height="auto" class="img-fluid" src="{{asset('static/images/associate8.jpg')}}" alt="image">
+                                    <img loading='lazy' width="100" height="auto" class="img-fluid" src="{{asset('static/images/ymca-logo.webp')}}" alt="YMCA Associate of {{env('APP_NAME')}}">
                                 </div>
                             </div>
                         </div>

@@ -38,6 +38,7 @@
                                     <th>Id</th>
                                     <th>Member</th>
                                     <th>Package</th>
+                                    <th>No of Month</th>
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
@@ -47,8 +48,9 @@
                                 @foreach($subscriptions as $subscription)
                                     <tr>
                                         <td>{{$subscription->id}}</td>
-                                        <td>{{$subscription->subscriptionUser->name}}</td>
+                                        <td><a href="{{ url('admin/member/' . $subscription->member_id) }}">{{$subscription->subscriptionUser->name}}</a></td>
                                         <td>{{$subscription->subscriptionPackage->package_name}}</td>
+                                        <td>{{$subscription->num_months}}</td>
                                         <td>@if($subscription->is_expired == false)<span class="badge badge-success">ACTIVE</span> @else <span class="badge badge-danger">INACTIVE</span>@endif</td>
                                         <td><a href="{{url('admin/subscription/' . $subscription->id)}}" class="btn btn-success">Action</a></td>
                                     </tr>

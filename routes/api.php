@@ -25,3 +25,15 @@ Route::post('registerMember', [MemberController::class, 'store']);
 
 //contact
 Route::post('contact', [WelcomeController::class, 'contact']);
+
+//appointment
+Route::post('makeAppointment', [WelcomeController::class, 'makeAppointment']);
+
+//user details
+Route::post('userDetails', [WelcomeController::class, 'userDetails']);
+
+//member details
+Route::post('memberDetails', [WelcomeController::class, 'memberDetails']);
+
+//member details
+Route::post('createMember', [MemberController::class, 'createMember']);

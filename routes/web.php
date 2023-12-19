@@ -30,6 +30,8 @@ require __DIR__ . '/frontend/sitemap.php';
 //homepage
 Route::get('/', [WelcomeController::class, 'index']);
 
+Route::get('/schedule-an-appointment', [WelcomeController::class, 'appointment']);
+
 //Services
 Route::get('services/{service_slug?}', [ServiceController::class, 'index']);
 
@@ -37,7 +39,11 @@ Route::get('services/{service_slug?}', [ServiceController::class, 'index']);
 require __DIR__ . '/frontend/dashboard.php';
 
 //location
-Route::get('city/{location_slug?}', [WelcomeController::class, 'location']);
+//Route::get('city/{location_slug?}', [WelcomeController::class, 'location']);
+
+//clinic
+Route::get('clinics', [WelcomeController::class, 'clinics']);
+Route::get('clinic/{clinic_slug?}', [WelcomeController::class, 'clinic']);
 
 //member register
 Route::get('register', [RegisterController::class, 'index']);
@@ -47,6 +53,9 @@ Route::get('article/{slug?}', [ArticleController::class, 'index']);
 
 //gallery
 Route::get('gallery/{slug?}', [GalleryController::class, 'index']);
+
+//loadingnoticeboard
+Route::get('loadNoticeBoard/{type}', [WelcomeController::class, 'loadNoticeBoard']);
 
 //offline
 Route::get('/offline', function () {

@@ -10,7 +10,9 @@ Route::get('page_sitemap.xml', [SitemapController::class, 'pagesitemap']);
 
 Route::get('article_sitemap.xml', [SitemapController::class, 'articlesitemap']);
 
-Route::get('location_sitemap.xml', [SitemapController::class, 'locationsitemap']);
+//Route::get('location_sitemap.xml', [SitemapController::class, 'locationsitemap']);
+
+Route::get('clinic_sitemap.xml', [SitemapController::class, 'clinicSitemap']);
 
 
 

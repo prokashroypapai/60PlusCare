@@ -9,6 +9,8 @@ Route::post('member/store', [MemberController::class, 'store']);
 Route::get('member/{id}', [MemberController::class, 'show']);
 Route::post('member/update', [MemberController::class, 'update']);
 Route::get('member/{id}/delete', [MemberController::class, 'delete']);
-
+Route::get('member/{id}/restore', [MemberController::class, 'restore']);
 
 Route::post('memberProfile/update', [MemberController::class, 'memberProfileUpdate']);
+
+Route::get('member/{id}/subscriptions', [MemberController::class, 'subscriptions']);

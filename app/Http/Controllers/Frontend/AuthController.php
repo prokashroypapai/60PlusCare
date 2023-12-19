@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Page;
+use App\Models\Seo;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -11,7 +13,9 @@ use Session;
 class AuthController extends Controller
 {
     public function login(){
-        return view('frontend.auth.login');
+        $page = Page::where('page_slug', 'login')->first();
+        $metaseo = Seo::where('page_id', $page->id)->first();
+        return view('frontend.auth.login', compact('metaseo'));
     }
 
     public function postlogin(Request $request){

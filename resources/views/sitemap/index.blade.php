@@ -9,7 +9,7 @@
         <lastmod>{{ date("Y-m-d\Th:m:s+00:00") }}</lastmod>
     </sitemap>
     <sitemap>
-        <loc>{{ url('location_sitemap.xml') }}</loc>
+        <loc>{{ url('clinic_sitemap.xml') }}</loc>
         <lastmod>{{date("Y-m-d\Th:m:s+00:00")}}</lastmod>
     </sitemap>
 </sitemapindex>

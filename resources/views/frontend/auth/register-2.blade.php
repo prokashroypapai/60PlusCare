@@ -53,14 +53,14 @@
                                         <input type="text" id="name">
                                     </div>
                                     <div class="form-group mb-3">
-                                        <label for="mobile">Mobile</label>
-                                        <span class="text-danger" id="mobileError"></span>
-                                        <input type="text" id="mobile">
-                                    </div>
-                                    <div class="form-group mb-3">
                                         <label for="email">Email</label>
                                         <span class="text-danger" id="emailError"></span>
                                         <input type="text" id="email">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="mobile">Mobile</label>
+                                        <span class="text-danger" id="mobileError"></span>
+                                        <input type="text" id="mobile">
                                     </div>
                                     <div class="form-group mb-3">
                                         <label for="city">City</label>

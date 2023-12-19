@@ -7,21 +7,20 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box d-flex align-items-center justify-content-between">
-                        <h4 class="mb-0 font-size-18">{{$user->name}}</h4>
+                        <h4 class="mb-0 font-size-18">
+                            {{$member->member_name}}
+                            @if($member->is_deleted == true)
+                            <span style="background: #f00; padding: 4px 6px; border-radius: 6px; color: #fff">
+                                Deleted Member
+                            </span>
+                            @endif
+                        </h4>
 
-                        @if(count($user->userActiveSubscriptions) > 0)
-                            <button class="btn btnSuccess" onclick="myFunc({{$user->id}})">Subscription Active</button>
+                        @isset($member->memberActiveSubscription)
+                            <button class="btn btn-success" onclick='window.location.href="{{ url('admin/member/' . $member->id . '/subscriptions') }}"'>Active Subscription</button>
                         @else
-                            <button class="btn btnDanger" onclick="myFunc({{$user->id}})">No Current Subscription</button>
-                        @endif
-
-                        <script>
-                            function myFunc(userId){
-                                window.location.href = "{{url('admin/subscription/user')}}" + "/" + userId;
-                            }
-                        </script>
-
-                        <style>.btnDanger{color: #fff;font-weight: 600;background-color: #ff1c2b;}  .btnSuccess{color: #fff;font-weight: 600;background-color: #077a14;}  .btnDanger:hover, .btnSuccess:hover{color: #fff;}</style>
+                            <button class="btn btn-danger" onclick='window.location.href="{{ url('admin/member/' . $member->id . '/subscriptions') }}"'>No Active Subscription</button>
+                        @endisset
 
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
@@ -31,7 +30,7 @@
                                 <li class="breadcrumb-item">
                                     <a href="{{url('admin/members')}}">Members</a>
                                 </li>
-                                <li class="breadcrumb-item active">{{$user->name}}</li>
+                                <li class="breadcrumb-item active">{{$member->member_name}}</li>
                             </ol>
                         </div>
 
@@ -41,89 +40,80 @@
             <!-- end page title -->
 
             <div class="row">
-                <div class="col-xl-6">
+                <div class="col-xl-6 float-left">
                     <div class="card">
                         <div class="card-body">
 
-                            <form method="post" action="{{url('admin/staff/update')}}">
+                            <form method="post" action="{{url('admin/member/update')}}">
                                 @csrf
-                                <input type="hidden" name="id" value="{{$user->id}}">
-
-                                <div class="form-group">
-                                    <label for="name">Name</label>
-                                    @if ($errors->has('name'))
-                                        <span class="text-danger">{{ $errors->first('name') }}</span>
-                                    @endif
-                                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter Name" value="{{$user->name}}">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    @if ($errors->has('email'))
-                                        <span class="text-danger">{{ $errors->first('email') }}</span>
-                                    @endif
-                                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email" value="{{$user->email}}">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="mobile">Mobile</label>
-                                    @if ($errors->has('mobile'))
-                                        <span class="text-danger">{{ $errors->first('mobile') }}</span>
-                                    @endif
-                                    <input type="text" id="mobile" name="mobile" class="form-control" placeholder="Enter Mobile" value="{{$user->mobile}}">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="password">Password</label>
-                                    @if ($errors->has('password'))
-                                        <span class="text-danger">{{ $errors->first('password') }}</span>
-                                    @endif
-                                    <input type="password" id="password" name="password" class="form-control">
-                                    <p>Leave blank if no need to update password</p>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="permission">Permission</label>
-                                    @if ($errors->has('permission'))
-                                        <span class="text-danger">{{ $errors->first('permission') }}</span>
-                                    @endif
-                                    <select type="text" id="permission" name="permission" class="form-control">
-                                        <option value="{{\App\Models\User::PERMISSION_ADMIN}}" @if($user->permission == \App\Models\User::PERMISSION_ADMIN) selected @endif>ADMIN</option>
-                                        <option value="{{\App\Models\User::PERMISSION_MANAGER}}" @if($user->permission == \App\Models\User::PERMISSION_MANAGER) selected @endif>MANAGER</option>
-                                        <option value="{{\App\Models\User::PERMISSION_MEMBER}}" @if($user->permission == \App\Models\User::PERMISSION_MEMBER) selected @endif>MEMBER</option>
-                                    </select>
-                                </div>
-
-                                <button type="submit" class="btn btn-primary waves-effect waves-light">Save</button>
-
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-6">
-                    <div class="card">
-                        <div class="card-body">
-
-                            <form method="post" action="{{url('admin/memberProfile/update')}}">
-                                @csrf
-                                <input type="hidden" name="user_id" value="{{$user->id}}">
-
-                                <div class="form-group">
-                                    <label for="alternate_no">Alternate No</label>
-                                    @if ($errors->has('alternate_no'))
-                                        <span class="text-danger">{{ $errors->first('alternate_no') }}</span>
-                                    @endif
-                                    <input type="text" id="alternate_no" name="alternate_no" class="form-control" placeholder="" value="{{$user->userProfile->alternate_no}}">
-                                </div>
+                                <input type="hidden" name="id" value="{{$member->id}}">
 
                                 <div class="form-group">
                                     <label for="registration_no">Registration No</label>
                                     @if ($errors->has('registration_no'))
                                         <span class="text-danger">{{ $errors->first('alternate_no') }}</span>
                                     @endif
-                                    <input type="text" id="registration_no" name="registration_no" class="form-control" placeholder="" value="{{$user->userProfile->registration_no}}" readonly>
+                                    <input type="text" id="registration_no" name="registration_no" class="form-control" placeholder="" value="{{$member->registration_no}}" readonly>
                                 </div>
+
+                                <div class="form-group">
+                                    <label for="name">Parent User</label>
+                                    @if ($errors->has('user_id'))
+                                        <span class="text-danger">{{ $errors->first('user_id') }}</span>
+                                    @endif
+                                    <select class="form-control" id="user_id" name="user_id">
+                                        <option value="0">Select Parent User</option>
+                                        @foreach(\App\Models\User::select('id', 'name', 'mobile')->where('permission', \App\Models\User::PERMISSION_MEMBER)->get() as $parentUser)
+                                            <option value="{{ $parentUser->id }}" @if($member->user_id == $parentUser->id) selected @endif>{{ $parentUser->name . ' => ' . $parentUser->mobile }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="name">Member Name</label>
+                                    @if ($errors->has('member_name'))
+                                        <span class="text-danger">{{ $errors->first('member_name') }}</span>
+                                    @endif
+                                    <input type="text" id="member_name" name="member_name" class="form-control" placeholder="Enter Name" value="{{$member->member_name}}">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="member_mobile">Member Mobile</label>
+                                    @if ($errors->has('member_mobile'))
+                                        <span class="text-danger">{{ $errors->first('member_mobile') }}</span>
+                                    @endif
+                                    <input type="text" id="member_mobile" name="member_mobile" class="form-control" placeholder="Enter Mobile" value="{{$member->member_mobile}}">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="status">Status</label>
+                                    @if ($errors->has('status'))
+                                        <span class="text-danger">{{ $errors->first('status') }}</span>
+                                    @endif
+                                    <select name="status" id="status" class="form-control">
+                                        <option value="1" @if($member->status == true) selected @endif>ACTIVE</option>
+                                        <option value="0" @if($member->status == false) selected @endif>INACTIVE</option>
+                                    </select>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary waves-effect waves-light">Save</button>
+                            </form>
+                            @if($member->is_deleted == true)
+                                <span class="float-right"><a href="{{url('admin/member/' . $member->id . '/restore')}}" class="text-danger" onclick="return confirm('Are you sure?')">Restore Member</a></span>
+                            @else
+                                <span class="float-right"><a href="{{url('admin/member/' . $member->id . '/delete')}}" class="text-danger" onclick="return confirm('Are you sure?')">Delete Member</a></span>
+                            @endif
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 float-left">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <form method="post" action="{{url('admin/memberProfile/update')}}">
+                                @csrf
+                                <input type="hidden" name="member_id" value="{{$member->id}}">
 
                                 <div class="form-group">
                                     <label for="is_policy">Is Policy / Mediclaim Holder</label>
@@ -131,8 +121,8 @@
                                         <span class="text-danger">{{ $errors->first('is_policy') }}</span>
                                     @endif
                                     <select id="is_policy" name="is_policy" class="form-control">
-                                        <option value="1" @if($user->userProfile->is_policy == true) selected @endif>YES</option>
-                                        <option value="0" @if($user->userProfile->is_policy == false) selected @endif>NO</option>
+                                        <option value="1" @if($member->is_policy == true) selected @endif>YES</option>
+                                        <option value="0" @if($member->is_policy == false) selected @endif>NO</option>
                                     </select>
                                 </div>
 
@@ -141,7 +131,7 @@
                                     @if ($errors->has('policy_number'))
                                         <span class="text-danger">{{ $errors->first('policy_number') }}</span>
                                     @endif
-                                    <input type="text" id="policy_number" name="policy_number" class="form-control" placeholder="" value="{{$user->userProfile->policy_number}}">
+                                    <input type="text" id="policy_number" name="policy_number" class="form-control" placeholder="" value="{{$member->policy_number}}">
                                 </div>
 
                                 <div class="form-group">
@@ -150,8 +140,8 @@
                                         <span class="text-danger">{{ $errors->first('is_medical_allergy') }}</span>
                                     @endif
                                     <select id="is_medical_allergy" name="is_medical_allergy" class="form-control">
-                                        <option value="1" @if($user->userProfile->is_medical_allergy == true) selected @endif>YES</option>
-                                        <option value="0" @if($user->userProfile->is_medical_allergy == false) selected @endif>NO</option>
+                                        <option value="1" @if($member->is_medical_allergy == true) selected @endif>YES</option>
+                                        <option value="0" @if($member->is_medical_allergy == false) selected @endif>NO</option>
                                     </select>
                                 </div>
 
@@ -162,11 +152,11 @@
                                     @endif
                                     <select id="id_type" name="id_type" class="form-control">
                                         <option value="0">Select</option>
-                                        <option value="Passport" @if($user->userProfile->id_type == 'Passport') selected @endif>Passport</option>
-                                        <option value="Driving_Licence" @if($user->userProfile->id_type == 'Driving_Licence') selected @endif>Driving Licence</option>
-                                        <option value="Voter_ID" @if($user->userProfile->id_type == 'Voter_ID') selected @endif>Voter ID</option>
-                                        <option value="PAN" @if($user->userProfile->id_type == 'PAN') selected @endif>PAN</option>
-                                        <option value="Other" @if($user->userProfile->id_type == 'Other') selected @endif>Other</option>
+                                        <option value="Passport" @if($member->id_type == 'Passport') selected @endif>Passport</option>
+                                        <option value="Driving_Licence" @if($member->id_type == 'Driving_Licence') selected @endif>Driving Licence</option>
+                                        <option value="Voter_ID" @if($member->id_type == 'Voter_ID') selected @endif>Voter ID</option>
+                                        <option value="PAN" @if($member->id_type == 'PAN') selected @endif>PAN</option>
+                                        <option value="Other" @if($member->id_type == 'Other') selected @endif>Other</option>
                                     </select>
                                 </div>
 
@@ -175,7 +165,7 @@
                                     @if ($errors->has('id_no'))
                                         <span class="text-danger">{{ $errors->first('id_no') }}</span>
                                     @endif
-                                    <input type="text" id="id_no" name="id_no" class="form-control" placeholder="" value="{{$user->userProfile->id_no}}">
+                                    <input type="text" id="id_no" name="id_no" class="form-control" placeholder="" value="{{$member->id_no}}">
                                 </div>
 
                                 <div class="form-group">
@@ -183,7 +173,7 @@
                                     @if ($errors->has('dob'))
                                         <span class="text-danger">{{ $errors->first('dob') }}</span>
                                     @endif
-                                    <input type="text" id="dob" name="dob" class="form-control" data-toggle="input-mask" data-mask-format="00-00-0000" placeholder="DD-MM-YYYY" value="{{$user->userProfile->dob != null ? \Carbon\Carbon::parse($user->userProfile->dob)->format('d-m-Y') : null}}" autocomplete="off">
+                                    <input type="text" id="dob" name="dob" class="form-control" data-toggle="input-mask" data-mask-format="00-00-0000" placeholder="DD-MM-YYYY" value="{{$member->dob != null ? \Carbon\Carbon::parse($member->dob)->format('d-m-Y') : null}}" autocomplete="off">
                                 </div>
 
                                 <div class="form-group">
@@ -193,9 +183,9 @@
                                     @endif
                                     <select type="text" id="gender" name="gender" class="form-control">
                                         <option value="0">Select</option>
-                                        <option value="Male" @if($user->userProfile->gender == 'Male') selected @endif>Male</option>
-                                        <option value="Female" @if($user->userProfile->gender == 'Female') selected @endif>Female</option>
-                                        <option value="Other" @if($user->userProfile->gender == 'Other') selected @endif>Other</option>
+                                        <option value="Male" @if($member->gender == 'Male') selected @endif>Male</option>
+                                        <option value="Female" @if($member->gender == 'Female') selected @endif>Female</option>
+                                        <option value="Other" @if($member->gender == 'Other') selected @endif>Other</option>
                                     </select>
                                 </div>
 
@@ -206,11 +196,11 @@
                                     @endif
                                     <select type="text" id="marital_status" name="marital_status" class="form-control">
                                         <option value="0">Select</option>
-                                        <option value="Unmarried" @if($user->userProfile->marital_status == 'Unmarried') selected @endif>Unmarried</option>
-                                        <option value="Married" @if($user->userProfile->marital_status == 'Married') selected @endif>Married</option>
-                                        <option value="Divorce" @if($user->userProfile->marital_status == 'Divorce') selected @endif>Divorce</option>
-                                        <option value="Widow" @if($user->userProfile->marital_status == 'Widow') selected @endif>Widow</option>
-                                        <option value="Widower" @if($user->userProfile->marital_status == 'Widower') selected @endif>Widower</option>
+                                        <option value="Unmarried" @if($member->marital_status == 'Unmarried') selected @endif>Unmarried</option>
+                                        <option value="Married" @if($member->marital_status == 'Married') selected @endif>Married</option>
+                                        <option value="Divorce" @if($member->marital_status == 'Divorce') selected @endif>Divorce</option>
+                                        <option value="Widow" @if($member->marital_status == 'Widow') selected @endif>Widow</option>
+                                        <option value="Widower" @if($member->marital_status == 'Widower') selected @endif>Widower</option>
                                     </select>
                                 </div>
 
@@ -219,7 +209,7 @@
                                     @if ($errors->has('spouse_name'))
                                         <span class="text-danger">{{ $errors->first('spouse_name') }}</span>
                                     @endif
-                                    <input type="text" id="spouse_name" name="spouse_name" class="form-control" placeholder="" value="{{$user->userProfile->spouse_name}}">
+                                    <input type="text" id="spouse_name" name="spouse_name" class="form-control" placeholder="" value="{{$member->spouse_name}}">
                                 </div>
 
                                 <div class="form-group">
@@ -227,7 +217,7 @@
                                     @if ($errors->has('spouse_dob'))
                                         <span class="text-danger">{{ $errors->first('spouse_dob') }}</span>
                                     @endif
-                                    <input type="text" id="spouse_dob" name="spouse_dob" class="form-control" data-toggle="input-mask" data-mask-format="00-00-0000" placeholder="DD-MM-YYYY" value="{{$user->userProfile->spouse_dob != null ? \Carbon\Carbon::parse($user->userProfile->spouse_dob)->format('d-m-Y') : null}}" autocomplete="off">
+                                    <input type="text" id="spouse_dob" name="spouse_dob" class="form-control" data-toggle="input-mask" data-mask-format="00-00-0000" placeholder="DD-MM-YYYY" value="{{$member->spouse_dob != null ? \Carbon\Carbon::parse($member->spouse_dob)->format('d-m-Y') : null}}" autocomplete="off">
                                 </div>
 
                                 <div class="form-group">
@@ -235,7 +225,7 @@
                                     @if ($errors->has('children_no'))
                                         <span class="text-danger">{{ $errors->first('children_no') }}</span>
                                     @endif
-                                    <input type="text" id="children_no" name="children_no" class="form-control" placeholder="" value="{{$user->userProfile->children_no}}">
+                                    <input type="text" id="children_no" name="children_no" class="form-control" placeholder="" value="{{$member->children_no}}">
                                 </div>
 
                                 <div class="form-group">
@@ -243,7 +233,7 @@
                                     @if ($errors->has('anniversary_date'))
                                         <span class="text-danger">{{ $errors->first('anniversary_date') }}</span>
                                     @endif
-                                    <input type="text" id="anniversary_date" name="anniversary_date" class="form-control" data-toggle="input-mask" data-mask-format="00-00-0000" placeholder="DD-MM-YYYY" value="{{$user->userProfile->anniversary_date != null ? \Carbon\Carbon::parse($user->userProfile->anniversary_date)->format('d-m-Y') : null}}" autocomplete="off">
+                                    <input type="text" id="anniversary_date" name="anniversary_date" class="form-control" data-toggle="input-mask" data-mask-format="00-00-0000" placeholder="DD-MM-YYYY" value="{{$member->anniversary_date != null ? \Carbon\Carbon::parse($member->anniversary_date)->format('d-m-Y') : null}}" autocomplete="off">
                                 </div>
 
                                 <div class="form-group">
@@ -251,7 +241,7 @@
                                     @if ($errors->has('address'))
                                         <span class="text-danger">{{ $errors->first('address') }}</span>
                                     @endif
-                                    <textarea id="address" name="address" class="form-control">{{$user->userProfile->address}}</textarea>
+                                    <textarea id="address" name="address" class="form-control">{{$member->address}}</textarea>
                                 </div>
 
                                 <div class="form-group">
@@ -259,7 +249,7 @@
                                     @if ($errors->has('city'))
                                         <span class="text-danger">{{ $errors->first('city') }}</span>
                                     @endif
-                                    <input type="text" id="city" name="city" class="form-control" placeholder="" value="{{$user->userProfile->city}}">
+                                    <input type="text" id="city" name="city" class="form-control" placeholder="" value="{{$member->city}}">
                                 </div>
 
                                 <div class="form-group">
@@ -267,7 +257,7 @@
                                     @if ($errors->has('pin_code'))
                                         <span class="text-danger">{{ $errors->first('pin_code') }}</span>
                                     @endif
-                                    <input type="text" id="pin_code" name="pin_code" class="form-control" placeholder="" value="{{$user->userProfile->pin_code}}">
+                                    <input type="text" id="pin_code" name="pin_code" class="form-control" placeholder="" value="{{$member->pin_code}}">
                                 </div>
 
                                 <div class="form-group">
@@ -275,7 +265,7 @@
                                     @if ($errors->has('police_station'))
                                         <span class="text-danger">{{ $errors->first('police_station') }}</span>
                                     @endif
-                                    <input type="text" id="police_station" name="police_station" class="form-control" placeholder="" value="{{$user->userProfile->police_station}}">
+                                    <input type="text" id="police_station" name="police_station" class="form-control" placeholder="" value="{{$member->police_station}}">
                                 </div>
 
                                 <div class="form-group">
@@ -283,7 +273,7 @@
                                     @if ($errors->has('gmail_id'))
                                         <span class="text-danger">{{ $errors->first('gmail_id') }}</span>
                                     @endif
-                                    <input type="text" id="gmail_id" name="gmail_id" class="form-control" placeholder="" value="{{$user->userProfile->gmail_id}}">
+                                    <input type="text" id="gmail_id" name="gmail_id" class="form-control" placeholder="" value="{{$member->gmail_id}}">
                                 </div>
 
                                 <div class="form-group">
@@ -291,7 +281,7 @@
                                     @if ($errors->has('facebook_id'))
                                         <span class="text-danger">{{ $errors->first('facebook_id') }}</span>
                                     @endif
-                                    <input type="text" id="facebook_id" name="facebook_id" class="form-control" placeholder="" value="{{$user->userProfile->facebook_id}}">
+                                    <input type="text" id="facebook_id" name="facebook_id" class="form-control" placeholder="" value="{{$member->facebook_id}}">
                                 </div>
 
                                 <div class="form-group">
@@ -301,12 +291,12 @@
                                     @endif
                                     <select id="staying_with" name="staying_with" class="form-control">
                                         <option value="0">Select</option>
-                                        <option value="Spouse" @if($user->userProfile->staying_with == 'Spouse') selected @endif>Spouse</option>
-                                        <option value="Son" @if($user->userProfile->staying_with == 'Son') selected @endif>Son</option>
-                                        <option value="Daughter" @if($user->userProfile->staying_with == 'Daughter') selected @endif>Daughter</option>
-                                        <option value="Caretaker" @if($user->userProfile->staying_with == 'Caretaker') selected @endif>Caretaker</option>
-                                        <option value="Others" @if($user->userProfile->staying_with == 'Others') selected @endif>Others</option>
-                                        <option value="Alone" @if($user->userProfile->staying_with == 'Alone') selected @endif>Alone</option>
+                                        <option value="Spouse" @if($member->staying_with == 'Spouse') selected @endif>Spouse</option>
+                                        <option value="Son" @if($member->staying_with == 'Son') selected @endif>Son</option>
+                                        <option value="Daughter" @if($member->staying_with == 'Daughter') selected @endif>Daughter</option>
+                                        <option value="Caretaker" @if($member->staying_with == 'Caretaker') selected @endif>Caretaker</option>
+                                        <option value="Others" @if($member->staying_with == 'Others') selected @endif>Others</option>
+                                        <option value="Alone" @if($member->staying_with == 'Alone') selected @endif>Alone</option>
                                     </select>
                                 </div>
 
@@ -317,10 +307,10 @@
                                     @endif
                                     <select id="location_type" name="location_type" class="form-control">
                                         <option value="0">Select</option>
-                                        <option value="Stand_Alone_Building_House" @if($user->userProfile->location_type == 'Stand_Alone_Building_House') selected @endif>Stand Alone Building House</option>
-                                        <option value="Flat_In_An_Apartment_Building" @if($user->userProfile->location_type == 'Flat_In_An_Apartment_Building') selected @endif>Flat in an Apartment Building</option>
-                                        <option value="Group_Housing_Complex" @if($user->userProfile->location_type == 'Group_Housing_Complex') selected @endif>Group Housing Complex</option>
-                                        <option value="Independent_Room_Floor" @if($user->userProfile->location_type == 'Independent_Room_Floor') selected @endif>Independent Room Floor</option>
+                                        <option value="Stand_Alone_Building_House" @if($member->location_type == 'Stand_Alone_Building_House') selected @endif>Stand Alone Building House</option>
+                                        <option value="Flat_In_An_Apartment_Building" @if($member->location_type == 'Flat_In_An_Apartment_Building') selected @endif>Flat in an Apartment Building</option>
+                                        <option value="Group_Housing_Complex" @if($member->location_type == 'Group_Housing_Complex') selected @endif>Group Housing Complex</option>
+                                        <option value="Independent_Room_Floor" @if($member->location_type == 'Independent_Room_Floor') selected @endif>Independent Room Floor</option>
                                     </select>
                                 </div>
 
@@ -331,10 +321,10 @@
                                     @endif
                                     <select id="security_available" name="security_available" class="form-control">
                                         <option value="0">Select</option>
-                                        <option value="Security_Guard_Desk_is_available" @if($user->userProfile->security_available == 'Security_Guard_Desk_is_available') selected @endif>Security Guard Desk is available</option>
-                                        <option value="Security_Desk_only" @if($user->userProfile->security_available == 'Security_Desk_only') selected @endif>Security Desk only</option>
-                                        <option value="Caretaker_only" @if($user->userProfile->security_available == 'Caretaker_only') selected @endif>Caretaker only</option>
-                                        <option value="No_Security_Guard_or_Caretaker" @if($user->userProfile->security_available == 'No_Security_Guard_or_Caretaker') selected @endif>No Security Guard or Caretaker</option>
+                                        <option value="Security_Guard_Desk_is_available" @if($member->security_available == 'Security_Guard_Desk_is_available') selected @endif>Security Guard Desk is available</option>
+                                        <option value="Security_Desk_only" @if($member->security_available == 'Security_Desk_only') selected @endif>Security Desk only</option>
+                                        <option value="Caretaker_only" @if($member->security_available == 'Caretaker_only') selected @endif>Caretaker only</option>
+                                        <option value="No_Security_Guard_or_Caretaker" @if($member->security_available == 'No_Security_Guard_or_Caretaker') selected @endif>No Security Guard or Caretaker</option>
                                     </select>
                                 </div>
 
@@ -343,7 +333,7 @@
                                     @if ($errors->has('blood_group'))
                                         <span class="text-danger">{{ $errors->first('blood_group') }}</span>
                                     @endif
-                                    <input type="text" id="blood_group" name="blood_group" class="form-control" placeholder="" value="{{$user->userProfile->blood_group}}">
+                                    <input type="text" id="blood_group" name="blood_group" class="form-control" placeholder="" value="{{$member->blood_group}}">
                                 </div>
 
                                 <div class="form-group">
@@ -351,7 +341,7 @@
                                     @if ($errors->has('medical_condition'))
                                         <span class="text-danger">{{ $errors->first('medical_condition') }}</span>
                                     @endif
-                                    <textarea id="medical_condition" name="medical_condition" class="form-control">{{$user->userProfile->medical_condition}}</textarea>
+                                    <textarea id="medical_condition" name="medical_condition" class="form-control">{{$member->medical_condition}}</textarea>
                                 </div>
 
                                 <div class="form-group">
@@ -359,7 +349,7 @@
                                     @if ($errors->has('hospitalization_history'))
                                         <span class="text-danger">{{ $errors->first('hospitalization_history') }}</span>
                                     @endif
-                                    <textarea id="hospitalization_history" name="hospitalization_history" class="form-control">{{$user->userProfile->hospitalization_history}}</textarea>
+                                    <textarea id="hospitalization_history" name="hospitalization_history" class="form-control">{{$member->hospitalization_history}}</textarea>
                                 </div>
 
                                 <div class="form-group">
@@ -367,7 +357,7 @@
                                     @if ($errors->has('personal_doctor_details'))
                                         <span class="text-danger">{{ $errors->first('personal_doctor_details') }}</span>
                                     @endif
-                                    <textarea id="personal_doctor_details" name="personal_doctor_details" class="form-control">{{$user->userProfile->personal_doctor_details}}</textarea>
+                                    <textarea id="personal_doctor_details" name="personal_doctor_details" class="form-control">{{$member->personal_doctor_details}}</textarea>
                                 </div>
 
                                 <div class="form-group">
@@ -377,8 +367,8 @@
                                     @endif
                                     <select id="sponsored_by" name="sponsored_by" class="form-control">
                                         <option value="0">Select</option>
-                                        <option value="Self" @if($user->userProfile->sponsored_by == 'Self') selected @endif>Self</option>
-                                        <option value="Others" @if($user->userProfile->sponsored_by == 'Others') selected @endif>Others</option>
+                                        <option value="Self" @if($member->sponsored_by == 'Self') selected @endif>Self</option>
+                                        <option value="Others" @if($member->sponsored_by == 'Others') selected @endif>Others</option>
                                     </select>
                                 </div>
 

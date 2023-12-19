@@ -44,7 +44,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="featured-imagebox featured-imagebox-team">
                             <div class="featured-thumbnail">
-                                <img class="img-fluid" src="{{asset($doctor->doctorPicture->image_thumb)}}" width="277" height="301" alt="{{$doctor->doctor_name}} at {{env('APP_NAME')}}">
+                                <img loading='lazy' class="img-fluid" src="{{asset($doctor->doctorPicture->image_thumb)}}" width="277" height="301" alt="{{$doctor->doctor_name}} at {{env('APP_NAME')}}">
                             </div>
                             <div class="featured-content">
                                 <div class="featured-title">
@@ -57,7 +57,6 @@
                         </div>
                     </div>
                     @endforeach
-
                 </div>
             </div>
         </section>

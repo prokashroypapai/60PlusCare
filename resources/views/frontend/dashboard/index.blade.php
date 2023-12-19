@@ -12,7 +12,7 @@
                     <div class="col-lg-12">
                         <div class="prt-page-title-row-heading">
                             <div class="page-title-heading">
-                                <h2 class="title">team details</h2>
+                                <h2 class="title">Dashboard</h2>
                             </div>
                             <div class="breadcrumb-wrapper">
                                     <span>
@@ -49,8 +49,8 @@
                                                 <div class="prt-team-member-detail">
                                                     <div class="prt-team-member-single-list">
                                                         <h2 class="prt-team-member-single-title">{{Auth::user()->name}}</h2>
-                                                        <span class="prt-team-member-single-position">{{Auth::user()->mobile}}</span>
-                                                        <div class="prt-short-desc">{{isset($user->userProfile->address) ? $user->userProfile->address : 'NA'}}, {{isset($user->userProfile->city) ? $user->userProfile->city : 'NA'}}, {{isset($user->userProfile->pin_code) ? $user->userProfile->pin_code : 'NA'}}</div>
+                                                        <span class="prt-team-member-single-position">Registration No: <strong>{{Auth::user()->registration_no}}</strong></span>
+                                                        <div class="prt-short-desc">Mobile: {{ Auth::user()->mobile }}</div>
                                                         <div class="prt-team-data">
                                                             <div class="prt-team-details-wrapper">
                                                                 <ul class="prt-team-details-list clearfix">
@@ -109,29 +109,50 @@
                                             <div class="col-xl-6">
                                                 <div class="row">
                                                     <div class="col-lg-12 align-self-center">
-                                                        <h3 class="fs-28 mb-0 res-991-mb-15">Packages</h3>
+                                                        <h3 class="fs-28 mb-0 res-991-mb-15">Family Members</h3>
 
-                                                        @foreach(\App\Models\Package::active()->get() as $package)
-                                                        <div class="featured-icon-box icon-align-before-content style10">
-                                                            <div class="featured-content rounded {{in_array($package->id, $subscriptions) ? 'activeClass' : null}}" style="padding-left: 0; background-color: #fff; padding: 15px;">
-                                                                @if(in_array($package->id, $subscriptions))
-                                                                    <span style="background-color: #009928; position: absolute; float: right; top: 0;right: 0;padding: 3px;color: #fff; font-size: 14px;">Current Package</span>
-                                                                @endif
+                                                        @foreach(Auth::user()->userMembers as $member)
+                                                            <div class="featured-icon-box icon-align-before-content style10" style="padding-left: 0; background-color: #fff; padding: 15px;">
+                                                                <div class="featured-content rounded">
+                                                                    <div class="featured-desc">
+                                                                        <h6>{{$member->member_name}}</h6>
+                                                                        <p class="mb-3">
+                                                                            Registration No: <strong>{{ $member->registration_no }}</strong>
+                                                                        </p>
 
-                                                                <div class="featured-title">
-                                                                    <h3>{{$package->package_name}}</h3>
-                                                                </div>
-                                                                <div class="featured-desc">
-                                                                    <p class="py-3">
-                                                                        {{\Illuminate\Support\Str::limit(strip_tags($package->package_details), 150)}}
-                                                                    </p>
-                                                                    <h5>
-                                                                        ₹ {{$package->package_price}}
-                                                                        <span>per {{$package->package_price_duration}}</span>
-                                                                    </h5>
+                                                                        @isset($member->memberActiveSubscription)
+                                                                        <h5>
+                                                                            Package Name: {{ $member->memberActiveSubscription->subscriptionPackage->package_name }} <button class="btn btn-success">Upgrade</button>
+                                                                        </h5>
+                                                                        <p>
+                                                                            <span>Start Date: <strong>{{ \Carbon\Carbon::parse($member->memberActiveSubscription->start_date)->format('d-M-Y') }}</strong></span>
+                                                                        </p>
+                                                                        <p>
+                                                                            <span>End Date: <strong>{{ \Carbon\Carbon::parse($member->memberActiveSubscription->end_date)->format('d-M-Y') }}</strong></span>
+                                                                        </p>
+                                                                        <?php $datsRemain = \Carbon\Carbon::parse(\Carbon\Carbon::now())->diffInDays(\Carbon\Carbon::parse($member->memberActiveSubscription->end_date));
+                                                                        if($datsRemain <=3){
+                                                                            $className = 'text-danger';
+                                                                        }
+                                                                        else if($datsRemain > 3 && $datsRemain <=7){
+                                                                            $className = 'text-warning';
+                                                                        }
+                                                                        else{
+                                                                            $className = 'text-black';
+                                                                        }
+                                                                        ?>
+                                                                        <p>
+                                                                            <span class="text-success {{ $className }}">Days Remaining:
+                                                                                <strong>{{ \Carbon\Carbon::parse(\Carbon\Carbon::now())->diffInDays(\Carbon\Carbon::parse($member->memberActiveSubscription->end_date)) }}</strong>
+                                                                            </span>
+                                                                        </p>
+                                                                        @else
+                                                                            <button class="btn btn-secondary">No Active Subscription</button>
+                                                                        @endisset
+
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
                                                         @endforeach
 
                                                         <style>

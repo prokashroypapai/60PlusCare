@@ -15,5 +15,5 @@ class MembershipNumber extends Model
         'unique_no'
     ];
 
-    const REGISTRATION_PREFIX = '60PC';
+    const REGISTRATION_PREFIX = 'SPC';
 }

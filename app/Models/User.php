@@ -17,11 +17,13 @@ class User extends Authenticatable
 
     const PERMISSION_ADMIN = 0;
     const PERMISSION_MANAGER = 1;
-    const PERMISSION_MEMBER = 2;
+    const PERMISSION_CARE_MANAGER = 2;
+    const PERMISSION_MEMBER = 3;
 
     const defaultPassword = '12345678';
 
     protected $fillable = [
+        'registration_no',
         'name',
         'email',
         'mobile',
@@ -47,9 +49,9 @@ class User extends Authenticatable
     }
 
     //user has profile
-    public function userProfile(){
+    /*public function userProfile(){
         return $this->hasOne(Profile::class);
-    }
+    }*/
 
     //user has subscription
     public function userSubscriptions(){
@@ -59,5 +61,11 @@ class User extends Authenticatable
     //user has active subscription
     public function userActiveSubscriptions(){
         return $this->hasMany(Subscription::class)->where('is_expired', false);
+    }
+
+    //user has Many members
+    public function userMembers()
+    {
+        return $this->hasMany(Member::class);
     }
 }

@@ -15,12 +15,12 @@
                                 <h2 class="title">Articles</h2>
                             </div>
                             <div class="breadcrumb-wrapper">
-                                    <span>
-                                        <a href="{{url('/')}}">Home</a>
-                                    </span>
                                 <span>
-                                        <a href="#">Articles</a>
-                                    </span>
+                                    <a href="{{ url('/') }}">Home</a>
+                                </span>
+                                <span>
+                                    <a href="{{ url('article') }}">Articles</a>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                         <div class="row g-0 featured-imagebox featured-imagebox-blog style3">
                             <div class="col-xl-6 col-lg-12">
                                 <div class="featured-thumbnail">
-                                    <img class="img-fluid" src="{{asset($article->articlePicture->image_full)}}" width="329" height="315" alt="blog-04">
+                                    <img class="img-fluid" src="{{asset(isset($article->articlePicture->image_thumb) ? $article->articlePicture->image_thumb : \App\Models\Picture::getDefaultImage()->image_thumb)}}" width="300" height="300" alt="blog-04">
                                     <div class="prt-box-post-date">
                                         <div class="entry-date"><span>{{\Carbon\Carbon::parse($article->posted_at)->format('d')}}</span>{{\Carbon\Carbon::parse($article->posted_at)->format('F')}}</div>
                                     </div>
@@ -54,9 +54,7 @@
                                 <div class="featured-content-wrapper">
                                     <div class="featured-content">
                                         <div class="featured-title">
-                                            <h3>
-                                                <a href="{{url('article/' . $article->slug)}}">{{$article->title}}</a>
-                                            </h3>
+                                            <h3><a href="{{url('article/' . $article->slug)}}">{{$article->title}}</a></h3>
                                         </div>
                                         <div class="ser_category">
                                             <span>{{$article->articleUser->name}}</span>
@@ -65,10 +63,7 @@
                                         </div>
                                         <div class="prt-horizontal_sep mt-20 mb-20"></div>
                                         <div class="featured-desc">
-                                            {!! Str::limit($article->description, 150) !!}
-                                        </div>
-                                        <div class="featured-bottom">
-                                            <a class="prt-btn btn-inline prt-btn-color-dark" href="{{url('article/' . $article->slug)}}">explore more</a>
+                                            <p>{{ Str::limit(strip_tags($article->description), 155) }}</p>
                                         </div>
                                     </div>
                                 </div>

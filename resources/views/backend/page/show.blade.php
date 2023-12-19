@@ -102,11 +102,11 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="meta_keyword">Meta Keyword: </label>
-                                    @if ($errors->has('meta_keyword'))
-                                        <span class="text-danger">{{ $errors->first('meta_keyword') }}</span>
+                                    <label for="meta_keywords">Meta Keyword: </label>
+                                    @if ($errors->has('meta_keywords'))
+                                        <span class="text-danger">{{ $errors->first('meta_keywords') }}</span>
                                     @endif
-                                    <input type="text" class="form-control" id="meta_keyword" name="meta_keyword" value="{{isset($page->pageSeo->meta_keyword) ? $page->pageSeo->meta_keyword : null}}">
+                                    <input type="text" class="form-control" id="meta_keywords" name="meta_keywords" value="{{isset($page->pageSeo->meta_keywords) ? $page->pageSeo->meta_keywords : null}}">
                                 </div>
 
                                 <div class="form-group">

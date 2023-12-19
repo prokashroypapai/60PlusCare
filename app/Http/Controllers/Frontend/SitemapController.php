@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Article;
+use App\Models\Clinic;
 use App\Models\Location;
 use Illuminate\Http\Request;
 use View;
@@ -47,6 +48,17 @@ class SitemapController extends Controller
             ->get();
 
         $content = View::make('sitemap.location', ['locations' => $locations]);
+        return Response::make($content)->header('Content-Type', 'text/xml;charset=utf-8');
+    }
+
+    public function clinicSitemap()
+    {
+        $clinics = Clinic::select('clinic_slug', 'updated_at')
+            ->where('status', true)
+            ->orderBy('id', 'desc')
+            ->get();
+
+        $content = View::make('sitemap.clinic', ['clinics' => $clinics]);
         return Response::make($content)->header('Content-Type', 'text/xml;charset=utf-8');
     }
 

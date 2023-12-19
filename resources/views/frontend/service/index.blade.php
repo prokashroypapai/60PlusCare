@@ -5,7 +5,7 @@
         <h1>60 Plus Care provides Most Trusted Elder Care Services in Kolkata</h1>
         <p>
             60 Plus Care is mostly trusted elder care service provider in Kolkata. We are working since 2008 effortlessly to provide best parent care solutions in Kolkata.
-            With experienced doctors & medical professionals we provide best Home Care Services in Kolkata
+            With experienced doctors & medical professionals we provide best Home Care Services in Kolkata.
         </p>
     </div>
     <style>
@@ -28,9 +28,6 @@
                 <div class="row align-items-center">
                     <div class="col-lg-12">
                         <div class="prt-page-title-row-heading">
-                            <div class="page-title-heading">
-                                <h2 class="title">60 Plus Care provides Most Trusted Elder Care Services in Kolkata</h2>
-                            </div>
                             <div class="breadcrumb-wrapper">
                                 <span>
                                     <a href="{{url('/')}}">Home</a>
@@ -38,6 +35,11 @@
                                 <span>
                                     <a href="{{url('services')}}">Services</a>
                                 </span>
+                            </div>
+                            <div class="page-title-heading">
+                                <strong class="title">
+                                    Best Elder Care Services from {{ env('APP_NAME') }}
+                                </strong>
                             </div>
                         </div>
                     </div>
@@ -57,7 +59,7 @@
                     <!-- section title -->
                     <div class="section-title title-style-center_text">
                         <div class="title-header">
-                            <h3>Get <span>Best Parent Care Solutions</span> in Kolkata</h3>
+                            <h2>Get <span>Best Parent Care Solutions</span> in Kolkata</h2>
                         </div>
                         <!--<div class="title-desc">
                             <p>To ensure that our seniors have the support of resources and they need to live the lives they  deserve as elders of our next generation.</p>
@@ -102,16 +104,13 @@
     @include('frontend.widget.specialTreatment')
     <!-- special-treatment-section -->
 
-        <!-- service-section -->
-    @include('frontend.widget.bodyConditions')
-    <!-- service-section-end -->
-
         <!-- testimonial-section -->
         @include('frontend.home.testimonial')
         <!-- testimonial-section -->
-        <!-- testimonial-section -->
+
+        <!-- contact-section -->
     @include('frontend.home.contact')
-    <!-- testimonial-section -->
+    <!-- contact-section -->
 
     </div><!--site-main end-->
 @endsection

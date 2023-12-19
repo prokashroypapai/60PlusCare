@@ -15,19 +15,19 @@
                 </div><!-- section title end -->
             </div>
         </div>
-        <div class="row slick_slider team-01 mt_15" data-slick='{"slidesToShow": 4, "slidesToScroll": 1, "arrows":false, "autoplay":true, "dots":false, "infinite":true, "responsive":[{"breakpoint":992,"settings":{"slidesToShow": 3}},{"breakpoint":767,"settings":{"slidesToShow": 2}},{"breakpoint":575,"settings":{"slidesToShow": 1}},{"breakpoint":480,"settings":{"slidesToShow": 1}}]}'>
+        <div class="row slick_slider team-01 mt_15" data-slick='{"slidesToShow": 6, "slidesToScroll": 1, "arrows":false, "autoplay":true, "dots":false, "infinite":true, "responsive":[{"breakpoint":992,"settings":{"slidesToShow": 3}},{"breakpoint":767,"settings":{"slidesToShow": 2}},{"breakpoint":575,"settings":{"slidesToShow": 1}},{"breakpoint":480,"settings":{"slidesToShow": 1}}]}'>
 
             @foreach(\App\Models\Doctor::active()->where('is_home', true)->get() as $doctor)
-                <div class="col-lg-3">
+                <div class="col-lg-2">
                     <div class="featured-imagebox featured-imagebox-team">
                         <div class="featured-thumbnail">
-                            <img class="img-fluid" src="{{asset($doctor->doctorPicture->image_thumb)}}" width="277" height="301" alt="image">
+                            <img loading='lazy' class="img-fluid" src="{{asset($doctor->doctorPicture->image_thumb)}}" width="277" height="301" alt="{{$doctor->doctor_name}} on {{env('APP_NAME')}}">
                         </div>
                         <div class="featured-content">
                             <div class="featured-title">
-                                <h4><a href="{{url('doctors/?id=' . $doctor->id)}}">{{$doctor->doctor_name}}</a></h4>
+                                <strong><a href="{{url('doctors/?id=' . $doctor->id)}}">{{$doctor->doctor_name}}</a></strong>
                             </div>
-                            <div class="featured-desc">
+                            <div class="featured-desc mt-2">
                                 <p>{{$doctor->doctor_designation}}</p>
                             </div>
                         </div>
@@ -38,7 +38,7 @@
         </div>
         <div class="row">
             <div class="col-lg-12 py-5 text-center">
-                <button class="btn btn-success" onclick='window.location.href="{{url('doctors')}}"'>See All Our Associate Doctors</button>
+                <button class="registerBtn shadow" onclick='window.location.href="{{url('doctors')}}"'>See All Our Associate Doctors</button>
             </div>
         </div>
     </div>

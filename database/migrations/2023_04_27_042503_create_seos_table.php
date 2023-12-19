@@ -19,13 +19,13 @@ return new class extends Migration
             $table->foreign('page_id')->references('id')->on('pages');
             $table->unsignedBigInteger('service_id')->nullable();
             $table->foreign('service_id')->references('id')->on('services');
-            $table->unsignedBigInteger('location_id')->nullable();
-            $table->foreign('location_id')->references('id')->on('locations');
+            $table->unsignedBigInteger('clinic_id')->nullable();
+            $table->foreign('clinic_id')->references('id')->on('clinics');
             $table->unsignedBigInteger('article_id')->nullable();
             $table->foreign('article_id')->references('id')->on('articles');
             $table->string('meta_title', 255)->nullable();
             $table->string('meta_description')->nullable();
-            $table->string('meta_keyword')->nullable();
+            $table->string('meta_keywords')->nullable();
             $table->string('og_title', 255)->nullable();
             $table->string('og_description')->nullable();
             $table->text('og_image')->nullable();

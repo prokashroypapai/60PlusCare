@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Package;
+use App\Models\Page;
+use App\Models\Seo;
 use Illuminate\Http\Request;
 
 class RegisterController extends Controller
@@ -24,6 +26,8 @@ class RegisterController extends Controller
             'package_name' => 'Package'
         ];
 
-        return view('frontend.auth.register-2', compact('package'));
+        $page = Page::where('page_slug', 'register')->first();
+        $metaseo = Seo::where('page_id', $page->id)->first();
+        return view('frontend.auth.register-2', compact('package', 'metaseo'));
     }
 }

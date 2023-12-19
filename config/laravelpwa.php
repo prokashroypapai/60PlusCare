@@ -4,7 +4,7 @@ return [
     'name' => env('APP_URL', '60 Plus Care'),
     'manifest' => [
         'name' => env('APP_NAME', '60 Plus Care'),
-        'short_name' => '60Plus Care',
+        'short_name' => '60 Plus Care',
         'start_url' => env('APP_URL',''),
         'background_color' => '#ffffff',
         'theme_color' => '#b6c134',

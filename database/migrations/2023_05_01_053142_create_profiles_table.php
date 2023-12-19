@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->string('alternate_no', 15)->nullable();
-            $table->string('registration_no', 15)->unique();
+            $table->string('alternate_no', 15)->nullable(); //delete
+            $table->string('registration_no', 15)->unique();//
             $table->boolean('is_policy')->default(false);
             $table->string('policy_number', 30)->nullable();
             $table->boolean('is_medical_allergy')->default(false);

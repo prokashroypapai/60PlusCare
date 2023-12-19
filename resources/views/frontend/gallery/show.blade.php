@@ -53,13 +53,13 @@
 
                     @foreach($gallery->galleryImages as $gImage)
                         <div class="col-lg-3">
-                            <div class="featured-imagebox featured-imagebox-team style2">
+
                                 <div class="featured-thumbnail">
                                     <a href="{{asset(isset($gImage->GalleryPicture->image_full) ? $gImage->GalleryPicture->image_full : \App\Models\Picture::getDefaultImage()->image_full)}}">
                                         <img class="img-fluid" src="{{asset(isset($gImage->GalleryPicture->image_thumb) ? $gImage->GalleryPicture->image_thumb : \App\Models\Picture::getDefaultImage()->image_thumb)}}" width="277" height="301" alt="image">
                                     </a>
                                 </div>
-                            </div>
+
                         </div>
                     @endforeach
 

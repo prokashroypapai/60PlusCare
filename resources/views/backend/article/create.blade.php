@@ -63,7 +63,7 @@
                                     @if ($errors->has('description'))
                                         <span class="text-danger">{{ $errors->first('description') }}</span>
                                     @endif
-                                    <textarea id="description" name="description" class="form-control">{{old('description')}}</textarea>
+                                    <textarea id="description" name="description" class="form-control" rows="80">{{old('description')}}</textarea>
                                 </div>
 
                                 <button type="submit" class="btn btn-primary waves-effect waves-light">Save</button>

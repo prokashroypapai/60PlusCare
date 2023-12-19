@@ -14,7 +14,8 @@
                                 <span><a href="tel:+91 8296111777" rel="nofollow noindex">+91 8296 111 777</a></span>
                             </div>
                             <div class="top_bar_contact_item" id="mailIcon">
-                                <div class="top_bar_icon prt-icon prt-icon_element-onlytxt"><i class="flaticon flaticon-email"></i></div>
+                                <div class="top_bar_icon prt-icon prt-icon_element-onlytxt">
+                                    <i class="flaticon flaticon-email"></i></div>
                                 <a href="mailto:info@60plusclinic.com" rel="nofollow noindex">info@60plusclinic.com</a>
                             </div>
                             <div class="top_bar_contact_item">
@@ -28,6 +29,17 @@
                                     <a href="{{url('logout')}}">Sign Out</a>
                                 </div>
                             @endauth
+                        </div>
+                        <div class="align-self-center d-none d-lg-block">
+                            <div class="appointmentBtn">
+                                <button onclick='window.location.href="{{ url('schedule-an-appointment') }}"'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+                                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+                                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                    </svg>
+                                    Book an Appointment
+                                </button>
+                            </div>
                         </div>
                         <div class="align-self-center">
                             <ul class="social-icons">
@@ -140,6 +152,9 @@
                                         </li>
                                         <li class="mega-menu-item">
                                             <a href="{{url('contact')}}">Contact</a>
+                                        </li>
+                                        <li class="mega-menu-item d-block d-lg-none">
+                                            <a href="{{url('schedule-an-appointment')}}">Book an Appointment</a>
                                         </li>
                                     </ul>
                                 </nav><!-- menu end -->

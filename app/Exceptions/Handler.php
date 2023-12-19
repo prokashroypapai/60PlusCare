@@ -38,7 +38,7 @@ class Handler extends ExceptionHandler
                     'meta_keywords' => '',
                     'og_image' => ''
                 ];
-                return response()->view('frontend.error.' . '404', $metaseo, 404);
+                return response()->view('frontend.error.' . '404', compact('metaseo'), 404);
             }
             if ($exception->getStatusCode() == 999) {
                 $metaseo = [
@@ -47,7 +47,7 @@ class Handler extends ExceptionHandler
                     'meta_keywords' => '',
                     'og_image' => ''
                 ];
-                return response()->view('frontend.error.' . '999', $metaseo, 404);
+                return response()->view('frontend.error.' . '999', compact('metaseo'), 404);
             }
         }
         return parent::render($request, $exception);

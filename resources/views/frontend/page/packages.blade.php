@@ -44,7 +44,7 @@
                         Kolkata's first Geriatrician & Specialised Doctors initiated Proactive Elder Care & Home Care Service
                     </div>
 
-                    <div class="col-10 py-3 mt-4 bg-white">
+                    <div class="col-10 py-3 mt-4 bg-white" style="overflow-x:auto;">
                         <Style>
                             .bg1{
                                 background-color: #c9d1ff;

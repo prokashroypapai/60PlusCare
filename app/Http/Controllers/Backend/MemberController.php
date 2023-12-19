@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Member;
 use App\Models\Profile;
 use App\Models\Service\MembershipNumber;
 use App\Models\User;
@@ -12,8 +13,23 @@ use Illuminate\Http\Request;
 
 class MemberController extends Controller
 {
-    public function index(){
-        $members = User::where('permission', User::PERMISSION_MEMBER)->paginate(10);
+    public function index(Request $request){
+        $getmembers = Member::select('id', 'user_id', 'registration_no', 'member_name', 'status');
+
+        /*if($request->status == 'deleted'){
+            $getmembers->where('is_deleted', true);
+        }
+        else{
+            $getmembers->where('is_deleted', false);
+        }*/
+
+        if($request->mName && $request->mName != ""){
+            $getmembers->where('member_name', 'like', "%$request->mName%")
+                ->orWhere('registration_no', 'like', "%$request->mName%");
+        }
+
+        $members = $getmembers->paginate(10);
+
         return view('backend.member.index', compact('members'));
     }
 
@@ -21,46 +37,65 @@ class MemberController extends Controller
         return view('backend.member.create');
     }
 
-    public function store(Request $request, CreateRegistrationnoService $createRegistrationnoService){
+    public function store(Request $request, CreateRegistrationnoService $createRegistrationnoService)
+    {
+
         $request->validate([
+            'user_id' => 'required|not_in:0',
             'name' => 'required',
-            'email' => 'email|unique:users',
-            'mobile' => 'required|unique:users',
-            'password' => 'required'
+            'mobile' => 'required'
         ],[
+            'user_id.required' => 'User Id is required',
+            'user_id.not_in' => 'User Id is required',
             'name.required' => 'Name is required',
-            'email.email' => 'Valid email is required',
-            'email.unique' => 'Email already exists',
-            'mobile.required' => 'Mobile number is required',
-            'mobile.unique' => 'Mobile already exists',
-            'password.required' => 'Password is required'
+            'mobile.required' => 'Mobile number is required'
         ]);
 
-        $is_valid = 0;
-
-        $data = [
-            'name' => $request->name,
-            'email' => $request->email,
-            'mobile' => $request->mobile,
-            'password' => bcrypt($request->password),
-            'permission' => User::PERMISSION_MEMBER,
-            'status' => User::STATUS_ACTIVE
-        ];
-
-        $user = User::create($data);
-
-        if($is_valid == 1) {
-            Profile::create([
-                'user_id' => $user->id,
-            ]);
-        }else{
-            Profile::create([
-                'user_id' => $user->id,
-                'registration_no' => $createRegistrationnoService->createRegistrationNumber($user->id)
+        if($request->is_policy == true){
+            $request->validate([
+                'policy_number' => 'required'
+            ],[
+                'policy_number.required' => 'Policy number is required'
             ]);
         }
 
-        if($user){
+        if($request->user_id == 'default'){
+            $request->validate([
+                'mobile' => 'unique:users'
+            ],[
+                'mobile.unique' => 'Mobile no already exists'
+            ]);
+        }
+
+        if($request->user_id == 'default'){
+            $userData = [
+                'name' => $request->name,
+                'mobile' => $request->mobile,
+                'password' => bcrypt($request->password),
+                'permission' => User::PERMISSION_MEMBER,
+                'status' => User::STATUS_ACTIVE
+            ];
+
+            $user = User::create($userData);
+
+            $userId = $user->id;
+        }
+        else{
+            $userId = $request->user_id;
+        }
+
+        $memberData = [
+            'user_id' => $userId,
+            'registration_no' => $createRegistrationnoService->createRegistrationNumber($userId),
+            'member_name' => $request->name,
+            'member_mobile' => $request->mobile,
+            'is_policy' => $request->is_policy,
+            'policy_number' => $request->policy_number
+        ];
+
+        $createMember = Member::create($memberData);
+
+        if($createMember){
             return redirect()->back()->with('success', 'Saved successfully');
         }
         else{
@@ -69,49 +104,48 @@ class MemberController extends Controller
     }
 
     public function show($id){
-        $user = User::findorFail($id);
-        return view('backend.member.show', compact('user'));
+        $member = Member::findorFail($id);
+        return view('backend.member.show', compact('member'));
     }
 
-    public function update(Request $request){
+    public function update(Request $request)
+    {
+        //return $request->all();
+
         $request->validate([
-            'name' => 'required',
-            'email' => 'email',
-            'mobile' => 'required|digits:10',
-            'permission' => 'required'
+            'member_name' => 'required',
+            'member_mobile' => 'required'
         ],[
-            'name.required' => 'Name is required',
-            'email.email' => 'Valid email is required',
-            'mobile.required' => 'Mobile number is required',
-            'mobile.digits' => 'Valid Mobile number is required',
-            'permission.required' => 'Permission is required'
+            'member_name.required' => 'Name is required',
+            'member_mobile.required' => 'Mobile number is required'
         ]);
 
-        $user = User::findorFail($request->id);
+        $member = Member::where('id', $request->id)->first();
 
-        if($request->password == ""){
-            $data = [
-                'name' => $request->name,
-                'email' => $request->email,
-                'mobile' => $request->mobile,
-                'password' => bcrypt($request->password),
-                'permission' => $request->permission,
-                'status' => User::STATUS_ACTIVE
-            ];
-        }
-        else{
-            $data = [
-                'name' => $request->name,
-                'email' => $request->email,
-                'mobile' => $request->mobile,
-                'permission' => $request->permission,
-                'status' => User::STATUS_ACTIVE
-            ];
+        if(!$member){
+            return redirect()->back()->with('error', 'Something went wrong');
         }
 
-        $updateUser = $user->update($data);
+        if($request->user_id != $member->user_id){
 
-        if($updateUser){
+            $mNumber = MembershipNumber::where('registration_no', $request->registration_no)
+                ->first();
+
+            $mNumber->update([
+                'user_id' => $request->user_id
+            ]);
+        }
+
+        $data = [
+            'user_id' => $request->user_id,
+            'member_name' => $request->member_name,
+            'member_mobile' => $request->member_mobile,
+            'status' => $request->status
+        ];
+
+        $updateMember = $member->update($data);
+
+        if($updateMember){
             return redirect()->back()->with('success', 'Saved successfully');
         }
         else{
@@ -120,7 +154,39 @@ class MemberController extends Controller
     }
 
     public function delete($id){
-        //
+        $member = Member::where('id', $id)->first();
+
+        $delMember = $member->update([
+            'is_deleted' => true
+        ]);
+
+        if($delMember){
+            return redirect('admin/members')->with('success', 'Saved successfully');
+        }
+        else{
+            return redirect()->back()->with('error', 'Something went wrong');
+        }
+    }
+
+    public function restore($id){
+        $member = Member::where('id', $id)->first();
+
+        $resMember = $member->update([
+            'is_deleted' => false
+        ]);
+
+        if($resMember){
+            return redirect()->back()->with('success', 'Saved successfully');
+        }
+        else{
+            return redirect()->back()->with('error', 'Something went wrong');
+        }
+    }
+
+    public function subscriptions($id)
+    {
+        $member = Member::findorFail($id);
+        return view('backend.member.memberSubscriptions', compact('member'));
     }
 
     public function memberProfileUpdate(Request $request){
@@ -151,14 +217,17 @@ class MemberController extends Controller
             'sponsored_by' => 'required|not_in:0'
         ]);*/
 
-        $user = User::where('id', $request->user_id)->first();
+        $member = Member::where('id', $request->member_id)->first();
+
+        if(!$member){
+            return redirect()->back()->with('error', 'Something went wrong');
+        }
 
         $dob = $request->dob != "" ? Carbon::parse($request->dob)->format('Y-m-d') : null;
         $spouse_dob = $request->spouse_dob != "" ? Carbon::parse($request->spouse_dob)->format('Y-m-d') : null;
         $anniversary_date = $request->anniversary_date != "" ? Carbon::parse($request->anniversary_date)->format('Y-m-d') : null;
 
         $data = [
-            'alternate_no' => $request->alternate_no,
             /*'registration_no' => $request->registration_no,*/
             'is_policy' => $request->is_policy,
             'policy_number' => $request->policy_number,
@@ -188,9 +257,9 @@ class MemberController extends Controller
             'sponsored_by' => $request->sponsored_by
         ];
 
-        $updateUser = $user->userProfile->update($data);
+        $updateMember = $member->update($data);
 
-        if($updateUser){
+        if($updateMember){
             return redirect()->back()->with('success', 'Saved successfully');
         }
         else{

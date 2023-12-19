@@ -1,4 +1,4 @@
-<section class="prt-row about03-team-section bg-base-grey clearfix">
+<section class="prt-row about03-team-section pt-100 clearfix">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -14,7 +14,7 @@
             <div class="col-lg-3">
                 <div class="featured-imagebox featured-imagebox-team style2">
                     <div class="featured-thumbnail">
-                        <img class="img-fluid" src="{{asset('static/images/Chandana_Jana.jpg')}}" width="277" height="301" alt="image">
+                        <img loading="lazy" class="img-fluid" src="{{asset('static/images/Chandana_Jana.jpg')}}" width="277" height="301" alt="Ms.Chandana Jana supporting staff at {{env('APP_NAME')}}">
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
@@ -22,36 +22,6 @@
                         </div>
                         <div class="featured-desc">
                             <p>Nursing In-Charge</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="featured-imagebox featured-imagebox-team style2">
-                    <div class="featured-thumbnail">
-                        <img class="img-fluid" src="{{asset('static/images/Saibal_Dhar.jpg')}}" width="277" height="301" alt="image">
-                    </div>
-                    <div class="featured-content">
-                        <div class="featured-title">
-                            <h4 class="text-white">Saibal Dhar</h4>
-                        </div>
-                        <div class="featured-desc">
-                            <p>Manager - Customer Relation</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="featured-imagebox featured-imagebox-team style2">
-                    <div class="featured-thumbnail">
-                        <img class="img-fluid" src="{{asset('static/images/Raj_Hossain.jpg')}}" width="277" height="301" alt="image">
-                    </div>
-                    <div class="featured-content">
-                        <div class="featured-title">
-                            <h4 class="text-white">Raj Hossain</h4>
-                        </div>
-                        <div class="featured-desc">
-                            <p>Manager - Elder Care</p>
                         </div>
                     </div>
                 </div>

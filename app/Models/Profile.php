@@ -11,8 +11,9 @@ class Profile extends Model
 
     protected $fillable = [
         'user_id',
-        'alternate_no',
         'registration_no',
+        'member_name',
+        'member_mobile',
         'is_policy',
         'policy_number',
         'is_medical_allergy',

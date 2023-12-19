@@ -2,7 +2,7 @@
 @section('content')
 
     <!-- page-title -->
-    <div class="prt-page-title-row prt-bg prt-bgimage-yes" style="background-image: url({{asset(isset($location->locationPicture->image_full) ? $location->locationPicture->image_full : \App\Models\Picture::getDefaultImage()->image_full)}})">
+    <!--<div class="prt-page-title-row prt-bg prt-bgimage-yes" style="background-image: url({{asset(isset($location->locationPicture->image_full) ? $location->locationPicture->image_full : \App\Models\Picture::getDefaultImage()->image_full)}})">
         <div class="prt-page-title-row-inner prt-bg-layer bg-base-bodycolor">
             <div class="prt-page-title-row-wrapper-inner"></div>
         </div>
@@ -27,7 +27,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- page-title end -->
 
     <!--site-main start-->
@@ -55,7 +55,7 @@
                                             <div class="col-xl-6">
                                                 <div class="prt-team-member-detail">
                                                     <div class="prt-team-member-single-list">
-                                                        <h2 class="prt-team-member-single-title"><span>60 Plus Care in </span>{{$location->location_name}}</h2>
+                                                        <h1 class="prt-team-member-single-title"><span><span>60 Plus Clinic</span> in </span>{{$location->location_name}}</h1>
                                                         <div class="prt-short-desc">
                                                             {{$location->location_address}}
                                                         </div>

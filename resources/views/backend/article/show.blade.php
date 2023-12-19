@@ -69,7 +69,7 @@
                                     @if ($errors->has('description'))
                                         <span class="text-danger">{{ $errors->first('description') }}</span>
                                     @endif
-                                    <textarea id="description" name="description" class="form-control">{{$article->description}}</textarea>
+                                    <textarea id="description" name="description" class="form-control" rows="80">{{$article->description}}</textarea>
                                 </div>
 
                                 <div class="form-group">

@@ -17,7 +17,7 @@
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class="featured-imagebox featured-imagebox-services style2">
                     <div class="featured-thumbnail">
-                        <img class="img-fluid" src="{{asset('static/images/24X7.jpg')}}" width="447" height="300" alt="image">
+                        <img loading='lazy' class="img-fluid" src="{{asset('static/images/60pluscare-24x7-emergency.webp')}}" width="447" height="300" alt="24x7 Medical Emergency Assistance service at {{env('APP_NAME')}}">
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
@@ -36,7 +36,7 @@
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class="featured-imagebox featured-imagebox-services style2">
                     <div class="featured-thumbnail">
-                        <img class="img-fluid" src="{{asset('static/images/hospital.jpg')}}" width="447" height="300" alt="image">
+                        <img loading='lazy' class="img-fluid" src="{{asset('static/images/hospital.jpg')}}" width="447" height="300" alt="Prioritised Hospitalisation service at {{env('APP_NAME')}}">
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
@@ -53,7 +53,7 @@
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class="featured-imagebox featured-imagebox-services style2">
                     <div class="featured-thumbnail">
-                        <img class="img-fluid" src="{{asset('static/images/package.jpg')}}" width="447" height="300" alt="image">
+                        <img loading='lazy' class="img-fluid" src="{{asset('static/images/60pluscare-medial-packages.webp')}}" width="447" height="300" alt="Affordable & Customised at {{env('APP_NAME')}}">
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
@@ -68,7 +68,7 @@
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class="featured-imagebox featured-imagebox-services style2">
                     <div class="featured-thumbnail">
-                        <img class="img-fluid" src="{{asset('static/images/doctor_consultation2.jpg')}}" width="447" height="300" alt="image">
+                        <img loading='lazy' class="img-fluid" src="{{asset('static/images/60pluscare-doctor-consultation.webp')}}" width="447" height="300" alt="Doctor Consultation at {{env('APP_NAME')}}">
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
@@ -85,7 +85,7 @@
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class="featured-imagebox featured-imagebox-services style2">
                     <div class="featured-thumbnail">
-                        <img class="img-fluid" src="{{asset('static/images/Elder_care2.jpg')}}" width="447" height="300" alt="image">
+                        <img loading='lazy' class="img-fluid" src="{{asset('static/images/60pluscare-care-managers.webp')}}" width="447" height="300" alt="Care Managers service at {{env('APP_NAME')}}">
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
@@ -100,7 +100,7 @@
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class="featured-imagebox featured-imagebox-services style2">
                     <div class="featured-thumbnail">
-                        <img class="img-fluid" src="{{asset('static/images/postdischarge.jpg')}}" width="447" height="300" alt="image">
+                        <img loading='lazy' class="img-fluid" src="{{asset('static/images/postdischarge.jpg')}}" width="447" height="300" alt="Trained Nurses services at {{env('APP_NAME')}}">
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
@@ -117,7 +117,7 @@
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class="featured-imagebox featured-imagebox-services style2">
                     <div class="featured-thumbnail">
-                        <img class="img-fluid" src="{{asset('static/images/care.jpg')}}" width="447" height="300" alt="image">
+                        <img loading='lazy' class="img-fluid" src="{{asset('static/images/60pluscare-post-discharge-care-at-home.webp')}}" width="447" height="300" alt="Post Discharge Care At Home service at {{env('APP_NAME')}}">
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
@@ -134,7 +134,7 @@
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class="featured-imagebox featured-imagebox-services style2">
                     <div class="featured-thumbnail">
-                        <img class="img-fluid" src="{{asset('static/images/physiotherapy.jpg')}}" width="447" height="300" alt="image">
+                        <img loading='lazy' class="img-fluid" src="{{asset('static/images/physiotherapy.jpg')}}" width="447" height="300" alt="Physiotherapy & Rehabilitation service at {{env('APP_NAME')}}">
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
@@ -151,7 +151,7 @@
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class="featured-imagebox featured-imagebox-services style2">
                     <div class="featured-thumbnail">
-                        <img class="img-fluid" src="{{asset('static/images/medicaldevice.jpg')}}" width="447" height="300" alt="image">
+                        <img loading='lazy' class="img-fluid" src="{{asset('static/images/60pluscare-medical-devices.webp')}}" width="447" height="300" alt="Medical Devices service at {{env('APP_NAME')}}">
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
@@ -168,7 +168,7 @@
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class="featured-imagebox featured-imagebox-services style2">
                     <div class="featured-thumbnail">
-                        <img class="img-fluid" src="{{asset('static/images/telemedicine.jpg')}}" width="447" height="300" alt="image">
+                        <img loading='lazy' class="img-fluid" src="{{asset('static/images/telemedicine.jpg')}}" width="447" height="300" alt="Telemedicine service at {{env('APP_NAME')}}">
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
@@ -185,7 +185,7 @@
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class="featured-imagebox featured-imagebox-services style2">
                     <div class="featured-thumbnail">
-                        <img class="img-fluid" src="{{asset('static/images/vaccine.jpg')}}" width="447" height="300" alt="image">
+                        <img loading='lazy' class="img-fluid" src="{{asset('static/images/vaccine.jpg')}}" width="447" height="300" alt="Medicines & Vaccines service at {{env('APP_NAME')}}">
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">
@@ -202,7 +202,7 @@
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div class="featured-imagebox featured-imagebox-services style2">
                     <div class="featured-thumbnail">
-                        <img class="img-fluid" src="{{asset('static/images/pathology.jpg')}}" width="447" height="300" alt="image">
+                        <img loading='lazy' class="img-fluid" src="{{asset('static/images/pathology.jpg')}}" width="447" height="300" alt="Pathology & Diagnostic Tests service at {{env('APP_NAME')}}">
                     </div>
                     <div class="featured-content">
                         <div class="featured-title">

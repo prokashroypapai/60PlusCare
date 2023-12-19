@@ -15,11 +15,14 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('member_id')->nullable();
+            $table->foreign('member_id')->references('id')->on('members');
             $table->unsignedBigInteger('package_id')->nullable();
             $table->foreign('package_id')->references('id')->on('packages');
+            $table->tinyInteger('num_months')->nullable();
             $table->dateTime('start_date')->nullable();
             $table->dateTime('end_date')->nullable();
-            $table->tinyInteger('num_of_days')->nullable();
+            $table->integer('num_of_days')->nullable();
             $table->boolean('is_expired')->default(false);
             $table->boolean('status')->default(true);
             $table->timestamps();

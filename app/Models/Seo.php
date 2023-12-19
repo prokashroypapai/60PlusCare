@@ -13,11 +13,11 @@ class Seo extends Model
         'picture_id',
         'page_id',
         'service_id',
-        'location_id',
+        'clinic_id',
         'article_id',
         'meta_title',
         'meta_description',
-        'meta_keyword',
+        'meta_keywords',
         'og_title',
         'og_description',
         'og_image'

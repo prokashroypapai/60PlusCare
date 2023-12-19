@@ -72,7 +72,7 @@ class SeoController extends Controller
             'article_id' => $type == 'article' ? $request->id : null,
             'meta_title' => $request->meta_title,
             'meta_description' => $request->meta_description,
-            'meta_keyword' => $request->meta_keyword,
+            'meta_keywords' => $request->meta_keywords,
             'og_title' => $request->og_title,
             'og_description' => $request->og_description,
             'og_image' => $ogImage

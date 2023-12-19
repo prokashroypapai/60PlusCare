@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Member;
 use App\Models\Package;
 use App\Models\Subscription;
 use App\Models\User;
@@ -12,7 +13,7 @@ use Illuminate\Http\Request;
 class SubscriptionController extends Controller
 {
     public function index(){
-        $subscriptions = Subscription::paginate(10);
+        $subscriptions = Subscription::active()->where('is_expired', Subscription::EXPIRED_NO)->paginate(10);
         return view('backend.subscription.index', compact('subscriptions'));
     }
 
@@ -22,30 +23,62 @@ class SubscriptionController extends Controller
 
     public function store(Request $request){
         $request->validate([
-            'user_id' => 'required|not_in:0',
-            'package_id' => 'required|not_in:0'
+            'member_id' => 'required|not_in:0',
+            'package_id' => 'required|not_in:0',
+            'num_months' => 'numeric|min:1|max:36',
+            'start_date' => 'required|date_format:d-m-Y'
         ],[
-            'user_id.required' => 'Member is required',
+            'member_id.required' => 'Member is required',
+            'member_id.not_in' => 'Member is required',
             'package_id.required' => 'Package Name is required',
-            'package_id.not_in' => 'Package Name is required'
+            'package_id.not_in' => 'Package Name is required',
+            'num_months.numeric' => 'Enter valid data',
+            'num_months.min' => 'Minimum 1 month is required',
+            'num_months.max' => 'Maximum 36 months is required',
+            'start_date.required' => 'Start Date is required',
+            'start_date.date_format' => 'Format is wrong (correct: d-m-y)',
         ]);
+
+        $startDate = Carbon::parse($request->start_date)->format('Y-m-d');
+
+        $numMonths = $request->num_months;
+
+        $numDays = $numMonths * 30;
+
+        if($request->end_date == "") {
+            $endDate = Carbon::parse($startDate)->addDays($numDays - 1);
+        }
+        else{
+            $endDate = Carbon::parse($request->end_date)->format('Y-m-d');
+        }
 
         $package = Package::where('id', $request->package_id)->first();
 
-        $start_date = Carbon::now();
-        $end_date = Carbon::now()->addDays($package->num_days);
+        if(!$package){
+            return redirect()->back()->with('error', 'Package not found');
+        }
+
+        $member = Member::where('id', $request->member_id)->first();
+
+        if(!$member){
+            return redirect()->back()->with('error', 'Member not found');
+        }
 
         $data = [
-            'user_id' => $request->user_id,
+            'user_id' => $member->user_id,
+            'member_id' => $member->id,
             'package_id' => $request->package_id,
-            'start_date' => $start_date,
-            'end_date' => $end_date,
-            'num_of_days' => $package->num_days
+            'num_months' => $request->num_months,
+            'start_date' => $startDate,
+            'end_date' => $endDate,
+            'num_of_days' => $numDays,
+            'is_expired' => Subscription::EXPIRED_NO,
+            'status' => Subscription::STATUS_ACTIVE
         ];
 
-        $subscription = Subscription::create($data);
+        $createSubscription = Subscription::create($data);
 
-        if($subscription){
+        if($createSubscription){
             return redirect()->back()->with('success', 'Saved successfully');
         }
         else{
@@ -59,16 +92,86 @@ class SubscriptionController extends Controller
     }
 
     public function update(Request $request){
-        return redirect()->back()->with('error', 'Something went wrong');
+        $request->validate([
+            'member_id' => 'required|not_in:0',
+            'package_id' => 'required|not_in:0',
+            'num_months' => 'numeric|min:1|max:36',
+            'start_date' => 'required|date_format:d-m-Y',
+            'is_expired' => 'required'
+        ],[
+            'member_id.required' => 'Member is required',
+            'member_id.not_in' => 'Member is required',
+            'package_id.required' => 'Package Name is required',
+            'package_id.not_in' => 'Package Name is required',
+            'num_months.numeric' => 'Enter valid data',
+            'num_months.min' => 'Minimum 1 month is required',
+            'num_months.max' => 'Maximum 36 months is required',
+            'start_date.required' => 'Start Date is required',
+            'start_date.date_format' => 'Format is wrong (correct: d-m-y)',
+            'is_expired.required' => 'Select expiry status'
+        ]);
+
+        $subscription = Subscription::where('id', $request->id)->first();
+
+        if(!$subscription){
+            return redirect()->back()->with('error', 'Subscription not found');
+        }
+
+        $startDate = Carbon::parse($request->start_date)->format('Y-m-d');
+
+        $numMonths = $request->num_months;
+
+        $numDays = $numMonths * 30;
+
+        $endDate = Carbon::parse($startDate)->addDays($numDays - 1);
+
+        $package = Package::where('id', $request->package_id)->first();
+
+        if(!$package){
+            return redirect()->back()->with('error', 'Package not found');
+        }
+
+        $member = Member::where('id', $request->member_id)->first();
+
+        if(!$member){
+            return redirect()->back()->with('error', 'Member not found');
+        }
+
+        $data = [
+            'package_id' => $request->package_id,
+            'num_months' => $request->num_months,
+            'start_date' => $startDate,
+            'end_date' => $endDate,
+            'num_of_days' => $numDays,
+            'is_expired' => Subscription::EXPIRED_NO
+        ];
+
+        $updateSubscription = $subscription->update($data);
+
+        if($updateSubscription){
+            return redirect()->back()->with('success', 'Saved successfully');
+        }
+        else{
+            return redirect()->back()->with('error', 'Something went wrong');
+        }
     }
 
-    public function delete($id, $user_id = null){
-        $delSubscription = Subscription::where('id', $id)->delete();
-        if($user_id == null){
+    public function delete($id){
+        $getSubscription = Subscription::where('id', $id)->first();
+
+        if(!$getSubscription){
+            return redirect()->back()->with('error', 'Subscription not found');
+        }
+
+        $delSubscription = $getSubscription->update([
+            'status' => Subscription::STATUS_INACTIVE
+        ]);
+
+        if($delSubscription){
             return redirect('admin/subscriptions')->with('success', 'Deleted');
         }
         else {
-            return redirect('admin/subscription/user/' . $user_id)->with('success', 'Deleted');
+            return redirect()->back()->with('error', 'Something went wrong');
         }
     }
 

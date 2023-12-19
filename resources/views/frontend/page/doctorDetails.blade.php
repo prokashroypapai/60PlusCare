@@ -115,7 +115,7 @@
         <!--member-info-section-end-->
 
         <!-- achivement-section -->
-        <section class="prt-row team-details-achivement-section clearfix">
+        <!--<section class="prt-row team-details-achivement-section clearfix">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
@@ -194,11 +194,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
         <!-- achivement-section -->
 
         <!-- qualification-section -->
-        <section class="prt-row team-details-qualification-section bg-base-grey clearfix">
+        <!--<section class="prt-row team-details-qualification-section bg-base-grey clearfix">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 align-self-center">
@@ -255,7 +255,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
         <!-- qualification-section-end -->
 
     </div><!--site-main end-->
