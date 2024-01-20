@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->unsignedBigInteger('user_id')->nullable();
+            $table->unsignedBigInteger('member_id')->nullable();
             $table->foreign('member_id')->references('id')->on('members');
-            $table->string('member_id', 30)->nullable();
-            $table->bigInteger('unique_no')->nullable();
+            $table->string('registration_no', 30)->nullable();
+            $table->string('unique_no', 20)->nullable();
             $table->timestamps();
         });
     }

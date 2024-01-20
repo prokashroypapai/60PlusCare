@@ -5,9 +5,9 @@
                 <!-- section title -->
                 <div class="section-title title-style-center_text">
                     <div class="title-header">
-                        <p>
+                        <h3>
                             <span>Honorary Advisors</span> of {{env('APP_NAME')}}
-                        </p>
+                        </h3>
                     </div>
                     <div class="title-desc">
                         <p>

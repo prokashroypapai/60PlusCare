@@ -1,87 +1,49 @@
 @extends('frontend.layout.app')
 @section('content')
 
-    <!-- page-title -->
-    <div class="prt-page-title-row prt-bg prt-bgimage-yes" style="background-image: url({{asset('static/images/bgimage-3.jpg')}})">
-        <div class="prt-page-title-row-inner prt-bg-layer bg-base-bodycolor">
-            <div class="prt-page-title-row-wrapper-inner"></div>
-        </div>
-        <div class="layer-content">
-            <div class="container-fluid p-0">
-                <div class="row align-items-center">
-                    <div class="col-lg-12">
-                        <div class="prt-page-title-row-heading">
-                            <div class="page-title-heading">
-                                <h2 class="title">Login</h2>
-                            </div>
-                            <div class="breadcrumb-wrapper">
-                                    <span>
-                                        <a href="{{url('/')}}">Home</a>
-                                    </span>
-                                <span>
-                                        <a href="#">Login</a>
-                                    </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- page-title end -->
-
     <!--site-main start-->
     <div class="site-main">
-
         <!-- contact-form-section -->
-        <section class="prt-row contactus-contact-form-section bg-base-grey clearfix">
+        <section class="prt-row conatct-section bg-layer-equal-height clearfix" style="background-image: linear-gradient(#f9fcf2, #f2f3fc)">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <!-- section title -->
-                        <div class="section-title title-style-center_text">
-                            <div class="title-header">
-                                <h2>Please <i class="text-base-skin">Login</i> to continue</h2>
-                            </div>
-                        </div><!-- section title end -->
-                    </div>
-                </div>
-                <div class="row g-0 justify-content-center">
-                    <div class="col-lg-5">
-                        <div class="bg-base-white spacing-33">
-                            @if (session('success'))
-                                <div class="alert alert-success">
-                                    {{ session('success') }}
-                                </div>
-                            @endif
-                            @if (session('error'))
-                                <div class="alert alert-danger">
-                                    {{ session('error') }}
-                                </div>
-                            @endif
-                            <form action="{{url('login')}}" class="contact_form style2 clearfix" method="post">
-                                @csrf
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <label for="mobile">Mobile</label>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4">
+                        <div class="mt-15 mb-15">
+                            <div class="conatct-section-item block-01 rounded shadow" style="padding-top: 15px;" id="formDiv">
+                                <form action="{{url('login')}}" method="post" id="registerForm">
+                                    @csrf
+                                    <div class="form-group mb-3 text-center">
+                                        <img src="{{ asset('static/images/logo.png') }}" class="img-fluid" style="max-width: 200px; height: auto"/>
+                                    </div>
+                                    <h5 class="text-center">Login</h5>
+                                    @if (session('success'))
+                                        <div class="alert alert-success">
+                                            {{ session('success') }}
+                                        </div>
+                                    @endif
+                                    @if (session('error'))
+                                        <div class="alert alert-danger">
+                                            {{ session('error') }}
+                                        </div>
+                                    @endif
+                                    <div class="form-group mb-3">
                                         @if ($errors->has('mobile'))
                                             <span class="text-danger">{{ $errors->first('mobile') }}</span>
                                         @endif
-                                        <input name="mobile" type="text" value="{{old('mobile')}}" placeholder="Enter your mobile">
+                                        <input type="text" id="mobile" name="mobile" placeholder="Mobile" value="{{old('mobile')}}">
                                     </div>
 
-                                    <div class="col-md-12">
-                                        <label for="password">Password</label>
+                                    <div class="form-group mb-3">
                                         @if ($errors->has('password'))
                                             <span class="text-danger">{{ $errors->first('password') }}</span>
                                         @endif
-                                        <input name="password" type="password" value="{{old('password')}}" placeholder="Email Address">
+                                        <input type="password" id="password" name="password" placeholder="Password" value="{{old('password')}}">
                                     </div>
-                                    <div class="mt-5">
-                                        <button type="submit" value="submit" class="registerBtn">Login</button>
+                                    <div class="form-group py-3">
+                                        <button type="submit" class="btn btn-success" id="registerBtn">Login</button>
                                     </div>
-                                </div>
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -90,4 +52,35 @@
         <!-- contact-form-section-end -->
 
     </div><!--site-main end-->
+    <style>
+        #registerForm label{
+            font-size: 16px;
+            font-weight: 500;
+            color: #333333;
+            margin-bottom: 8px;
+        }
+        #registerForm input[type=text], #registerForm input[type=password]{
+            color: #000;
+            border-radius: 6px;
+            border: 1px solid #cccccc;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        #registerForm input[type=text]:focus, #registerForm input[type=password]:focus{
+            border: 1px solid #d80065;
+        }
+        #registerForm button{
+            width: 100%;
+            background-color: #d80065;
+            color: #fff;
+            border: 0;
+            padding: 10px 0;
+            font-size: 18px;
+            font-weight: 600;
+            outline: none;
+        }
+        #registerForm button:focus{
+            outline: none;
+        }
+    </style>
 @endsection

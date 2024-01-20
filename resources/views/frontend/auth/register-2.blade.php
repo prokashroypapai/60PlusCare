@@ -1,74 +1,42 @@
 @extends('frontend.layout.app')
 @section('content')
 
-    <!-- page-title -->
-    <div class="prt-page-title-row prt-bg prt-bgimage-yes" style="background-image: url({{asset('static/images/bgimage-3.jpg')}})">
-        <div class="prt-page-title-row-inner prt-bg-layer bg-base-bodycolor">
-            <div class="prt-page-title-row-wrapper-inner"></div>
-        </div>
-        <div class="layer-content">
-            <div class="container-fluid p-0">
-                <div class="row align-items-center">
-                    <div class="col-lg-12">
-                        <div class="prt-page-title-row-heading">
-                            <div class="page-title-heading">
-                                <h2 class="title">Register</h2>
-                            </div>
-                            <div class="breadcrumb-wrapper">
-                                    <span>
-                                        <a href="{{url('/')}}">Home</a>
-                                    </span>
-                                <span>
-                                        <a href="#">Register</a>
-                                    </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- page-title end -->
-
     <!--site-main start-->
     <div class="site-main">
 
         <!-- conatct-section -->
-        <section class="prt-row conatct-section bg-layer-equal-height clearfix">
+        <section class="prt-row conatct-section bg-layer-equal-height clearfix" style="background-image: linear-gradient(#f9fcf2, #f2f3fc)">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
+                <div class="row justify-content-center">
+                    <!--<div class="col-lg-4">
                         <img src="https://pbs.twimg.com/media/FDZuWk_VgAgKWZ9?format=jpg&name=medium" class="img-fluid">
-                    </div>
-                    <div class="col-lg-6">
+                    </div>-->
+                    <div class="col-lg-4">
                         <div class="mt-15 mb-15">
-
-
-                            <div class="conatct-section-item block-01" style="padding-top: 15px;" id="formDiv">
-                                <h3>Please submit the form</h3>
+                            <div class="conatct-section-item block-01 rounded shadow" style="padding-top: 15px;" id="formDiv">
                                 <form id="registerForm">
+                                    <div class="form-group mb-3 text-center">
+                                        <img src="{{ asset('static/images/logo.png') }}" class="img-fluid" style="max-width: 200px; height: auto"/>
+                                    </div>
+                                    <h5 class="text-center">Register</h5>
                                     <div class="form-group mb-3">
-                                        <label for="name">Name: </label>
                                         <span class="text-danger" id="nameError"></span>
-                                        <input type="text" id="name">
+                                        <input type="text" id="name" placeholder="Name">
                                     </div>
                                     <div class="form-group mb-3">
-                                        <label for="email">Email</label>
                                         <span class="text-danger" id="emailError"></span>
-                                        <input type="text" id="email">
+                                        <input type="text" id="email" placeholder="Email">
                                     </div>
                                     <div class="form-group mb-3">
-                                        <label for="mobile">Mobile</label>
                                         <span class="text-danger" id="mobileError"></span>
-                                        <input type="text" id="mobile">
+                                        <input type="text" id="mobile" placeholder="Mobile">
                                     </div>
                                     <div class="form-group mb-3">
-                                        <label for="city">City</label>
                                         <span class="text-danger" id="cityError"></span>
-                                        <input type="text" id="city">
+                                        <input type="text" id="city" placeholder="City">
                                     </div>
                                     <div class="form-group py-3">
-                                        <button class="btn btn-success">Register</button>
+                                        <button class="btn btn-success" id="registerBtn">Register</button>
                                     </div>
                                     <div id="errorDiv"></div>
                                 </form>
@@ -89,8 +57,6 @@
                                     Our representative will contact you soon
                                 </p>
                             </div>
-
-
 
                         </div>
                     </div>
@@ -136,6 +102,12 @@
                         mobile:mobile,
                         city:city,
                     },
+                    beforeSend: function (){
+                        $('#registerBtn').attr('disabled', true);
+                    },
+                    complete: function (){
+                        $('#registerBtn').attr('disabled', false);
+                    },
                     success:function(response){
                         //console.log(response);
                         if (response.status === 200) {
@@ -169,9 +141,10 @@
         }
         #registerForm input[type=text]{
             color: #000;
-            border-radius: 3px;
+            border-radius: 6px;
             border: 1px solid #cccccc;
-            font-size: 15px;
+            font-size: 14px;
+            font-weight: 500;
         }
         #registerForm input[type=text]:focus{
             border: 1px solid #d80065;
@@ -184,6 +157,9 @@
             padding: 10px 0;
             font-size: 18px;
             font-weight: 600;
+            outline: none;
+        }
+        #registerForm button:focus{
             outline: none;
         }
     </style>

@@ -1741,7 +1741,7 @@ blockquote .qoute-text p { margin-bottom: 0; }
 /*  Contact_page
 /*------------------------------------------------------------------------------*/
 .conatct-section .conatct-section-item {
-    background-color: var(--base-grey);
+    background-color: var(--base-white);
     border: 1px solid var(--base-dark-border);
 }
 .conatct-section .conatct-section-item.block-01 {
