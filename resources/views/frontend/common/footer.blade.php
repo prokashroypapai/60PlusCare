@@ -1,119 +1,174 @@
-<footer class="footer widget-footer clearfix">
-    <div class="second-footer bg-layer-equal-height clearfix">
-        <div class="container">
-            <div class="row g-0">
-                <div class="col-lg-8">
-                    <div class="prt-bg prt-col-bgcolor-yes prt-left-span bg-base-dark spacing-42">
-                        <div class="prt-col-wrapper-bg-layer prt-bg-layer bg-base-skin-Primary"></div>
-                        <div class="layer-content">
-                            <div class="row">
-                                <div class="col-12 col-md-4 mb-15">
-                                    <div class="widget-area">
-                                        <div class="widget widget-contact-info clearfix">
-                                            <h6 class="widget-title">Get in touch</h6>
-                                            <div class="link-widget-menu d-block d-sm-flex">
-                                                <ul class="menu-footer-link">
-                                                    <li><span>Our Location</span><span> : </span><span>Elder Care Center Apollo Diagnostics,</br>P-43/4, Jadunath Mukherjee Road, Jadu Colony,</br>
-                                                            Behala, Kolkata 700034</span></li>
-                                                    <li><span>24/7 Emergency Call</span><span> : </span><span><a href="tel:+918296111777">(+91) 8296 111 777</a></span></li>
-                                                    <li><span>Email Us</span><span> : </span><span><a href="mailto:60pcpl@gmail.com">60pcpl@gmail.com</a></span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4">
-                                    <div class="widget-area">
-                                        <div class="widget widget-working-info with-title">
-                                            <h6 class="widget-title">Opening hours</h6>
-                                            <ul class="widget-working">
-                                                <li><span>Monday to Friday</span><span> : </span><span>9AM to 9PM</span></li>
-                                                <li><span>Saturday</span><span> : </span><span>10AM to 8PM</span></li>
-                                                <li><span>Sunday</span><span> : </span><span class="text-decoration-underline">Closed!</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4">
-                                    <div class="widget-area">
-                                        <div class="widget link-widget clearfix">
-                                            <h6 class="widget-title">Important links</h6>
-                                            <div class="link-widget-menu d-block d-sm-flex">
-                                                <ul class="menu-footer-link">
-                                                    <li><a href="{{url('/about')}}" rel="nofollow noindex">About</a></li>
-                                                    <li><a href="{{url('/doctors')}}" rel="nofollow noindex">Doctors</a></li>
-                                                    <li><a href="{{url('packages')}}" rel="nofollow noindex">Packages</a></li>
-                                                    <!--<li><a href="{{url('newsletters')}}">Newsletters</a></li>
-                                                    <li><a href="{{url('offers')}}">Offers</a></li>-->
-                                                </ul>
-                                                <ul class="menu-footer-services">
-                                                    <li><a href="{{url('terms-condition')}}">Terms of service</a></li>
-                                                    <li><a href="{{url('privacy-policy')}}">Privacy policy</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<!-- Footer Section Start -->
+<footer class="footer-wrap">
+    <div class="container">
+        <div class="row pt-100 pb-75">
+            <div class="col-xl-3 col-lg-5 col-md-5 col-sm-12">
+                <div class="footer-widget">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/img/logo-white.png" alt="Image">
+                    </a>
+                    <p class="comp-desc">
+                        Lorem ipsum dolor sit amet consc tetur adicing elit. Dolor emque dicta molest enim beatae ame consequ atur tempo pretium auctor nam.
+                    </p>
+                    <ul class="social-profile style1 list-style">
+                        <li>
+                            <a href="https://facebook.com/">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/">
+                                <i class="ri-linkedin-fill"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-lg-4">
-                    <div class="prt-bg prt-col-bgcolor-yes prt-right-span bg-base-dark-two spacing-43">
-                        <div class="prt-col-wrapper-bg-layer prt-bg-layer bg-base-skin-SecondarySub1"></div>
-                        <div class="layer-content">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="widget-area">
-                                        <div class="widget widget_nav_menu clearfix">
-                                            <h6 class="widget-title">Request a Callback</h6>
-                                            <div class="widget-contact-text">
-                                                <span>Need advises?? Call us <a href="tel:+91 8296111777" title="Call 60 Plus Care Customer Care" rel="noindex nofollow">(+91) 8296 111 777</a> or email <a href="mailto:60pcpl@gmail.com" title="Email 60 Plus Care Customer Care" rel="noindex nofollow">60pcpl@gmail.com</a></span>
-                                            </div>
-                                            <div class="row g-0">
-                                                <div class="col-12 col-sm-6 col-md-6 col-lg-12">
-                                                    <div class="col-bg-img-six prt-bg prt-col-bgimage-yes">
-                                                        <div class="prt-col-wrapper-bg-layer prt-bg-layer"></div>
-                                                        <div class="layer-content">
-                                                            <div class="footer-ad-contact">
-                                                                <h3>Need <i class="text-base-skin fw-600">Elder Care</i><br>Services For You?</h3>
-                                                                <p>Have an idea a dream?</p>
-                                                                <span class="fw-600">call : <label class="text-base-skin"><a href="tel:+918296111777" title="Call 60 Plus Care Customer Care" rel="noindex nofollow">(+91) 8296 111 777</a></label></span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6">
+                <div class="footer-widget">
+                    <h3 class="footer-widget-title">Company</h3>
+                    <ul class="footer-menu list-style">
+                        <li>
+                            <a href="index.html">
+                                <i class="ri-arrow-right-s-line"></i>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html">
+                                <i class="ri-arrow-right-s-line"></i>
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="service-one.html">
+                                <i class="ri-arrow-right-s-line"></i>
+                                Our Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="team.html">
+                                <i class="ri-arrow-right-s-line"></i>
+                                Our Team
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html">
+                                <i class="ri-arrow-right-s-line"></i>
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-3 col-md-3 col-sm-6">
+                <div class="footer-widget">
+                    <h3 class="footer-widget-title">Important</h3>
+                    <ul class="footer-menu list-style">
+                        <li>
+                            <a href="portfolio.html">
+                                <i class="ri-arrow-right-s-line"></i>
+                                Portfolio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="appointment.html">
+                                <i class="ri-arrow-right-s-line"></i>
+                                Appointment
+                            </a>
+                        </li>
+                        <li>
+                            <a href="faq.html">
+                                <i class="ri-arrow-right-s-line"></i>
+                                FAQ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="privacy-policy.html">
+                                <i class="ri-arrow-right-s-line"></i>
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="terms-of-service.html">
+                                <i class="ri-arrow-right-s-line"></i>
+                                Terms &amp; Conditions
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-5 col-md-6 col-sm-6 pe-xl-4">
+                <div class="footer-widget">
+                    <h3 class="footer-widget-title">Quick Link</h3>
+                    <ul class="footer-menu list-style">
+                        <li>
+                            <a href="about.html">
+                                <i class="ri-arrow-right-s-line"></i>
+                                Why Choose Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pricing-plan.html">
+                                <i class="ri-arrow-right-s-line"></i>
+                                Pricing Plan
+                            </a>
+                        </li>
+                        <li>
+                            <a href="blog-left-sidebar.html">
+                                <i class="ri-arrow-right-s-line"></i>
+                                News &amp; Articles
+                            </a>
+                        </li>
+                        <li>
+                            <a href="login.html">
+                                <i class="ri-arrow-right-s-line"></i>
+                                Login
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html">
+                                <i class="ri-arrow-right-s-line"></i>
+                                Subscribe
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-7 col-md-6 col-sm-6">
+                <div class="footer-widget">
+                    <h3 class="footer-widget-title">Official Info</h3>
+                    <ul class="contact-info list-style">
+                        <li>
+                            <i class="flaticon-map"></i>
+                            <h6>Location</h6>
+                            <p>2767 Sunrise Street, NY 1002, USA</p>
+                        </li>
+                        <li>
+                            <i class="flaticon-email-1"></i>
+                            <h6>Email</h6>
+                            <a href="https://templates.hibotheme.com/cdn-cgi/l/email-protection#69010c050506291d0c0500470a0604"><span class="__cf_email__" data-cfemail="5f373a3333301f2b3a3336713c3032">[email&#160;protected]</span></a>
+                        </li>
+                        <li>
+                            <i class="flaticon-phone-call-1"></i>
+                            <h6>Phone</h6>
+                            <a href="tel:13454567877">+1-3454-5678-77</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <div class="bottom-footer-text bg-base-dark-three text-base-white bg-base-skin-SecondarySub2">
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="d-flex align-items-center justify-content-center">
-                            <span class="cpy-text">©2023 Copyright 60 Plus Care. All Rights Reserved </span>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="d-flex align-items-center justify-content-center">
-                            <div class="menu-footer-menu">
-                                <p>
-                                    Website Created & Maintained by <a href="https://www.algoflow.in" target="_blank" title="Algoflow official page">Algoflow</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <p class="copyright-text"><i class="ri-copyright-line"></i> <span>Teli</span>. All Rights Reserved By <a href="https://hibotheme.com/">HiboTheme</a></p>
 </footer>
+<!-- Footer Section End -->

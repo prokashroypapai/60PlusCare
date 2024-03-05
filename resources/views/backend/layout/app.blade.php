@@ -27,12 +27,14 @@
     <link href="{{asset('backend/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('backend/css/theme.min.css')}}" rel="stylesheet" type="text/css" />
 
-    <script src="https://cdn.tiny.cloud/1/fao4lv8hgbb96goupeykmodidomsb7k8026wjxnj6i48o9it/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/sqhluka7387mo7g05nfaql5ohc4ilv1ou3ehye90iz45bxfo/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
     <script>
         tinymce.init({
             selector: 'textarea#product_name, textarea#product_details, textarea#product_benefit, textarea#product_uses, textarea#story_description, textarea#description',
-            menubar: true
+            menubar: true,
+            plugins: 'link',
+            toolbar: 'link'
         });
     </script>
 

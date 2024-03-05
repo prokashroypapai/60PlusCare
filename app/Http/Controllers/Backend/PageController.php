@@ -63,7 +63,7 @@ class PageController extends Controller
         $id = $request->id;
         $page = Page::findorFail($id);
 
-        if($page->is_basic == true){
+        if($page->is_writable == false){
             return redirect()->back()->with('error', 'Can not modify basic page');
         }
 

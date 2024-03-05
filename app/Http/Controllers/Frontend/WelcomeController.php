@@ -61,7 +61,7 @@ class WelcomeController extends Controller
         }
 
         if($page->is_basic == true){
-            $getView = 'frontend.page.index';
+            $getView = 'frontend2.page.index';
         }
         else {
             $getView = 'frontend.page.' . $page->page_slug;

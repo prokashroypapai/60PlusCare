@@ -21,6 +21,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://www.60pluscare.in/pulmonary-rehabilitation</loc>
+        <changefreq>always</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://www.60pluscare.in/physiotherapy</loc>
         <changefreq>always</changefreq>
         <priority>1.0</priority>
