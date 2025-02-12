@@ -3,21 +3,25 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Activity\Training;
 use App\Models\Member;
 use App\Models\Profile;
 use App\Models\Service\MembershipNumber;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
 {
     public function home(Request $request){
-        if($request->type == 'userRegister') {
+        /*if($request->type == 'userRegister') {
             return $this->transferUserData();
         }
         if($request->type == 'memberRegister') {
             return $this->transferMemberData();
-        }
+        }*/
+
+        $this->checkTrainingExpiry();
 
         return view('backend.dashboard.index');
     }
@@ -58,5 +62,19 @@ class WelcomeController extends Controller
         }
 
         return 'yes';
+    }
+
+    public function checkTrainingExpiry()
+    {
+        $getTrainings = Training::select('id', 'date_expiry', 'is_expired', 'status')->get();
+        foreach($getTrainings as $getTraining){
+            $now = Carbon::now();
+            $expiry_date = Carbon::parse($getTraining->date_expiry);
+            if($now > $expiry_date){
+                $getTraining->update(['is_expired' => Training::EXPIRED_YES]);
+            }
+        }
+
+        return true;
     }
 }

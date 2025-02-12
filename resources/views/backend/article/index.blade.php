@@ -37,7 +37,7 @@
                                 <tr>
                                     <th>Id</th>
                                     <th>Picture</th>
-                                    <th>Name</th>
+                                    <th>Author</th>
                                     <th>Posted At</th>
                                     <th>Status</th>
                                     <th>Action</th>
@@ -49,7 +49,7 @@
                                     <tr>
                                         <td>{{$article->id}}</td>
                                         <td><img src="{{asset(isset($article->articlePicture->image_small) ? $article->articlePicture->image_small : \App\Models\Picture::getDefaultImage()->image_small)}}"/></td>
-                                        <td>{{$article->articleUser->name}}</td>
+                                        <td>{{$article->author}}</td>
                                         <td>{{\Carbon\Carbon::parse($article->posted_at)->format('d M, Y')}}</td>
                                         <td>@if($article->status == true)<span class="badge badge-success">ACTIVE</span> @else <span class="badge badge-danger">INACTIVE</span>@endif</td>
                                         <td><a href="{{url('admin/article/' . $article->id)}}" class="btn btn-success">Action</a></td>

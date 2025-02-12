@@ -20,7 +20,8 @@ class MemberController extends Controller
                 'name' => 'required',
                 'email' => 'required|email',
                 'mobile' => 'required|digits:10',
-                'city' => 'required'
+                'city' => 'required',
+                'comment' => 'required|min:10|max:191'
             ], [
                 'package_id.required' => 'Package Id is required',
                 'name.required' => 'Name is required',
@@ -28,7 +29,10 @@ class MemberController extends Controller
                 'email.email' => 'Email should be perfect',
                 'mobile.required' => 'Mobile number is required',
                 'mobile.digits' => 'Mobile number should be perfect',
-                'city.required' => 'City is required'
+                'city.required' => 'City is required',
+                'comment.required' => 'Comment is required',
+                'comment.min' => 'Minimum 10 characters for comment',
+                'comment.max' => 'Maximum 191 characters for comment',
             ]
         );
 
@@ -43,6 +47,7 @@ class MemberController extends Controller
             'email' => $request->email,
             'mobile' => '+91' . $request->mobile,
             'city' => $request->city,
+            'comment' => $request->comment,
             'status' => Membership::STATUS_ACTIVE
         ];
 

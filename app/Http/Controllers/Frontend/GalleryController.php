@@ -14,7 +14,13 @@ class GalleryController extends Controller
 {
     public function index($slug = null){
         if($slug != null){
-            $gallery = Gallery::where('gallery_slug', $slug)->first();
+            $gallery = Gallery::where('gallery_slug', $slug)
+                ->first();
+
+            if(!$gallery){
+                abort(404);
+            }
+
             $metaseo = [
                 'picture_id' => isset($gallery->galleryImages[0]) ? $gallery->galleryImages[0] : Picture::getDefaultImage()->id,
                 'meta_title' => $gallery->gallery_name,

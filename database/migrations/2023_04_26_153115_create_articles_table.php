@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->dateTime('posted_at')->nullable();
             $table->string('title', 191)->nullable();
+            $table->string('author', 30)->nullable();
             $table->string('slug', 191)->nullable();
             $table->longText('description')->nullable();
             $table->integer('num_of_views')->default(0);

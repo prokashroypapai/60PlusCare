@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('mobile', 15)->nullable();
             $table->string('email', 30)->nullable();
             $table->string('city', 30)->nullable();
+            $table->string('comment', 191)->nullable();
             $table->boolean('action')->nullable();
             $table->boolean('status')->default(1);
             $table->timestamps();

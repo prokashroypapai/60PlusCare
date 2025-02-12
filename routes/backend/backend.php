@@ -68,6 +68,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'manager'], function() {
     //article
     require __DIR__ . '/article.php';
 
+    //feed
+    require __DIR__ . '/feed.php';
+
     //testimonial
     require __DIR__ . '/testimonial.php';
 
@@ -79,4 +82,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'manager'], function() {
 
     //noticeboard
     require __DIR__ . '/noticeboard.php';
+
+    //training
+    require __DIR__ . '/training.php';
 });

@@ -57,6 +57,14 @@
                                 </div>
 
                                 <div class="form-group">
+                                    <label for="author">Author Name</label>
+                                    @if ($errors->has('author'))
+                                        <span class="text-danger">{{ $errors->first('author') }}</span>
+                                    @endif
+                                    <input type="text" id="author" name="author" class="form-control" value="{{$article->author}}">
+                                </div>
+
+                                <div class="form-group">
                                     <label for="title">Title</label>
                                     @if ($errors->has('title'))
                                         <span class="text-danger">{{ $errors->first('title') }}</span>

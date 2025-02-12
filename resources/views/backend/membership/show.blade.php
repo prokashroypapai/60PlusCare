@@ -31,8 +31,8 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <form method="post" action="{{url('admin/membership/update')}}">
-                                @csrf
+                            <!--<form method="post" action="{{url('admin/membership/update')}}">
+                                csrf
                                 <input type="hidden" name="id" value="{{$membership->id}}">
 
                                 <div class="form-group">
@@ -62,7 +62,7 @@
                                         <span class="text-danger">{{ $errors->first('start_date') }}</span>
                                     @endif
                                     <input type="text" class="form-control" id="start_date" name="start_date" value=""/>
-                                </div>
+                                </div>-->
 
                                 <div class="form-group">
                                     <label for="name">Name</label>
@@ -96,9 +96,18 @@
                                     <input type="text" class="form-control" id="city" name="city" value="{{$membership->city}}"/>
                                 </div>
 
-                                <button type="submit" class="btn btn-primary waves-effect waves-light">Save</button>
+                                <div class="form-group">
+                                    <label for="comment">Comment</label>
+                                    @if ($errors->has('comment'))
+                                        <span class="text-danger">{{ $errors->first('comment') }}</span>
+                                    @endif
+                                    <textarea class="form-control" id="comment" name="comment">{{$membership->comment}}</textarea>
+                                </div>
 
-                            </form>
+                                <button type="button" class="btn btn-primary waves-effect waves-light" onclick='window.location.href="{{ url('/admin/memberships') }}"'>Back to Requests</button>
+                                <!--<button type="submit" class="btn btn-primary waves-effect waves-light">Save</button>
+
+                            </form>-->
                         </div>
                     </div>
                 </div>

@@ -15,6 +15,7 @@ class Doctor extends Model
         'doctor_name',
         'doctor_slug',
         'doctor_designation',
+        'doctor_association',
         'doctor_experience',
         'is_home',
         'status'

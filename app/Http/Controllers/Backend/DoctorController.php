@@ -23,13 +23,13 @@ class DoctorController extends Controller
 
     public function store(Request $request, CreateSlugService $createSlugService, CreatePictureService $createPictureService){
         $request->validate([
-            'doctor_name' => 'required',
-            'doctor_designation' => 'required',
-            'doctor_experience' => 'required'
+            'doctor_name' => 'required'
+            /*'doctor_designation' => 'required',
+            'doctor_experience' => 'required'*/
         ],[
-            'doctor_name.required' => 'Doctor Name is required',
-            'doctor_designation.required' => 'Doctor Designation is required',
-            'doctor_experience.required' => 'Doctor Experience is required'
+            'doctor_name.required' => 'Doctor Name is required'
+            /*'doctor_designation.required' => 'Doctor Designation is required',
+            'doctor_experience.required' => 'Doctor Experience is required'*/
         ]);
 
         if($request->hasFile('upload')) {
@@ -52,6 +52,7 @@ class DoctorController extends Controller
             'doctor_name' => $request->doctor_name,
             'doctor_slug' => $createSlugService->CreateSlugService($request->doctor_name),
             'doctor_designation' => $request->doctor_designation,
+            'doctor_association' => $request->doctor_association,
             'doctor_experience' => $request->doctor_experience,
             'is_home' => $request->is_home,
             'status' => 1
@@ -74,13 +75,13 @@ class DoctorController extends Controller
 
     public function update(Request $request, CreateSlugService $createSlugService, CreatePictureService $createPictureService){
         $request->validate([
-            'doctor_name' => 'required',
-            'doctor_designation' => 'required',
-            'doctor_experience' => 'required'
+            'doctor_name' => 'required'
+            /*'doctor_designation' => 'required',
+            'doctor_experience' => 'required'*/
         ],[
-            'doctor_name.required' => 'Doctor Name is required',
-            'doctor_designation.required' => 'Doctor Designation is required',
-            'doctor_experience.required' => 'Doctor Experience is required'
+            'doctor_name.required' => 'Doctor Name is required'
+            /*'doctor_designation.required' => 'Doctor Designation is required',
+            'doctor_experience.required' => 'Doctor Experience is required'*/
         ]);
 
         $doctor = Doctor::findorFail($request->id);
@@ -105,6 +106,7 @@ class DoctorController extends Controller
             'doctor_name' => $request->doctor_name,
             'doctor_slug' => $createSlugService->CreateSlugService($request->doctor_name),
             'doctor_designation' => $request->doctor_designation,
+            'doctor_association' => $request->doctor_association,
             'doctor_experience' => $request->doctor_experience,
             'is_home' => $request->is_home,
             'status' => $request->status

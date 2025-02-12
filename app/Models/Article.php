@@ -16,6 +16,7 @@ class Article extends Model
         'picture_id',
         'user_id',
         'posted_at',
+        'author',
         'title',
         'slug',
         'description',

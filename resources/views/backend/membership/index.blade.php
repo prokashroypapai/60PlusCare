@@ -33,6 +33,7 @@
                                 <thead>
                                 <tr>
                                     <th>Id</th>
+                                    <th>Date</th>
                                     <th>Name</th>
                                     <th>Mobile</th>
                                     <th>Email</th>
@@ -45,6 +46,7 @@
                                 @foreach($memberships as $membership)
                                     <tr>
                                         <td>{{$membership->id}}</td>
+                                        <td>{{\Carbon\Carbon::parse($membership->created_at)->format('d M, Y')}}</td>
                                         <td>{{$membership->name}}</td>
                                         <td>{{$membership->mobile}}</td>
                                         <td>{{$membership->email}}</td>

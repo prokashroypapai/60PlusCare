@@ -52,6 +52,14 @@
                                 </div>
 
                                 <div class="form-group">
+                                    <label for="doctor_association">Doctor Association</label>
+                                    @if ($errors->has('doctor_association'))
+                                        <span class="text-danger">{{ $errors->first('doctor_association') }}</span>
+                                    @endif
+                                    <input type="text" id="doctor_association" name="doctor_association" class="form-control" placeholder="Enter Association" value="{{$doctor->doctor_association}}">
+                                </div>
+
+                                <div class="form-group">
                                     <label for="doctor_experience">Doctor Experience</label>
                                     @if ($errors->has('doctor_experience'))
                                         <span class="text-danger">{{ $errors->first('doctor_experience') }}</span>

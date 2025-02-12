@@ -21,6 +21,7 @@ class Membership extends Model
         'mobile',
         'email',
         'city',
+        'comment',
         'action',
         'status'
     ];

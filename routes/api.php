@@ -37,3 +37,12 @@ Route::post('memberDetails', [WelcomeController::class, 'memberDetails']);
 
 //member details
 Route::post('createMember', [MemberController::class, 'createMember']);
+
+//create Participant
+Route::post('createParticipant', [WelcomeController::class, 'createParticipant']);
+
+//get Participants with mobile & dob
+Route::post('getParticipants', [WelcomeController::class, 'getParticipants']);
+
+//check Certificate No
+Route::post('checkCertificateNo', [WelcomeController::class, 'checkCertificateNo']);

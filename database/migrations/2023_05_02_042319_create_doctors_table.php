@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('doctor_name', 50)->nullable();
             $table->string('doctor_slug', 50)->nullable();
             $table->string('doctor_designation', 100)->nullable();
+            $table->text('doctor_association')->nullable();
             $table->text('doctor_experience')->nullable();
             $table->boolean('is_home')->default(0);
             $table->boolean('status')->default(true);

@@ -6,6 +6,8 @@ use App\Http\Controllers\Frontend\ServiceController;
 use App\Http\Controllers\Frontend\RegisterController;
 use App\Http\Controllers\Frontend\ArticleController;
 use App\Http\Controllers\Frontend\GalleryController;
+use App\Models\Picture;
+use App\Http\Controllers\Frontend\TrainingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +19,9 @@ use App\Http\Controllers\Frontend\GalleryController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+//check subscriptions
+Route::get('/checkSubs', [WelcomeController::class, 'checkSubs']);
 
 //admin
 require __DIR__ . '/backend/backend.php';
@@ -45,6 +50,10 @@ require __DIR__ . '/frontend/dashboard.php';
 Route::get('clinics', [WelcomeController::class, 'clinics']);
 Route::get('clinic/{clinic_slug?}', [WelcomeController::class, 'clinic']);
 
+//doctors
+Route::get('doctors', [WelcomeController::class, 'doctors']);
+Route::get('doctor/{doctor_slug?}', [WelcomeController::class, 'doctorDetails']);
+
 //member register
 Route::get('register', [RegisterController::class, 'index']);
 
@@ -53,6 +62,12 @@ Route::get('article/{slug?}', [ArticleController::class, 'index']);
 
 //gallery
 Route::get('gallery/{slug?}', [GalleryController::class, 'index']);
+
+//training
+Route::get('trainings', [TrainingController::class, 'index']);
+Route::get('training/{slug}', [TrainingController::class, 'show']);
+Route::get('checkCertificate', [TrainingController::class, 'checkCertificate']);
+Route::get('downloadCertificate/{id}', [TrainingController::class, 'downloadCertificate']);
 
 //loadingnoticeboard
 Route::get('loadNoticeBoard/{type}', [WelcomeController::class, 'loadNoticeBoard']);

@@ -33,8 +33,10 @@
                             <a href="{{ url('admin/galleries') }}" class="dropdown-item">Gallery</a>
                             <a href="{{ url('admin/sliders') }}" class="dropdown-item">Sliders</a>
                             <a href="{{url('admin/articles')}}" class="dropdown-item">Articles</a>
+                            <a href="{{url('admin/feeds')}}" class="dropdown-item">Feeds</a>
                             <a href="{{url('admin/testimonials')}}" class="dropdown-item">Testimonials</a>
                             <a href="{{url('admin/noticeboards')}}" class="dropdown-item">Notice Boards</a>
+                            <a href="{{ url("admin/trainings") }}" class="dropdown-item">Trainings</a>
                         </div>
                     </li>
 

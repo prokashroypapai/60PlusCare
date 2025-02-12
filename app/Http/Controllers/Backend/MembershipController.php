@@ -14,7 +14,10 @@ use Illuminate\Http\Request;
 class MembershipController extends Controller
 {
     public function index(){
-        $memberships = Membership::active()->orderBy('created_at', 'desc')->paginate(10);
+        $memberships = Membership::active()
+            ->orderBy('created_at', 'desc')
+            ->paginate(10);
+
         return view('backend.membership.index', compact('memberships'));
     }
 

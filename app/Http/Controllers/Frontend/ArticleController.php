@@ -33,7 +33,9 @@ class ArticleController extends Controller
             return view('frontend.article.show', compact('article', 'metaseo'));
         }
         else {
-            $articles = Article::active()->get();
+            $articles = Article::active()
+                ->orderby('created_at', 'desc')
+                ->get();
             $page = Page::where('page_slug', 'article')->first();
             $metaseo = Seo::where('page_id', $page->id)->first();
             return view('frontend.article.index', compact('articles', 'metaseo'));
