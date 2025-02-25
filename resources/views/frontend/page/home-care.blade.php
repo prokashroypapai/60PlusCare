@@ -2,278 +2,244 @@
 @section('content')
 
     <div class="headingMain">
-        <h1>
-            {{ env('APP_NAME') }} offers Home Health Care Services in Kolkata
-        </h1>
+        <h1>{{ env('APP_NAME') }} offers Home Health Care Services in Kolkata</h1>
         <p>
             {{ env('APP_NAME') }} is the trusted & best home care service provider in Kolkata. {{ env('APP_NAME') }} Home Care Services in Kolkata offers both medical and non medical services at home and wide range of home care services,
             including doctor visits at home, emergency medical support, experienced physiotherapists, nurse care at home, specialized elderly care,
             medical equipment for rent or sale, post discharge care, post critical care, vaccinations at home, and rehab programs.
-
         </p>
+        <h2>{{ env('APP_NAME') }}, <strong>Home Care Service Provider in Kolkata</strong></h2>
         <p>
-            Photo Credits: <a href="https://www.freepik.com" rel="noindex" title="Freepik Photo">Freepik</a>
+            {{ env('APP_NAME') }} is the <strong>best & most reliable home health care service provider</strong> in Kolkata, with qualified and experienced healthcare professionals.
+            Providing Home Care services to the doorsteps of the people all facilities including modalities of care, nursing and attendant care, doctor consultation, dietician care, diagnostic services, health check-up
+            post stroke care, post accident care, pathology tests, vaccine services and physiotherapy and other medical <a href="{{ url('services') }}" title="Services provided by {{ env('APP_NAME') }}">services</a>.
         </p>
     </div>
-    <style>
-        .headingMain{
-            clip: rect(1px,1px,1px,1px);
-            height: 1px;
-            overflow: hidden;
-            position: absolute;
-            white-space: nowrap;
-            width: 1px;
-        }
-    </style>
-    <!-- page-title -->
-    <div class="prt-page-title-row prt-bg prt-bgimage-yes" style="background-image: url({{asset('/static/images/elder-care-kolkata-2323.webp')}})">
-        <div class="prt-page-title-row-inner prt-bg-layer bg-base-bodycolor">
-            <div class="prt-page-title-row-wrapper-inner"></div>
-        </div>
-        <div class="layer-content">
-            <div class="container-fluid p-0">
-                <div class="row align-items-center">
-                    <div class="col-lg-12">
-                        <div class="prt-page-title-row-heading">
-                            <div class="page-title-heading">
-                                <strong class="title">
-                                    Find Home Health Care Services from {{ env('APP_NAME') }} in Kolkata
-                                </strong>
-                            </div>
-                            <div class="breadcrumb-wrapper">
-                                <span>
-                                    <a href="{{url('/')}}">Home</a>
-                                </span>
-                                <span class="text-white">
-                                    Home Care
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- page-title end -->
+    <style>.headingMain {clip: rect(1px,1px,1px,1px);height: 1px;overflow: hidden;position: absolute;white-space: nowrap;width: 1px;}</style>
 
     <!--site-main start-->
     <div class="site-main">
 
-        <!-- about-section -->
-        <section class="prt-row about01-about-section clearfix">
+        <!-- desc-section -->
+        <section class="prt-row service-detail06-desc-section clearfix">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-6">
-                        <div class="pr-30 res-1199-pr-0">
-                            <div class="section-title mb-30">
-                                <div class="title-header">
-                                    <h2>{{ env('APP_NAME') }}, <strong><span>Best Home Care</span> solution in Kolkata</strong></h2>
+                    <div class="col-lg-12">
+                        <div class="prt_single_image-wrapper text-center">
+                            <img loading="lazy" class="img-fluid rounded" src="{{asset('static/images/60plus-care-physiotherapy-service-at-home.jpg')}}" alt="60 Plus Care provides Best Physiotherapy Service in Kolkata">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-50 res-991-mt-30">
+                    <div class="col-lg-12">
+                        <div class="section-title">
+                            <div class="title-header">
+                                <h3>Best <span>Home Nursing Care Services</span> in Kolkata</h3>
+                            </div>
+                            <div class="title-desc">
+                                <p>
+                                    Experience superior home nursing care at home with in-house trained & verified caregivers. {{ env('APP_NAME') }} is the trusted home nursing service provider in Kolkata, providing the best in health at your doorstep.
+                                </p>
+                                <p>
+                                    Many medical conditions, such as post stroke, post accident, arthritis, physical disabilities, trauma conditions, age-related disorders, and surgical injuries
+                                    prevent patients from taking care of themselves and require long-term care. In some cases family members are unable to handle the situation in a perfect way, the patients need medical help.
+                                    We offer customized home care services with proper guidance and best medical manpower.
+                                </p>
+                                <p class="mt-2">
+                                    For any kind of emergency or doctor support Call <a href="tel:+918296111777">+91 8296 111 777</a> or email at <a href="mailto:care@60pluscare.in">care@60pluscare.in</a> for Elder Care Solution in Kolkata.
+                                </p>
+                            </div>
+                            <div class="row py-5">
+                                <div class="text-center">
+                                    <button class="registerBtn" onclick='window.location.href="tel:+918296111777"'>Call for Packages</button>
                                 </div>
-                                <div class="title-desc">
-                                    <p class="pr-50">
-                                        {{ env('APP_NAME') }} is the <strong>best & most reliable home health care service provider</strong> in Kolkata, with qualified and experienced healthcare professionals.
-                                        Providing Home Care services to the doorsteps of the people all facilities including modalities of care, nursing and attendant care, doctor consultation, dietician care, diagnostic services, health check-up
-                                        post stroke care, post accident care, pathology tests, vaccine services and physiotherapy and other medical <a href="{{ url('services') }}" title="Services provided by {{ env('APP_NAME') }}">services</a>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- desc-section-end -->
+
+        <!--services-->
+        <section class="prt-row service01-service-section bg-light clearfix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <!-- section title -->
+                        <div class="section-title mt-20 mb-0 res-767-mt_10">
+                            <div class="title-header">
+                                <h3>
+                                    Types of <span>Home Nursing Services</span> at Home available in <strong>Kolkata</strong>
+                                </h3>
+                            </div>
+                            <div class="title-desc">
+                                <p>
+                                    Get Complete Home Care Services at your doorstep with trained & verified care persons.
+                                    {{ env('APP_NAME') }} is the most trusted & leading home healthcare solution providing Nurse Attendant Service, 24x7 Medical Emergency Services, Doctor visit, hospitalization,
+                                    ambulance services, post discharge care, post stroke care, dialysis care etc.
+                                </p>
+                            </div>
+                        </div><!-- section title end -->
+                    </div>
+
+                    <!--Nursing Service-->
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="featured-imagebox featured-imagebox-services style2">
+                            <div class="featured-thumbnail">
+                                <img loading='lazy' class="img-fluid" src="{{asset('static/images/60pluscare-24x7-emergency.webp')}}" width="447" height="300" alt="24x7 Medical Emergency Assistance service at {{env('APP_NAME')}}">
+                            </div>
+                            <div class="featured-content">
+                                <div class="featured-title">
+                                    <h5 class="text-white">
+                                        Nursing Service at Home
+                                    </h5>
+                                </div>
+                                <div class="featured-desc">
+                                    <p>
+                                        Get 24 Hours or Hour basis Nursing Service at Home from {{ env('APP_NAME') }}. We provide trained and certified nursing facility at your doorstep.
                                     </p>
                                 </div>
                             </div>
-                            <div class="d-sm-flex">
-                                <div class="d-flex res-575-mt-20">
-                                    <div class="bg-base-grey spacing-36">
-                                        <h3 class="fs-20 mb-0">{{ env('APP_NAME') }} Trusted Home Care Solution in Kolkata</h3>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <!--Nursing Service-->
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="featured-imagebox featured-imagebox-services style2">
+                            <div class="featured-thumbnail">
+                                <img loading='lazy' class="img-fluid" src="{{asset('static/images/60pluscare-doctor-consultation.webp')}}" width="447" height="300" alt="Doctor Consultation at {{env('APP_NAME')}}">
                             </div>
-                            <div class="row g-0 mt-30 res-991-mt-20">
-                                <p>
-                                    We provide high-quality healthcare at home, physiotherapy, and palliative care with well-trained nurses and caretakers at the most affordable price in Kolkata.
-
-
-
-                                    Are you staying far away from your parents for office or study purpose. And you are worried about your parents as they are getting old as they <strong>need someone to take care of their health</strong>.
-                                </p>
-                                <p>
-                                    If you are looking for an agency who can take care of your parents, 60 Plus Care provides <strong>most trusted elder care services</strong> in Kolkata offering you best senior care solutions. Our senior <a href="{{ url('doctors') }}" title="Find Doctors at {{ env('APP_NAME') }}">doctors</a> & trained staffs properly take care of every needs of your parents.
-                                </p>
-                                <div class="col-md-6">
-                                    <ul class="prt-list style3">
-                                        <li>24x7 Medical Emergency</li>
-                                        <li>Day/Night Ambulance Service</li>
-                                        <li>Doctor Consultation</li>
-                                    </ul>
+                            <div class="featured-content">
+                                <div class="featured-title">
+                                    <h5 class="text-white">Trained Attendant Service</h5>
                                 </div>
-                                <div class="col-md-6 res-767-mt-12">
-                                    <ul class="prt-list style3">
-                                        <li>Regular Care Manager Visit</li>
-                                        <li>Doctors at home</li>
-                                        <li>Lab Tests at home</li>
-                                    </ul>
+                                <div class="featured-desc">
+                                    <p>
+                                        Trained Nursing Attendant service at doorstep. Avail trusted Attendant / aaya services at your home in Kolkata.
+                                    </p>
                                 </div>
-                                <p class="mt-3">
-                                    For any kind of emergency or doctor support Call <a href="tel:+918296111777" title="Call 60 Plus Care Support">+91 8296 111 777</a> or email at <a href="mailto:care@60pluscare.in" title="60 Plus Care Support Email">care@60pluscare.in</a> for Elder Care Solution in Kolkata.
-                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6 res-1199-mt-30 align-self-center">
-                        <div class="prt_single_image-wrapper text-start">
-                            <img width="100%" height="auto" class="img-fluid rounded" src="{{ asset('static/images/elder-care-kolkata-3345.webp') }}" alt="{{ env('APP_NAME') }} Most Trusted Elder Care Solution in Kolkata">
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="featured-imagebox featured-imagebox-services style2">
+                            <div class="featured-thumbnail">
+                                <img loading='lazy' class="img-fluid" src="{{asset('static/images/60pluscare-24x7-emergency.webp')}}" width="447" height="300" alt="24x7 Medical Emergency Assistance service at {{env('APP_NAME')}}">
+                            </div>
+                            <div class="featured-content">
+                                <div class="featured-title">
+                                    <h5 class="text-white">
+                                        ICU Care at Home
+                                    </h5>
+                                </div>
+                                <div class="featured-desc">
+                                    <p>
+                                        Looking for long-term ICU service at Home? {{ env('APP_NAME') }} provides complete ICU setup at your home with an inexpensive cost.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="featured-imagebox featured-imagebox-services style2">
+                            <div class="featured-thumbnail">
+                                <img loading='lazy' class="img-fluid" src="{{asset('static/images/hospital.jpg')}}" width="447" height="300" alt="Prioritised Hospitalisation service at {{env('APP_NAME')}}">
+                            </div>
+                            <div class="featured-content">
+                                <div class="featured-title">
+                                    <h5 class="text-white">Medical Devices</h5>
+                                </div>
+                                <div class="featured-desc">
+                                    <p>
+                                        All kinds of Medical Equipments required in medical practice are available here. Buy or rent Medical devices at budget friendly prices.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="featured-imagebox featured-imagebox-services style2">
+                            <div class="featured-thumbnail">
+                                <img loading='lazy' class="img-fluid" src="{{asset('static/images/60pluscare-post-discharge-care-at-home.webp')}}" width="447" height="300" alt="Post Discharge Care At Home service at {{env('APP_NAME')}}">
+                            </div>
+                            <div class="featured-content">
+                                <div class="featured-title">
+                                    <h5 class="text-white">Post Discharge Care At Home</h5>
+                                </div>
+                                <div class="featured-desc">
+                                    <p>
+                                        We provide Post Discharge Care & Support at home ensuring comfort and healing with proper monitoring, after hospitalization.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="featured-imagebox featured-imagebox-services style2">
+                            <div class="featured-thumbnail">
+                                <img loading='lazy' class="img-fluid" src="{{asset('static/images/telemedicine.jpg')}}" width="447" height="300" alt="Telemedicine service at {{env('APP_NAME')}}">
+                            </div>
+                            <div class="featured-content">
+                                <div class="featured-title">
+                                    <h5 class="text-white">Telemedicine 24x7</h5>
+                                </div>
+                                <div class="featured-desc">
+                                    <p>
+                                        We coordinate and organise Teleconsultation with our Doctors, Nurses, Dietitians, Psychologists & Counsellors.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="featured-imagebox featured-imagebox-services style2">
+                            <div class="featured-thumbnail">
+                                <img loading='lazy' class="img-fluid" src="http://127.0.0.1:8000/static/images/vaccine.jpg" width="447" height="300" alt="Medicines & Vaccines service at 60 Plus Care">
+                            </div>
+                            <div class="featured-content">
+                                <div class="featured-title">
+                                    <h5 class="text-white">Medicines & Vaccines</h5>
+                                </div>
+                                <div class="featured-desc">
+                                    <p>
+                                        With our network, we are able to source required Medicines & Vaccines including Influenza & Pneumococcal delivered at your home. We also do COVID 19 Vaccination at our Partner's Center.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                        <div class="featured-imagebox featured-imagebox-services style2">
+                            <div class="featured-thumbnail">
+                                <img loading='lazy' class="img-fluid" src="http://127.0.0.1:8000/static/images/cancer-care-support-60-plus-care.webp" width="447" height="300" alt="60 Plus Care Cancer Care & Support in Kolkata">
+                            </div>
+                            <div class="featured-content">
+                                <div class="featured-title">
+                                    <h5 class="text-white">Cancer Care & Support</h5>
+                                </div>
+                                <div class="featured-desc">
+                                    <p>
+                                        Get best Cancer Care & Support from team 60 Plus Care. We offer best Medical support & care along with mental support after Chemotherapy.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- about-section end-->
-
-        <!-- service-section -->
-        <section class="prt-row service02-service-section clearfix" style="padding-bottom: 45px;">
-            <div class="container">
-                <div class="row">
-                    <!-- section title -->
-                    <div class="section-title title-style-center_text">
-                        <div class="title-header">
-                            <h2>
-                                {{ env('APP_NAME') }}, <span>Best Medical Support</span> for elders in Kolkata
-                            </h2>
-                        </div>
-                        <div class="title-desc">
-                            <p>
-                                {{ env('APP_NAME') }} is the most trustworthy Elder Care service provider in Kolkata. Providing services since 2008 makes one of the oldest elder care service provider in Kolkata.
-                            </p>
-                            <p>
-                                Our expert team always support 24x7 emergency services including doctor visit at home, nurses/aaya, care manager and other medical services makes us most trusted elder care company in Kolkata. For any query please Call us at <a href="tel:+918296111777" rel="nofollow, noindex">+91 8296 111 777</a> or <a href="{{ url('contact') }}" rel="nofollow">Get Support from customer care executive</a>.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- section title-end -->
-                </div>
-                <div class="row g-0 overflow-hidden">
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="featured-icon-box icon-align-top-content style8">
-                            <div class="featured-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-heart-pulse" viewBox="0 0 16 16">
-                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053.918 3.995.78 5.323 1.508 7H.43c-2.128-5.697 4.165-8.83 7.394-5.857.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17c3.23-2.974 9.522.159 7.394 5.856h-1.078c.728-1.677.59-3.005.108-3.947C13.486.878 10.4.28 8.717 2.01L8 2.748ZM2.212 10h1.315C4.593 11.183 6.05 12.458 8 13.795c1.949-1.337 3.407-2.612 4.473-3.795h1.315c-1.265 1.566-3.14 3.25-5.788 5-2.648-1.75-4.523-3.434-5.788-5Z"/>
-                                    <path d="M10.464 3.314a.5.5 0 0 0-.945.049L7.921 8.956 6.464 5.314a.5.5 0 0 0-.88-.091L3.732 8H.5a.5.5 0 0 0 0 1H4a.5.5 0 0 0 .416-.223l1.473-2.209 1.647 4.118a.5.5 0 0 0 .945-.049l1.598-5.593 1.457 3.642A.5.5 0 0 0 12 9h3.5a.5.5 0 0 0 0-1h-3.162l-1.874-4.686Z"/>
-                                </svg>
-                            </div>
-                            <div class="featured-content">
-                                <div class="featured-title">
-                                    <strong>24 Hours Medical Service</strong>
-                                </div>
-                                <div class="featured-desc">
-                                    On Call We are ready for Emergency service 24 Hours
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="featured-icon-box icon-align-top-content style8">
-                            <div class="featured-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-heart-pulse" viewBox="0 0 16 16">
-                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053.918 3.995.78 5.323 1.508 7H.43c-2.128-5.697 4.165-8.83 7.394-5.857.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17c3.23-2.974 9.522.159 7.394 5.856h-1.078c.728-1.677.59-3.005.108-3.947C13.486.878 10.4.28 8.717 2.01L8 2.748ZM2.212 10h1.315C4.593 11.183 6.05 12.458 8 13.795c1.949-1.337 3.407-2.612 4.473-3.795h1.315c-1.265 1.566-3.14 3.25-5.788 5-2.648-1.75-4.523-3.434-5.788-5Z"/>
-                                    <path d="M10.464 3.314a.5.5 0 0 0-.945.049L7.921 8.956 6.464 5.314a.5.5 0 0 0-.88-.091L3.732 8H.5a.5.5 0 0 0 0 1H4a.5.5 0 0 0 .416-.223l1.473-2.209 1.647 4.118a.5.5 0 0 0 .945-.049l1.598-5.593 1.457 3.642A.5.5 0 0 0 12 9h3.5a.5.5 0 0 0 0-1h-3.162l-1.874-4.686Z"/>
-                                </svg>
-                            </div>
-                            <div class="featured-content">
-                                <div class="featured-title">
-                                    <strong>Medical Assistant</strong>
-                                </div>
-                                <div class="featured-desc">
-                                    24 Hours Nurse/aaya, medical team is available
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="featured-icon-box icon-align-top-content style8">
-                            <div class="featured-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-heart-pulse" viewBox="0 0 16 16">
-                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053.918 3.995.78 5.323 1.508 7H.43c-2.128-5.697 4.165-8.83 7.394-5.857.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17c3.23-2.974 9.522.159 7.394 5.856h-1.078c.728-1.677.59-3.005.108-3.947C13.486.878 10.4.28 8.717 2.01L8 2.748ZM2.212 10h1.315C4.593 11.183 6.05 12.458 8 13.795c1.949-1.337 3.407-2.612 4.473-3.795h1.315c-1.265 1.566-3.14 3.25-5.788 5-2.648-1.75-4.523-3.434-5.788-5Z"/>
-                                    <path d="M10.464 3.314a.5.5 0 0 0-.945.049L7.921 8.956 6.464 5.314a.5.5 0 0 0-.88-.091L3.732 8H.5a.5.5 0 0 0 0 1H4a.5.5 0 0 0 .416-.223l1.473-2.209 1.647 4.118a.5.5 0 0 0 .945-.049l1.598-5.593 1.457 3.642A.5.5 0 0 0 12 9h3.5a.5.5 0 0 0 0-1h-3.162l-1.874-4.686Z"/>
-                                </svg>
-                            </div>
-                            <div class="featured-content">
-                                <div class="featured-title">
-                                    <strong>Doctor's Visit at Day/Night</strong>
-                                </div>
-                                <div class="featured-desc">
-                                    For any emergency get Doctor visit at day or night
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="featured-icon-box icon-align-top-content style8">
-                            <div class="featured-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-heart-pulse" viewBox="0 0 16 16">
-                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053.918 3.995.78 5.323 1.508 7H.43c-2.128-5.697 4.165-8.83 7.394-5.857.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17c3.23-2.974 9.522.159 7.394 5.856h-1.078c.728-1.677.59-3.005.108-3.947C13.486.878 10.4.28 8.717 2.01L8 2.748ZM2.212 10h1.315C4.593 11.183 6.05 12.458 8 13.795c1.949-1.337 3.407-2.612 4.473-3.795h1.315c-1.265 1.566-3.14 3.25-5.788 5-2.648-1.75-4.523-3.434-5.788-5Z"/>
-                                    <path d="M10.464 3.314a.5.5 0 0 0-.945.049L7.921 8.956 6.464 5.314a.5.5 0 0 0-.88-.091L3.732 8H.5a.5.5 0 0 0 0 1H4a.5.5 0 0 0 .416-.223l1.473-2.209 1.647 4.118a.5.5 0 0 0 .945-.049l1.598-5.593 1.457 3.642A.5.5 0 0 0 12 9h3.5a.5.5 0 0 0 0-1h-3.162l-1.874-4.686Z"/>
-                                </svg>
-                            </div>
-                            <div class="featured-content">
-                                <div class="featured-title">
-                                    <strong>Health Checkup</strong>
-                                </div>
-                                <div class="featured-desc">
-                                    Regular checkup is done by our care managers
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="featured-icon-box icon-align-top-content style8">
-                            <div class="featured-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-heart-pulse" viewBox="0 0 16 16">
-                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053.918 3.995.78 5.323 1.508 7H.43c-2.128-5.697 4.165-8.83 7.394-5.857.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17c3.23-2.974 9.522.159 7.394 5.856h-1.078c.728-1.677.59-3.005.108-3.947C13.486.878 10.4.28 8.717 2.01L8 2.748ZM2.212 10h1.315C4.593 11.183 6.05 12.458 8 13.795c1.949-1.337 3.407-2.612 4.473-3.795h1.315c-1.265 1.566-3.14 3.25-5.788 5-2.648-1.75-4.523-3.434-5.788-5Z"/>
-                                    <path d="M10.464 3.314a.5.5 0 0 0-.945.049L7.921 8.956 6.464 5.314a.5.5 0 0 0-.88-.091L3.732 8H.5a.5.5 0 0 0 0 1H4a.5.5 0 0 0 .416-.223l1.473-2.209 1.647 4.118a.5.5 0 0 0 .945-.049l1.598-5.593 1.457 3.642A.5.5 0 0 0 12 9h3.5a.5.5 0 0 0 0-1h-3.162l-1.874-4.686Z"/>
-                                </svg>
-                            </div>
-                            <div class="featured-content">
-                                <div class="featured-title">
-                                    <strong>Diagnostic Tests at home</strong>
-                                </div>
-                                <div class="featured-desc">
-                                    Avail Diagnostic lab tests at home
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="featured-icon-box icon-align-top-content style8">
-                            <div class="featured-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-heart-pulse" viewBox="0 0 16 16">
-                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053.918 3.995.78 5.323 1.508 7H.43c-2.128-5.697 4.165-8.83 7.394-5.857.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17c3.23-2.974 9.522.159 7.394 5.856h-1.078c.728-1.677.59-3.005.108-3.947C13.486.878 10.4.28 8.717 2.01L8 2.748ZM2.212 10h1.315C4.593 11.183 6.05 12.458 8 13.795c1.949-1.337 3.407-2.612 4.473-3.795h1.315c-1.265 1.566-3.14 3.25-5.788 5-2.648-1.75-4.523-3.434-5.788-5Z"/>
-                                    <path d="M10.464 3.314a.5.5 0 0 0-.945.049L7.921 8.956 6.464 5.314a.5.5 0 0 0-.88-.091L3.732 8H.5a.5.5 0 0 0 0 1H4a.5.5 0 0 0 .416-.223l1.473-2.209 1.647 4.118a.5.5 0 0 0 .945-.049l1.598-5.593 1.457 3.642A.5.5 0 0 0 12 9h3.5a.5.5 0 0 0 0-1h-3.162l-1.874-4.686Z"/>
-                                </svg>
-                            </div>
-                            <div class="featured-content">
-                                <div class="featured-title">
-                                    <strong>Medical Equipment at home</strong>
-                                </div>
-                                <div class="featured-desc">
-                                    We arrange medical equipments at anytime
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row py-5">
-                    <div class="section-title title-style-center_text">
-                        <button class="registerBtn" onclick='window.location.href="{{ url('/packages') }}"'>View Packages</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- service-section end-->
+        <!--services-->
 
         <!-- care-section -->
         <section class="prt-row about03-child-care-section clearfix">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-6">
-                        <div class="prt_single_image-wrapper text-start">
-                            <img width="685" height="546" class="img-fluid" src="{{ asset('static/images/elder-care-kolkata-5544.webp') }}" alt="Nurse AAya Service at {{ env('APP_NAME') }}">
+                    <div class="col-xl-6 text-center">
+                        <div class="prt_single_image-wrapper">
+                            <img width="100%" height="auto" class="img-fluid rounded" src="{{ asset('/static/images/60-plus-care-pulmonary-rehabilitation-in-kolkata.jpg') }}" alt="Pulmonary Rehabilitation Service at 60 Plus Care">
                         </div>
                     </div>
                     <div class="col-xl-6 align-self-center">
@@ -281,14 +247,21 @@
                             <!-- section title -->
                             <div class="section-title mb-30">
                                 <div class="title-header">
-                                    <h2>Get Best Elderly Care <span>at Home</span></h2>
+                                    <h2>Best Pulmonary Rehabilitation Solution <span>at Home</span></h2>
                                 </div>
                                 <div class="title-desc">
-                                    <p>
-                                        {{ env('APP_NAME') }} is one of the oldest elder care company in Kolkata providing <strong>best senior care solutions in Kolkata</strong>. We provide <strong>24x7 Emergency service</strong> with doctor consultation, nurses, medical team, physiotherapy, care manager and best part day/night ambulance service.
+                                    <p class="pb-10">
+                                        We understand the importance of receiving quality <strong>healthcare</strong> in the comfort of your own home.
+                                        Also we keep in mind about the most <strong>affordable cost</strong> for the services.
+                                        With a commitment to excellence and compassion, we bring trained nurses, attendants or caregivers to your doorstep. Our trained & experienced team is dedicated to provide personalized care tailored to your unique needs, medical supports, non medical helps as well as dementia care ensuring your health and well-being are our top priorities.
                                     </p>
                                     <p>
-                                        We also provide diagnostic <strong>lab tests at home</strong> and other medical equipments and services. Our <a href="{{ url('clinics') }}" title="Find 60 Plus Clinic in Kolkata">clinics</a> are available at different locations in Kolkata including <a href="{{ url('/clinic/salt-lake') }}" title="Visit 60 Plus Clinic at Salt Lake">60 Plus Clinic in Salt Lake</a>, <a href="{{ url('/clinic/behala') }}" title="Visit 60 Plus Clinic at Behala">60 Plus Clinic in Behala</a>, <a href="{{ url('/clinic/joka') }}" title="Visit 60 Plus Clinic at Joka">60 Plus Clinic in Joka</a>, Rajarhat New Town. For more query you can <a href="{{ url('contact') }}" title="Customer support at {{ env('APP_NAME') }}">contact with our support</a>.
+                                        Avail Home Nursing Service, Home Attendant Service, Physiotherapy at Home, Post Stroke Care, Post Accident Care, Dementia Care at Home, Elderly Care at Home
+                                        with just one call away. Also we have dedicated <a href="{{ url('/clinics') }}" title="Find 60 Plus Clinic in Kolkata">Elder Care Clinics in Kolkata</a> at different locations in
+                                        Kolkata including <a href="{{ url('/clinic/salt-lake') }}" title="Visit 60 Plus Clinic at Salt Lake">60 Plus Clinic in Salt Lake</a>,
+                                        <a href="{{ url('/clinic/behala') }}" title="Visit 60 Plus Clinic at Behala">60 Plus Clinic in Behala</a>,
+                                        <a href="{{ url('/clinic/joka') }}" title="Visit 60 Plus Clinic at Joka">60 Plus Clinic in Joka</a>, Rajarhat New Town.
+                                        For more query you can <a href="{{ url('/contact') }}" title="Customer support at 60 Plus Care">contact with our support</a>.
                                     </p>
                                 </div>
                             </div><!-- section title end -->
@@ -297,10 +270,16 @@
                                     <div class="featured-icon-box">
                                         <div class="featured-content">
                                             <div class="featured-title">
-                                                <h3>Lab Tests At Home</h3>
+                                                <h3>Why you Avail Home Care Service from {{ env('APP_NAME') }}</h3>
                                             </div>
                                             <div class="featured-desc">
-                                                <p>Providing best diagnostic lab tests facility at home we also arrange medical equipments along with best medical support</p>
+                                                <p>
+                                                    {{ env('APP_NAME') }} is your one-stop destination for a wide array of home healthcare services in Kolkata.
+                                                    Our services encompass home nursing care, home attendant services, physiotherapy services, elder care at home, baby care, adult vaccination and more.
+                                                </p>
+                                                <p>
+                                                    Also, we provide medical equipment rentals to further support your healthcare needs. Portable Xray, Portable ECG at Home, Halter, EEG, NCV etc we bring to our doorstep with an affordable cost.
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -309,12 +288,25 @@
                                     <div class="featured-icon-box">
                                         <div class="featured-content">
                                             <div class="featured-title">
-                                                <h3>Best Care Ever</h3>
+                                                <h3>Benefits of Choosing Home Care from {{ env('APP_NAME') }}</h3>
                                             </div>
                                             <div class="featured-desc">
-                                                <p>Our well trained medical staffs and medical support team makes you realize as your family member by providing best care</p>
+                                                <strong>Best Home Healthcare Solution</strong>
+                                                <ul>
+                                                    <li>Trained Nurse & Attendants</li>
+                                                    <li>Dedicated Senior Doctors</li>
+                                                    <li>Personalised Home Care Services</li>
+                                                    <li>Cost Effective Services</li>
+                                                    <li>Home Care with Medical Devices Availability</li>
+                                                    <li>One Stop solution for Medical Care</li>
+                                                </ul>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="row py-5">
+                                    <div class="text-center">
+                                        <button class="registerBtn" onclick='window.location.href="tel:+918296111777"'>Call our Support</button>
                                     </div>
                                 </div>
                             </div>
@@ -326,14 +318,12 @@
         </section>
         <!-- care-section-end -->
 
-
         <!-- testimonial-section -->
     @include('frontend.home.testimonial')
     <!-- testimonial-section -->
-
-        <!-- contact-section -->
+        <!-- testimonial-section -->
     @include('frontend.home.contact')
-    <!-- contact-section -->
+    <!-- testimonial-section -->
 
     </div><!--site-main end-->
 @endsection
